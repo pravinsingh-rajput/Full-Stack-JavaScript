@@ -6,3 +6,7 @@
 ### SEO Master [Preview](./SEO%20Master%20Landing%20Page/README.md)
 
 ![Alt](./SEO%20Master%20Landing%20Page/output.png)
+
+### Crypto [Preview](./Crypto%20Landing%20Page/README.md)
+
+![Alt](./Crypto%20Landing%20Page/output.png)
