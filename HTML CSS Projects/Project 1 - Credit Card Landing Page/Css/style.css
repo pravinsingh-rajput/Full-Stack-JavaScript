@@ -386,3 +386,117 @@ li:hover {
 }
 
 /* End of  Card Choice Section */
+/* Customer Page */
+
+.customer-page {
+  width: 100%;
+  height: 850px;
+}
+
+.customer-container {
+  margin: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upper-customer-conatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.upper-customer-conatiner h1 {
+  margin: 0px 10%;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.upper-customer-conatiner h1 span {
+  color: #f637ec;
+}
+.upper-customer-conatiner p {
+  margin: 0px 35%;
+  text-align: center;
+}
+
+.customer-review {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.review-upper-container,
+.review-lower-container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 8%;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  margin: 20px 5%;
+  width: 50%;
+  background-color: rgb(102, 102, 104);
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  padding: 5px 10px 10px 5px;
+  align-content: flex-start;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.review:hover {
+  scale: 1.05;
+}
+
+.review img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+.review .customer-details {
+  margin-top: 12px;
+}
+
+.review2,
+.review3,
+.review4 {
+  background-color: #1e1f24;
+}
+
+.review-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.rev-nav-active {
+  width: 50px;
+  height: 10px;
+  background-color: #f637ec;
+  border-radius: 12px;
+  margin-right: 2px;
+  cursor: pointer;
+  box-shadow: 1px 2px 10px #f776f0;
+  transition: all 0.2s ease-in-out;
+}
+.rev-nav-active:hover {
+  scale: 1.1;
+}
+.rev-nav {
+  width: 10px;
+  height: 10px;
+  background-color: #5a5a5a;
+  border-radius: 50%;
+  margin: 2px 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.rev-nav:hover {
+  scale: 1.3;
+}
+/* End of Customer review */
