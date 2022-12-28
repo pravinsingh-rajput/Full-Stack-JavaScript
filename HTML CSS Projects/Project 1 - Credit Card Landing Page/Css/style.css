@@ -225,3 +225,25 @@ li:hover {
 }
 
 /* End of main Section */
+/* Logo Section */
+
+.logo-section {
+  background-color: rgb(51, 50, 50);
+  width: 100%;
+  height: 130px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.logo-section img {
+  width: 150px;
+  transition: 0.1s all ease-in-out;
+  cursor: pointer;
+}
+.logo-section img:hover {
+  scale: 1.1;
+}
+
+/* End of Logo Section */
