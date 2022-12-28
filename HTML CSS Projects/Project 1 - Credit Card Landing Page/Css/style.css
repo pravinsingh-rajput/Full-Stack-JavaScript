@@ -561,3 +561,34 @@ li:hover {
   cursor: pointer;
 }
 /* End of Customization section */
+/* Footer Section */
+
+.footer-container {
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+.footer-logo img {
+  width: 100px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-logo img:hover {
+  scale: 1.1;
+}
+
+.footer-content {
+  display: flex;
+  width: 80%;
+  align-items: center;
+}
+
+/* End of the Footer Section */
