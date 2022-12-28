@@ -1003,3 +1003,215 @@ li:hover {
     width: 60px;
   }
 }
+
+/* 481px — 768px: iPads, Tablets */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .logo img {
+    width: 50px;
+  }
+
+  li {
+    font-size: 10px;
+  }
+
+  .language h4 {
+    font-size: 10px;
+  }
+
+  .arrow {
+    width: 10px;
+    height: 10px;
+  }
+
+  .contact-btn {
+    font-size: 10px;
+  }
+
+  .nav-contact-button {
+    padding-left: 10px;
+  }
+  .nav-contact-button img {
+    width: 25px;
+  }
+
+  .Home-Container {
+    height: 280px;
+  }
+
+  .left-content h1 {
+    font-size: 25px;
+  }
+  .Home-Container > img:first-of-type {
+    height: 60%;
+    width: 50%;
+  }
+  .Home-Container > img:last-of-type {
+    height: 60%;
+    width: 50%;
+  }
+
+  .started-btn {
+    z-index: 1;
+    margin-left: 14px;
+  }
+
+  .left-content > p {
+    font-size: 10px;
+    margin-right: 40%;
+  }
+
+  .getting-started-btn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+
+  .bg-start {
+    height: 12px;
+  }
+  .rightarrow {
+    width: 20px;
+    margin-left: 5px;
+  }
+
+  .user h2 {
+    font-size: 12px;
+    width: 60%;
+  }
+  .user h2 span {
+    font-size: 10px;
+  }
+
+  .user p {
+    font-size: 8px;
+    margin-right: 8px;
+  }
+
+  .home-bottom-content {
+    width: 55%;
+    margin-bottom: 10px;
+  }
+  .home-bottom-content img {
+    height: 20px;
+  }
+
+  .user2 {
+    margin-left: 10px;
+  }
+
+  .logo-section {
+    height: 50px;
+  }
+
+  .logo-section img {
+    width: 50px;
+  }
+
+  .upper-left-container h1 {
+    font-size: 30px;
+  }
+
+  .upper-right-container p {
+    margin: 5%;
+    font-size: 10px;
+  }
+
+  .feature-box img {
+    width: 60px;
+    height: 60px;
+  }
+  .feature-box h3 {
+    font-size: 10px;
+  }
+
+  .feature-box {
+    width: 150px;
+    height: 120px;
+    margin: 8px 25px;
+  }
+
+  .card-choice h1 {
+    font-size: 25px;
+    margin: 15px 20%;
+  }
+  .card-choice p {
+    font-size: 10px;
+    margin: 10px 25%;
+  }
+  .card-choice {
+    height: 300px;
+  }
+
+  .card-choice img {
+    width: 45%;
+    height: 55%;
+  }
+
+  .upper-customer-conatiner h1 {
+    font-size: 25px;
+  }
+
+  .upper-customer-conatiner p {
+    font-size: 11px;
+    margin: 0px 20%;
+  }
+
+  .review img {
+    width: 50px;
+    margin-bottom: 5px;
+  }
+
+  .review-upper-container {
+    margin: 0px 0px;
+    font-size: 10px;
+  }
+  .review-lower-container {
+    margin: 0px 0px;
+    font-size: 10px;
+  }
+
+  .review-nav {
+    margin-top: 10px;
+  }
+
+  .rev-nav-active {
+    width: 30px;
+    height: 8px;
+  }
+
+  .rev-nav {
+    width: 8px;
+    height: 8px;
+  }
+
+  .customer-page {
+    width: 100%;
+    height: 500px;
+  }
+
+  .custom-content h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .right-diamond img {
+    width: 200px;
+  }
+
+  .left-diamond img {
+    height: 200px;
+  }
+
+  .customize-card {
+    height: 230px;
+  }
+
+  .footer-container {
+    height: 30px;
+  }
+
+  .footer-logo img {
+    width: 40px;
+    margin-left: 10px;
+  }
+}
