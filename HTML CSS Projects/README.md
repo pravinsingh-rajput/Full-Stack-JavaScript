@@ -6,6 +6,7 @@
 📱💻
 
 `Project 1 - Credit Card Landing Page`
+
 `Project 2 - Hosting Website Landing Page`
 
 | Project No | Name                    | View                                                                  | Website link                           |
