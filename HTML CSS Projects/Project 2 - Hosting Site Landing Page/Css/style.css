@@ -391,7 +391,7 @@ h1 em {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin: 10px 0px;
+  margin: 8px 0px;
 }
 .card-lower-container ul img {
   margin-right: 10px;
@@ -428,4 +428,15 @@ h1 em {
   background-color: #0c8bfd;
   color: #fff;
   border: 2px solid #fff;
+}
+
+/* Customer Page */
+
+.customer-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  height: 780px;
 }
