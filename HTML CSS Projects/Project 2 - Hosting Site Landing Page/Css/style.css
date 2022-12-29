@@ -328,6 +328,6 @@ h1 em {
 
 .hosting-plan {
   width: 100%;
-  height: 700px;
+  height: fit-content;
   background-color: #000;
 }
