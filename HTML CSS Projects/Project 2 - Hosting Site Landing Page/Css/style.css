@@ -330,4 +330,102 @@ h1 em {
   width: 100%;
   height: fit-content;
   background-color: #000;
+  padding: 50px 5%;
+}
+
+.hosting-header h3 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 45px;
+  padding: 2px 15%;
+}
+
+.hosting-header h3 img {
+  margin-top: 30px;
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+  margin: 5px 20px;
+  border-radius: 15px;
+  padding: 10px 15px;
+  width: 280px;
+  cursor: pointer;
+}
+
+.card-upper-container {
+  border-bottom: 2px solid grey;
+  margin-bottom: 15px;
+}
+.card-upper-container h3 {
+  margin-bottom: 15px;
+}
+.card-upper-container h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.card-upper-container h1 span {
+  color: gray;
+  font-size: 20px;
+}
+.card-upper-container p {
+  margin-bottom: 15px;
+}
+
+.card-lower-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+.card-lower-container ul img {
+  margin-right: 10px;
+}
+
+.select {
+  margin-top: 15px;
+  cursor: pointer;
+  border: 2px solid #0c8bfd;
+  transition: all 0.2s ease-in-out;
+}
+
+.select:hover {
+  background-color: #fff;
+  color: #0c8bfd;
+  border: 2px solid #0c8bfd;
+}
+
+.regular .select {
+  margin-top: 30px;
+}
+
+.standard {
+  color: #fff;
+  background-color: #0c8bfd;
+}
+
+.standard .select {
+  color: #0c8bfd;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.standard .select:hover {
+  background-color: #0c8bfd;
+  color: #fff;
+  border: 2px solid #fff;
 }
