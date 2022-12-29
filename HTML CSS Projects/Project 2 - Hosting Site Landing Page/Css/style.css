@@ -501,8 +501,6 @@ h1 em {
   height: 8px;
   background-color: grey;
   border-radius: 12px;
-  box-sizing: border-box;
-  overflow: hidden;
   margin-bottom: 20px;
 }
 
@@ -515,6 +513,84 @@ h1 em {
 /* Footer */
 
 footer {
-  width: 100%;
   height: 700px;
+  margin: 30px 5%;
 }
+
+.footer-heading {
+  font-size: 40px;
+  text-align: center;
+  padding: 0px 20%;
+  margin: 40px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(52, 49, 49);
+  border-radius: 25px;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: gray;
+  color: #fff !important;
+  border-radius: 25px;
+  padding: 12px 20px;
+  width: 250px;
+  font-size: 17px;
+}
+input::placeholder {
+  color: #ffff;
+}
+
+.sign-up {
+  border: 2px solid #0c8bfd;
+  transition: all 0.2s ease-in-out;
+}
+
+.sign-up:hover {
+  background-color: #fff;
+  color: #0c8bfd;
+  border: 2px solid #0c8bfd;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  padding: 40px 25px;
+  justify-content: space-around;
+}
+
+.info div h2 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.info div ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.info div ul:hover {
+  color: #0c8bfd;
+  scale: 1.1;
+}
+
+.footer-logo img {
+  margin-top: 25px;
+}
+
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
