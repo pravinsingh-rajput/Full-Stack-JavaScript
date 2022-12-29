@@ -7,6 +7,6 @@
 ![ALT](https://img.shields.io/badge/-RESPONSIVE-green)
 📱💻
 
-[Click here to Preview Website](https://tu-card.netlify.app/)
+[Click here to Preview Website](https://host-web.netlify.app/)
 
 ![Alt](./Hosting%20Landing%20Page.png)
