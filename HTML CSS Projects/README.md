@@ -6,13 +6,9 @@
 📱💻
 
 `Project 1 - Credit Card Landing Page`
-
-[Click here to Preview Website](https://tu-card.netlify.app/)
-
-[Link](./Project%201%20-%20Credit%20Card%20Landing%20Page/README.md)
-
 `Project 2 - Hosting Website Landing Page`
 
-<!-- [Click here to Preview Website](https://tu-card.netlify.app/) -->
-
-[Link](./Project%202%20-%20Hosting%20Site%20Landing%20Page/README.md)
+| Project No | Name                    | View                                                                  | Website link                           |
+| ---------- | ----------------------- | --------------------------------------------------------------------- | -------------------------------------- |
+| 1          | Tu Card - Landing Page  | [Link](./Project%202%20-%20Hosting%20Site%20Landing%20Page/README.md) | [Visit](https://tu-card.netlify.app/)  |
+| 2          | Host Web - Landing Page | [Link](./Project%201%20-%20Credit%20Card%20Landing%20Page/README.md)  | [Visit](https://host-web.netlify.app/) |
