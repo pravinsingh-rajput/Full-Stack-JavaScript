@@ -883,9 +883,16 @@ input::placeholder {
     margin-bottom: 40px;
   }
 
+  .signupform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   form {
     flex-direction: column;
     align-items: center;
+    width: 70%;
   }
 
   input {
@@ -916,5 +923,299 @@ input::placeholder {
   .footer-logo img {
     margin-top: 20px;
     width: 90px;
+  }
+}
+/* 481px — 768px: iPads, Tablets */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Home Container */
+
+  nav img {
+    width: 45px;
+  }
+
+  li {
+    font-size: 10px;
+  }
+
+  .login {
+    display: none;
+  }
+
+  button {
+    background-color: #0c8bfd;
+    color: #ffff;
+    font-size: 14px;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .home-content {
+    position: relative;
+    margin: 3% 0px;
+  }
+
+  .right-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .right-content h1 {
+    font-size: 40px;
+  }
+  .left-content img {
+    width: 300px;
+  }
+  .right-content p {
+    font-size: 13px;
+  }
+
+  .left-content {
+    position: absolute;
+    opacity: 0.2;
+    right: 2px;
+  }
+
+  /* Logo Container */
+
+  .logo-container {
+    height: 50px;
+  }
+  .logo-container img {
+    width: 50px;
+  }
+
+  /* Service Container */
+  .services-heading {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .services-description {
+    font-size: 12px;
+    padding: 0px 10%;
+    margin-bottom: 5px;
+  }
+
+  .services-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0px;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 220px;
+    padding: 8px 18px;
+    margin: 10px 0px;
+  }
+
+  .service-card img {
+    margin: 15px 0px;
+    width: 50px;
+  }
+
+  .service-card h3 {
+    font-size: 15px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+  }
+  .services-bottom-container {
+    width: 100%;
+    padding: 0px 7%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .bottom-container-heading {
+    font-size: 20px;
+  }
+
+  .services-feature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-feature-container {
+    width: 80%;
+    padding: 4px 15px;
+  }
+  .right-feature-container {
+    width: 80%;
+  }
+
+  .left-feature-container ul {
+    font-weight: 300;
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+  .left-feature-container ul img {
+    width: 15px;
+  }
+
+  .right-feature-container ul {
+    font-size: 10px;
+  }
+  .bullet {
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+  }
+
+  /* Hosting Plan Section */
+
+  .hosting-header h3 {
+    font-size: 20px;
+    padding: 2px 2%;
+  }
+
+  .hosting-header h3 img {
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  .plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    margin: 5px 15px;
+    border-radius: 12px;
+    padding: 8px 10px;
+    width: 280px;
+  }
+
+  .card-upper-container h3 {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .card-upper-container h1 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .card-upper-container h1 span {
+    font-size: 18px;
+  }
+  .card-upper-container p {
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+
+  .card-lower-container ul {
+    font-size: 12px;
+    margin: 5px 0px;
+  }
+  .card-lower-container ul img {
+    margin-right: 8px;
+  }
+  .regular .select {
+    margin-top: 10px;
+  }
+
+  /* Customer Page */
+
+  .cutomer-upper-container {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .cutomer-upper-container h2 {
+    width: 100%;
+    text-align: center;
+    padding-right: 0%;
+    font-size: 25px;
+  }
+
+  .cutomer-upper-container p {
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .cutomer-lower-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  .customer-card {
+    padding: 12px;
+    width: 80%;
+    margin-bottom: 15px;
+  }
+  .customer-card img {
+    width: 10px;
+    margin-bottom: 5px;
+  }
+  .customer-card p {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+  .rating img {
+    width: 8px;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  /* Footer */
+
+  .footer-heading {
+    font-size: 18px;
+    text-align: center;
+    padding: 0px 4%;
+    margin-bottom: 20px;
+  }
+
+  .signupform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+
+  input {
+    width: 260px;
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 10px 0px;
+  }
+
+  .sign-up {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .info {
+    padding: 35px 20px;
+  }
+
+  .info div h2 {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .info div ul {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .footer-logo img {
+    margin-top: 10px;
+    width: 50px;
   }
 }
