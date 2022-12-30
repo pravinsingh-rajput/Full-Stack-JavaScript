@@ -1,4 +1,4 @@
-# HTML CSS Project 1
+# HTML CSS Project 2
 
 `Hosting website Landing Page`
 
