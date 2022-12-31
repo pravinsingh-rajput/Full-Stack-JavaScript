@@ -3,3 +3,145 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+[aria-label="Container"] {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../Assets/Photos/futuristic-bg.png);
+  width: 100vw;
+  height: 770px;
+  color: #fff;
+  padding: 10px 5%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2%;
+  cursor: pointer;
+}
+
+nav img {
+  width: 120px;
+  margin-right: 5%;
+  transition: all 0.2s ease-in-out;
+}
+nav img:hover {
+  scale: 1.05;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 5px 3%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
+  font-size: 18px;
+}
+li:hover {
+  border-bottom: 2px solid #fff;
+  color: #f87e65;
+  scale: 1.1;
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+button {
+  background-color: #f87e65;
+  color: #fff;
+  padding: 8px 20px;
+  margin: 0px 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: transparent;
+  border: 2px solid #fff;
+  scale: 1.05;
+}
+
+.sign-in {
+  background: transparent;
+}
+
+.main-content {
+  border: 2px solid #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-header {
+  width: 50%;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+  justify-content: center;
+  padding-right: 8%;
+}
+
+.right-header {
+  width: 50%;
+  border: 2px solid yellow;
+}
+
+/*  */
+.right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-header-upper-container {
+  height: 50%;
+  display: flex;
+}
+.right-header-lower-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  justify-content: center;
+}
+
+.dash {
+  margin-right: 20px;
+}
+
+.right-header-lower-container h3 {
+  width: 40%;
+  font-size: 30px;
+}
+
+.arrow {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
