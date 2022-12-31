@@ -14,3 +14,4 @@
 | 08     | Truthy & Falsy     | [Code](./Truthy_Falsy.js)      |
 | 09     | Logical Operator   | [Code](./Logical_operator.js)  |
 | 10     | Switch Statement   | [Code](./Switch_statement.js)  |
+| 11     | Ternary Operator   | [Code](./Ternary_operator.js)  |
