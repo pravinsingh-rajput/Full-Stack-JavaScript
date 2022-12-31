@@ -6,7 +6,6 @@
 //  Undefined => Empty
 
 // Variables
-
 var number = 45;
 let name = "Pravin";
 const mobile = 9284347785;

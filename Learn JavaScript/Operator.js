@@ -11,9 +11,7 @@ console.log(x);
 x--;
 console.log(x);
 
-// Arithmetic Operator
-
-// +, -, *, /, %
+// Arithmetic Operator [ +, -, *, /, % ]
 
 let a = 18;
 let b = 15;
