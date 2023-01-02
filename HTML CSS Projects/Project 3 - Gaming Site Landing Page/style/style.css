@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 [aria-label="Container"] {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
+  overflow: hidden;
 }
 
 /* Header */
@@ -15,11 +18,11 @@
 header {
   display: flex;
   flex-direction: column;
-  background-image: url(../Assets/Photos/futuristic-bg.png);
   width: 100%;
   height: 700px;
-  color: #fff;
+  background: url(../Assets/Photos/futuristic-bg.png) no-repeat;
   padding: 10px 5%;
+  color: #fff;
 }
 
 nav {
@@ -169,4 +172,149 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+/* Polular Page */
+
+[aria-label="Popular"] {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 4% 5%;
+}
+
+.popular-upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.popular-upper h2 {
+  width: 50%;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.popular-game {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 35px;
+  justify-content: center;
+  width: 100%;
+  align-tracks: center;
+}
+
+.popular-card {
+  height: 300px;
+  width: 250px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.popular-card:hover {
+  scale: 1.05;
+  box-shadow: 4px 4px 4px #646464;
+}
+
+.popular-card img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  background-image: filter();
+  backdrop-filter: blur(10px);
+  color: #fff;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 5px 0px;
+}
+
+.left-details {
+  z-index: 2;
+  width: 50%;
+  margin-left: 10px;
+  position: relative;
+}
+.right-details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin-right: 10px;
+}
+.left-details p {
+  font-size: 13px;
+}
+
+.ratings img {
+  width: 15px;
+}
+
+.popular-lower {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.popular-lower img {
+  width: 420px;
+  height: 320px;
+  margin-right: 80px;
+  transition: all 0.2s ease-in-out;
+}
+
+.popular-lower img:hover {
+  scale: 1.02;
+  box-shadow: 5px 5px 8px #646464;
+}
+
+.description-popular {
+  display: flex;
+  flex-direction: column;
+  padding-right: 110px;
+  justify-content: center;
+}
+.description-popular h1 {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+.description-popular p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #646464;
+}
+
+.explore-now-pop {
+  transition: all 0.2s ease-in-out;
+}
+
+.explore-now-pop:hover {
+  background-color: #fff;
+  color: #f87e65;
+  border: 1px solid #f87e65;
+  box-shadow: 1px 1px 3px #f87e65;
+}
+
+.learn-more-pop {
+  border: 1px solid #f87e65;
+  color: #f87e65;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.learn-more-pop:hover {
+  border: 1px solid #f87e65;
+  color: #f87e65;
+  box-shadow: 1px 1px 3px #f87e65;
 }
