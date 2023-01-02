@@ -554,3 +554,59 @@ button:hover {
   width: 25%;
   text-align: center;
 }
+
+/* Footer */
+
+footer {
+  background-color: rgb(7, 8, 15);
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 4% 5%;
+  justify-content: space-between;
+}
+
+.flogo {
+  width: 100px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.footer1 ul {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.social img {
+  margin-right: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.social img:hover {
+  scale: 1.1;
+}
+
+.content {
+}
+
+.content h4 {
+  margin-bottom: 20px;
+}
+
+.content ul {
+  color: rgb(175, 173, 173);
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.content ul:hover {
+  scale: 1.1;
+  color: #fff;
+}
+.footer1 ul:hover {
+  color: #fff;
+  scale: 1.05;
+}
