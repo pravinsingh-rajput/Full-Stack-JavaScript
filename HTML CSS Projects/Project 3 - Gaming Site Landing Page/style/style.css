@@ -209,7 +209,7 @@ button:hover {
 
 .popular-card {
   height: 300px;
-  width: 250px;
+  width: 270px;
   position: relative;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
