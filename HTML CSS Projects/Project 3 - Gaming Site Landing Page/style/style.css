@@ -318,3 +318,122 @@ button:hover {
   color: #f87e65;
   box-shadow: 1px 1px 3px #f87e65;
 }
+
+/* Recommended Page */
+
+[aria-label="Recommend"] {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4% 5%;
+  color: black;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 45px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.heading h2 {
+  width: 340px;
+  font-size: 30px;
+}
+
+.next-prev-button {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.next-button,
+.previous-button {
+  width: 35px;
+  background-color: #f87e65;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.previous-button:hover {
+  scale: 0.95;
+  box-shadow: -2px -2px 3px #868686;
+}
+.next-button:hover {
+  scale: 0.95;
+  box-shadow: 2px 2px 3px #868686;
+}
+
+.previous-button {
+  background-color: #f8a595;
+}
+
+.recommend-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.recommend-card {
+  display: flex;
+  flex-direction: row;
+  width: 550px;
+  height: 230px;
+}
+.recommend-card img {
+  width: 37%;
+  height: 100%;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.recommend-card img:hover {
+  scale: 1.02;
+  box-shadow: 3px 3px 4px #686868;
+}
+
+.recommend-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.type {
+  font-size: 14px;
+  color: #f87e65;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #646464;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.Download {
+  margin-left: 0px;
+  margin: 5px 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.Download:hover {
+  color: #f87e65;
+  border: 1px solid #f87e65;
+  box-shadow: 2px 2px 4px #f87e65;
+}
