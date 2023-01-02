@@ -19,3 +19,8 @@
 | 13     | Function Expression | [Code](./function_expression.js) |
 | 14     | Arrow Function      | [Code](./arrow_function.js)      |
 | 15     | Coding Challenge    | [Code](./Coding_challenege.js)   |
+| 16     | Array               | [Code](./Array.js)               |
+| 17     | Object              | [Code](./Objects.js)             |
+| 18     | Object Method       | [Code](./Objects_method.js)      |
+| 19     | For Loop            | [Code](./for_loop.js)            |
+| 20     | While Loop          | [Code](./while_loop.js)          |
