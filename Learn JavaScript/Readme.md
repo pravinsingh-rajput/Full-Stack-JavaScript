@@ -24,3 +24,5 @@
 | 18     | Object Method       | [Code](./Objects_method.js)      |
 | 19     | For Loop            | [Code](./for_loop.js)            |
 | 20     | While Loop          | [Code](./while_loop.js)          |
+| 21     | Date                | [Code](./date.js)                |
+| 22     | Math                | [Code](./math.js)                |
