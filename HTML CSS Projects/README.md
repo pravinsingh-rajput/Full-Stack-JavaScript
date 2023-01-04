@@ -9,6 +9,8 @@
 
 `Project 2 - Hosting Website Landing Page`
 
+`Project 3 - Gaming Website Landing Page`
+
 | Project No | Name                      | View                                                                  | Website link                              |
 | ---------- | ------------------------- | --------------------------------------------------------------------- | ----------------------------------------- |
 | 1          | Tu Card - Landing Page    | [Link](./Project%202%20-%20Hosting%20Site%20Landing%20Page/README.md) | [Visit](https://tu-card.netlify.app/)     |
