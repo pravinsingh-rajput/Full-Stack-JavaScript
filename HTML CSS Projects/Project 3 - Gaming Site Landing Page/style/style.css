@@ -9,7 +9,7 @@
 [aria-label="Container"] {
   display: flex;
   flex-direction: column;
-  max-width: 1440px;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -23,6 +23,7 @@ header {
   background: url(../Assets/Photos/futuristic-bg.png) no-repeat;
   padding: 10px 5%;
   color: #fff;
+  position: relative;
 }
 
 nav {
@@ -201,7 +202,7 @@ button:hover {
   display: inline-grid;
   grid-template-columns: repeat(auto-fit, 250px);
   /* grid-template-rows: repeat(auto, 1fr); */
-  grid-gap: 35px;
+  grid-gap: 55px;
   justify-content: center;
   width: 100%;
   align-tracks: center;
@@ -209,7 +210,7 @@ button:hover {
 
 .popular-card {
   height: 300px;
-  width: 270px;
+  width: 250px;
   position: relative;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
@@ -616,3 +617,153 @@ footer {
 /* //////////////////////////////////////////////////// */
 
 /* 1025px — 1200px: Desktops, large screens */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .left-header {
+    padding-right: 2%;
+  }
+  .right-header-lower-container h3 {
+    width: 37%;
+    font-size: 25px;
+  }
+
+  .popular-upper h2 {
+    font-size: 35px;
+    margin-bottom: 45px;
+  }
+
+  .popular-game {
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-gap: 20px;
+  }
+
+  .popular-card {
+    height: 300px;
+    width: 200px;
+  }
+
+  .left-details h4 {
+    font-size: 15px;
+  }
+
+  .left-details p {
+    font-size: 12px;
+  }
+
+  .right-details button {
+    padding: 6px 10px;
+    margin-left: 10px;
+  }
+
+  .ratings img {
+    width: 13px;
+  }
+
+  .popular-lower img {
+    width: 380px;
+    height: 290px;
+    margin-right: 60px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .description-popular h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  .description-popular p {
+    font-size: 12px;
+  }
+
+  /* Recommended Page */
+
+  .heading h2 {
+    width: 340px;
+    font-size: 30px;
+  }
+
+  .next-button,
+  .previous-button {
+    width: 35px;
+    height: 35px;
+    margin: 0px 5px;
+  }
+
+  .recommend-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-gap: 30px;
+  }
+
+  .recommend-card {
+    width: 420px;
+    height: 200px;
+  }
+
+  .recommend-card img {
+    width: 35%;
+    height: 100%;
+    margin-right: 25px;
+  }
+
+  .name {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .type {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    color: #646464;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  /* Most played page */
+  .mostplayed-container h1 {
+    width: 40%;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .mostplayed-left {
+    width: 26%;
+    height: 470px;
+  }
+
+  .mostplayed-right span img {
+    width: 700px;
+  }
+
+  .mostplayed-right p {
+    font-size: 13px;
+    padding-right: 18%;
+    margin-bottom: 50px;
+  }
+
+  .lowerrightplayed img:first-of-type {
+    height: 370px;
+    width: 300px;
+  }
+
+  .lowerrightplayed img:last-of-type {
+    height: 250px;
+    width: 250px;
+    margin-left: 25px;
+  }
+
+  .mostplayed-lower h2 {
+    width: 45%;
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .mostplayed-lower p {
+    margin-bottom: 14px;
+    font-size: 13px;
+    width: 30%;
+  }
+}
