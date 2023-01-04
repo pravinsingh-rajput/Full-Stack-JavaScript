@@ -7,4 +7,4 @@
 
 | Project No | Name                       | View                                                               | Website link |
 | ---------- | -------------------------- | ------------------------------------------------------------------ | ------------ |
-| 1          | Real Estate - Landing Page | [Link](./Project%2001-%20Real%20Estate%20Landing%20Page/readme.md) |              |
+| 1          | Real Estate - Landing Page | [Link](./Project%2001-%20Real%20Estate%20Landing%20Page/Readme.md) |              |
