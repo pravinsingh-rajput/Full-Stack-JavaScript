@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout & Positoning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Positoning -->
+    <div class="relative bg-red-200 h-12 w-1/2 mb-4">
+      <p>Realtive</p>
+      <div class="absolute bottom-0 right-0 bg-yellow-600 w-24">
+        <p>Absolute</p>
+      </div>
+    </div>
+
+    <!-- Top left Corner -->
+
+    <div class="bg-red-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute top-0 left-0 bg-cyan-200 w-30 h-8">
+        <p>Top Left</p>
+      </div>
+    </div>
+
+    <!-- Top right Corner -->
+    <div class="bg-red-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute top-0 right-0 bg-cyan-200 w-30 h-8">
+        <p>Top Right</p>
+      </div>
+    </div>
+
+    <!-- Bottom left Corner -->
+    <div class="bg-red-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute bottom-0 left-0 bg-cyan-200 w-30 h-8">
+        <p>Bottom Left</p>
+      </div>
+    </div>
+
+    <!-- Bottom right Corner -->
+    <div class="bg-red-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute bottom-0 right-0 bg-cyan-200 w-30 h-8">
+        <p>Bottom Right</p>
+      </div>
+    </div>
+
+    <!-- span top edge -->
+    <div class="bg-yellow-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute top-0 inset-x-0 bg-yellow-200 h-8">
+        <p>Top edge</p>
+      </div>
+    </div>
+
+    <!-- span left edge -->
+    <div class="bg-yellow-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute left-0 inset-y-0 bg-yellow-200 w-20">
+        <p>Left edge</p>
+      </div>
+    </div>
+
+    <!-- span right edge -->
+    <div class="bg-yellow-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute right-0 inset-y-0 bg-yellow-200 w-20">
+        <p>Right edge</p>
+      </div>
+    </div>
+
+    <!-- span bottom edge -->
+    <div class="bg-yellow-400 h-16 relative w-1/2 mb-4">
+      <div class="absolute bottom-0 inset-x-0 bg-yellow-200 h-8">
+        <p>Bottom edge</p>
+      </div>
+    </div>
+
+    <!--  -->
+  </body>
+</html>
