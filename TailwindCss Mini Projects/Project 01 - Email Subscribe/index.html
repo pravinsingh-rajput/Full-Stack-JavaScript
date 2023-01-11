@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Subscription</title>
+    <link rel="shortcut icon" href="./images/image.jpg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Email Subscription -->
+
+    <div class="flex justify-center items-center bg-zinc-700 h-screen">
+      <!-- Email Card -->
+      <div class="bg-zinc-800 rounded-xl mx-6 p-2 shadow-lg shadow-white/20">
+        <!-- FLex Container -->
+
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0">
+          <img
+            src="./images/image.jpg"
+            alt=""
+            class="h-72 md:h-60 object-fit rounded-lg md:rounded-l-lg md:rounded-none transform hover:scale-105 duration-300"
+          />
+
+          <div
+            class="md:space-x-0 text-center md:text-left text-white space-y-2 md:space-y-4 md:p-10"
+          >
+            <h1 class="md:text-lg font-bold">
+              Get diet and Fitness tips in your inbox
+            </h1>
+            <p class="max-w-xs text-xs tracking-wide">
+              Eat better and exercise better. Signup for diet & fitness news
+              letters.
+            </p>
+
+            <form
+              action=""
+              class="flex flex-col md:flex-row p-2 md:p-0 md:space-x-2 space-y-4 md:space-y-0"
+            >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                class="text-center placeholder:text-xs p-2 bg-zinc-700 placeholder:md:text-left md:text-left focus:outline-none"
+              />
+
+              <button
+                class="bg-lime-400 text-black rounded-lg hover:text-white p-2 md:px-6 hover:bg-lime-600 transform duration-500"
+              >
+                Susbcribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
