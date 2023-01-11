@@ -5,30 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real Estate</title>
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body class="overflow-hidden">
     <div class="conatiner w-full h-full max-2xl overflow-hidden box-border">
       <!-- Home page -->
       <section
         aria-label="home-container"
-        class="flex flex-col px-10 py-2 w-full h-screen text-white bg-[url('../Photos/mainBackground.png')]"
+        class="flex flex-col px-10 py-2 w-full h-screen text-white"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.548),
+              rgba(0, 0, 0, 0.54)
+            ),
+            url(./Photos/mainBackground.png); ;
+        "
       >
         <header class="flex flex-col">
           <!-- Navigation -->
-          <nav class="flex flex-row border-red-500 border-2 justify-around">
-            <img src="../Icons/Logo.svg" alt="nav-logo" class="w-24" />
+          <nav
+            class="flex flex-row border-white py-3 md:px-12 border-b-[0.8px] md:justify-between"
+          >
+            <div class="logo w-24">
+              <img src="./Icons/Logo.svg" alt="nav-logo" class="w-16 md:w-24" />
+            </div>
             <ul class="flex flex-row w-2/5 justify-between align-middle">
-              <li>Location</li>
-              <li>Blogs</li>
-              <li>Testimonials</li>
-              <li>Contact</li>
+              <li class="cursor-pointer text-md md:text-lg px-2">Location</li>
+              <li class="cursor-pointer text-md md:text-lg px-2">Blogs</li>
+              <li class="cursor-pointer text-md md:text-lg px-2">
+                Testimonials
+              </li>
+              <li class="cursor-pointer text-md md:text-lg px-2">Contact</li>
             </ul>
           </nav>
           <!-- Home Body -->
-          <div class="home-container">
-            <h1>Home That Makes You Living Life!</h1>
-            <p>
+          <div
+            class="home-container mx-auto space-y-8 my-auto flex flex-col align-middle justify-center w-screen border-2 border-red-400"
+          >
+            <h1 class="text-6xl text-center">
+              Home That Makes You Living Life!
+            </h1>
+            <p class="">
               Are you looking for amazing Real estate? Don't worry! We got it
               for you!
             </p>
@@ -38,11 +55,11 @@
       </section>
       <!-- logo Box -->
       <section class="logo-box">
-        <img src="../Icons/logoName.svg" alt="logo" />
-        <img src="../Icons/logoName.svg" alt="logo" />
-        <img src="../Icons/logoName.svg" alt="logo" />
-        <img src="../Icons/logoName.svg" alt="logo" />
-        <img src="../Icons/logoName.svg" alt="logo" />
+        <img src="./Icons/logoName.svg" alt="logo" />
+        <img src="./Icons/logoName.svg" alt="logo" />
+        <img src="./Icons/logoName.svg" alt="logo" />
+        <img src="./Icons/logoName.svg" alt="logo" />
+        <img src="./Icons/logoName.svg" alt="logo" />
       </section>
       <!-- Best Estate -->
       <section class="Best-estate">
@@ -52,7 +69,7 @@
           <!-- First Best container -->
           <div class="best1">
             <div class="best-cards">
-              <img src="../Photos/cardImage1.png" alt="cardimg" />
+              <img src="./Photos/cardImage1.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Mixtownia</p>
@@ -62,7 +79,7 @@
               </div>
             </div>
             <div class="best-cards">
-              <img src="../Photos/cardImage2.png" alt="cardimg" />
+              <img src="./Photos/cardImage2.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Mirtawan</p>
@@ -72,7 +89,7 @@
               </div>
             </div>
             <div class="best-cards">
-              <img src="../Photos/cardImage3.png" alt="cardimg" />
+              <img src="./Photos/cardImage3.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Wartawan</p>
@@ -85,7 +102,7 @@
           <!-- Second Best container -->
           <div class="best2">
             <div class="best-cards">
-              <img src="../Photos/cardImage4.png" alt="cardimg" />
+              <img src="./Photos/cardImage4.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Mixtownia</p>
@@ -95,7 +112,7 @@
               </div>
             </div>
             <div class="best-cards">
-              <img src="../Photos/cardImage5.png" alt="cardimg" />
+              <img src="./Photos/cardImage5.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Mirtawan</p>
@@ -105,7 +122,7 @@
               </div>
             </div>
             <div class="best-cards">
-              <img src="../Photos/cardImage6.png" alt="cardimg" />
+              <img src="./Photos/cardImage6.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Wartawan</p>
@@ -118,7 +135,7 @@
           <!-- Third Best container -->
           <div class="best3">
             <div class="best-cards">
-              <img src="../Photos/cardImage7.png" alt="cardimg" />
+              <img src="./Photos/cardImage7.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Mixtownia</p>
@@ -128,7 +145,7 @@
               </div>
             </div>
             <div class="best-cards">
-              <img src="../Photos/cardImage8.png" alt="cardimg" />
+              <img src="./Photos/cardImage8.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Mirtawan</p>
@@ -138,7 +155,7 @@
               </div>
             </div>
             <div class="best-cards">
-              <img src="../Photos/cardImage9.png" alt="cardimg" />
+              <img src="./Photos/cardImage9.png" alt="cardimg" />
               <div class="card-details">
                 <div class="name-price">
                   <p>Wartawan</p>
@@ -154,8 +171,8 @@
       <section aria-label="Features">
         <div class="first-feature">
           <div class="feature-img">
-            <img src="../Icons/featureImageBg1.svg" alt="bg" />
-            <img src="../Photos/featuresImage1.png" alt="feature-img" />
+            <img src="./Icons/featureImageBg1.svg" alt="bg" />
+            <img src="./Photos/featuresImage1.png" alt="feature-img" />
           </div>
           <div class="feature-deatils">
             <h2>Modern, Trendy, Affordable!</h2>
@@ -176,8 +193,8 @@
             <button class="early-bird-btn">Early Bird Book</button>
           </div>
           <div class="feature-img">
-            <img src="../Icons/featureImageBg1.svg" alt="bg" />
-            <img src="../Photos/featuresImage1.png" alt="feature-img" />
+            <img src="./Icons/featureImageBg1.svg" alt="bg" />
+            <img src="./Photos/featuresImage1.png" alt="feature-img" />
           </div>
         </div>
       </section>
@@ -193,7 +210,7 @@
           <!-- Susbscription -->
           <form action="">
             <div class="input-email">
-              <img src="../Icons/mail.png" alt="mail" />
+              <img src="./Icons/mail.png" alt="mail" />
               <input
                 type="email"
                 name="email"
@@ -210,11 +227,11 @@
       <footer>
         <section aria-label="Footer">
           <div class="socail-address">
-            <img src="../Icons/Logo.svg" alt="footer-logo" />
+            <img src="./Icons/Logo.svg" alt="footer-logo" />
             <div class="social-media">
-              <img src="../Icons/facebook.png" alt="facebook" />
-              <img src="../Icons/twitter.png" alt="twitter" />
-              <img src="../Icons/instagram.png" alt="instagram" />
+              <img src="./Icons/facebook.png" alt="facebook" />
+              <img src="./Icons/twitter.png" alt="twitter" />
+              <img src="./Icons/instagram.png" alt="instagram" />
             </div>
             <p>
               2022 Award winning Real estate and Lorem ipsum dolor sit amet.
