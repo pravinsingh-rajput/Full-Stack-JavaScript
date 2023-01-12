@@ -242,7 +242,7 @@
               </div>
             </div>
             <div
-              class="flex flex-col max-w-96 lg:h-[400px] md:justify-end md:hiddenn lg:flex"
+              class="flex flex-col max-w-96 lg:h-[400px] md:justify-end md:hidden lg:flex"
             >
               <img
                 src="./Photos/cardImage9.png"
@@ -268,32 +268,72 @@
       </section>
       <!-- Detailed View -->
       <section aria-label="Features">
-        <div class="first-feature">
-          <div class="feature-img">
-            <img src="./Icons/featureImageBg1.svg" alt="bg" />
-            <img src="./Photos/featuresImage1.png" alt="feature-img" />
+        <div class="flex flex-col border border-yellow-500 h-full mb-20">
+          <div class="flex flex-col md:flex-row border border-red-500 h-1/2">
+            <div
+              class="feature-img flex flex-col relative w-1/2 md:h-full justify-start items-center border border-black"
+            >
+              <img
+                src="./Icons/featureImageBg1.svg"
+                alt="bg"
+                class="absolute max-h-full left-0 bottom-0 border border-green-500"
+              />
+              <img
+                src="./Photos/featuresImage1.png"
+                alt="feature-img"
+                class="relative w-2/3 rounded-2xl"
+              />
+            </div>
+            <div
+              class="feature-deatils flex flex-col w-1/2 items-start justify-center space-y-3"
+            >
+              <h2 class="text-3xl md:text-6xl font-semibold">
+                Modern, Trendy, Affordable!
+              </h2>
+              <p class="max-w-md text-sm">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+                nemo sequi autem reiciendis vitae recusandae!
+              </p>
+              <button
+                class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all p-2 duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+              >
+                Early Bird Book
+              </button>
+            </div>
           </div>
-          <div class="feature-deatils">
-            <h2>Modern, Trendy, Affordable!</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-              nemo sequi autem reiciendis vitae recusandae!
-            </p>
-            <button class="early-bird-btn">Early Bird Book</button>
-          </div>
-        </div>
-        <div class="second-feature">
-          <div class="feature-deatils">
-            <h2>Unique House for Long Term!</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-              nemo sequi autem reiciendis vitae recusandae!
-            </p>
-            <button class="early-bird-btn">Early Bird Book</button>
-          </div>
-          <div class="feature-img">
-            <img src="./Icons/featureImageBg1.svg" alt="bg" />
-            <img src="./Photos/featuresImage1.png" alt="feature-img" />
+          <div
+            class="flex flex-col md:flex-row relative border border-red-500 h-1/2"
+          >
+            <div
+              class="flex flex-col w-1/2 items-start justify-center space-y-3 pl-32"
+            >
+              <h2 class="text-3xl md:text-6xl font-semibold">
+                Unique House for Long Term!
+              </h2>
+              <p class="max-w-md text-sm">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+                nemo sequi autem reiciendis vitae recusandae!
+              </p>
+              <button
+                class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all p-2 duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+              >
+                Early Bird Book
+              </button>
+            </div>
+            <div
+              class="flex flex-col relative w-1/2 md:h-full justify-start items-center border border-black"
+            >
+              <img
+                src="./Icons/featureImageBg2.png"
+                alt="bg"
+                class="absolute right-0 bottom-0 w-4/5 border border-green-500"
+              />
+              <img
+                src="./Photos/featuresImage2.png"
+                alt="feature-img"
+                class="relative w-2/3 rounded-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
