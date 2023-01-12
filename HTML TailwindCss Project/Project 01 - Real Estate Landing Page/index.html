@@ -7,29 +7,28 @@
     <title>Real Estate</title>
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body class="overflow-hidden">
-    <div class="conatiner w-full h-full max-2xl overflow-hidden box-border">
+  <body class="box-border scrollbar-hide">
+    <div class="overflow-hidden w-full h-full">
       <!-- Home page -->
       <section
         aria-label="home-container"
-        class="flex flex-col px-10 py-2 w-full h-screen text-white"
+        class="h-screen w-full px-2 md:px-20 text-white bg-no-repeat bg-cover bg-black"
         style="
           background-image: linear-gradient(
-              rgba(0, 0, 0, 0.548),
-              rgba(0, 0, 0, 0.54)
+              to bottom,
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 0.9)
             ),
-            url(./Photos/mainBackground.png); ;
+            url(./Photos/mainBackground.png);
         "
       >
-        <header class="flex flex-col">
+        <header class="flex flex-col h-screen">
           <!-- Navigation -->
-          <nav
-            class="flex flex-row border-white py-3 md:px-12 border-b-[0.8px] md:justify-between"
-          >
-            <div class="logo w-24">
+          <nav class="flex flex-row justify-between mt-4 border-b-[1px] py-2">
+            <div class="logo md:mx-8">
               <img src="./Icons/Logo.svg" alt="nav-logo" class="w-16 md:w-24" />
             </div>
-            <ul class="flex flex-row w-2/5 justify-between align-middle">
+            <ul class="flex flex-row md:w-2/5 md:space-x-8">
               <li class="cursor-pointer text-md md:text-lg px-2">Location</li>
               <li class="cursor-pointer text-md md:text-lg px-2">Blogs</li>
               <li class="cursor-pointer text-md md:text-lg px-2">
@@ -40,16 +39,20 @@
           </nav>
           <!-- Home Body -->
           <div
-            class="home-container mx-auto space-y-8 my-auto flex flex-col align-middle justify-center w-screen border-2 border-red-400"
+            class="flex flex-col justify-center items-start h-full max-w-2xl space-y-8"
           >
-            <h1 class="text-6xl text-center">
+            <h1 class="text-5xl md:text-6xl">
               Home That Makes You Living Life!
             </h1>
-            <p class="">
+            <p class="max-w-xs text-sm font-light">
               Are you looking for amazing Real estate? Don't worry! We got it
               for you!
             </p>
-            <button class="learnmore">Learn More</button>
+            <button
+              class="bg-blue-500 p-2 rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+            >
+              Learn More
+            </button>
           </div>
         </header>
       </section>
