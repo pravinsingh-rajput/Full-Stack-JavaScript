@@ -16,12 +16,23 @@
 <hr>
 <hr>
 
-`Project 2`
+`Project 3`
 
 ### Pricing Grid
 
 | Website                                        | Src Code                                              |
 | ---------------------------------------------- | ----------------------------------------------------- |
 | [Visit](https://subscriptionplan.netlify.app/) | [View](./Project%2002%20-%20Pricing%20Grid/Readme.md) |
+
+<hr>
+<hr>
+
+`Project 3`
+
+### Product Model
+
+| Website                                    | Src Code                                               |
+| ------------------------------------------ | ------------------------------------------------------ |
+| [Visit](https://productmodel.netlify.app/) | [View](./Project%2003%20-%20Product%20Model/Readme.md) |
 
 <hr>
