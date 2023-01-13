@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Model</title>
+    <link
+      rel="shortcut icon"
+      href="./images/headphone.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="flex justify-center items-center bg-slate-100 min-h-screen">
+      <!-- Card Container -->
+      <div
+        class="flex bg-white shadow-xl rounded-xl flex-col md:flex-row space-y-10 md:space-y-2 md:space-x-10 p-6 md:p-2 m-3 md:m-0"
+      >
+        <!-- Img -->
+        <div class="flex flex-col items-center">
+          <img
+            src="./images/headphone.png"
+            alt=""
+            class="w-40 md:w-56 md:pt-10 hover:scale-105 transition duration-200"
+          />
+        </div>
+        <!-- Details -->
+        <div class="items-center md:items-start flex flex-col space-y-4 py-4">
+          <div
+            class="inline-block rounded-full bg-black text-white text-sm px-3 py-1 cursor-pointer"
+          >
+            Free Shipping
+          </div>
+          <h1 class="text-2xl max-w-sm text-center md:text-left font-semibold">
+            Razer Kraken Kitty Edt Gaming Headset Quartz
+          </h1>
+          <del class="text-red-400">$799</del>
+          <h1 class="text-3xl font-bold text-green-600">$599</h1>
+          <p class="text-xs text-gray-400">
+            This Offer is Vaild until Januray 26 or as long as stock lasts.
+          </p>
+          <button
+            class="bg-blue-500 p-2 w-full rounded-xl border-b-4 border-blue-800 text-white hover:border-b-0 hover:border-t-4 hover:border-blue-500 transition duration-100"
+          >
+            Add to Cart
+          </button>
+          <!-- Stocks -->
+          <div
+            class="flex space-x-3 group md:text-start items-center cusror-pointer"
+          >
+            <div
+              class="rounded-full h-3 w-3 bg-green-400 group-hover:animate-ping"
+            ></div>
+            <div class="text-sm">50+ pcs. in stocks.</div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row w- w-full space-y-2 md:space-y-0 md:space-x-2"
+          >
+            <button
+              class="flex flex-row items-center border-2 justify-center space-x-3 border p-2 rounded-xl w-full text-sm transition duration-100 hover:shadow-xl hover:-translate-y-0.5"
+            >
+              <img src="./images/weight.png" alt="" class="w-6" />
+              <span>Add to Cart</span>
+            </button>
+            <button
+              class="flex flex-row items-center border-2 justify-center space-x-3 border p-2 rounded-xl w-full text-sm transition duration-100 hover:shadow-xl hover:-translate-y-0.5"
+            >
+              <img src="./images/heart.png" alt="" class="w-6" />
+              <span>Add to Wishlist</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
