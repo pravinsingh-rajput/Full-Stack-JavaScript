@@ -1,6 +1,6 @@
 # TailwindCss Mini Project
 
-`Pricing Grid`
+`Product Model`
 
 ![Alt](https://img.shields.io/badge/-HTML-orange) ![Alt](https://img.shields.io/badge/-TailwindCss-blue)
 
