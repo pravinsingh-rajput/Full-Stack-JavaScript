@@ -26,3 +26,4 @@
 | 20     | While Loop          | [Code](./while_loop.js)          |
 | 21     | Date                | [Code](./date.js)                |
 | 22     | Math                | [Code](./math.js)                |
+| 23     | Array Methods       | [Code](./Array_Methods.js)       |
