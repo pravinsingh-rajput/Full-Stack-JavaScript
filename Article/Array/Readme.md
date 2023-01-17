@@ -1,4 +1,4 @@
-# Array & Array Methods
+# Array & Array Method
 
 ![Alt](./images/JavaScript.png)
 
@@ -39,15 +39,15 @@ Burger
 Pizza
 ```
 
-**Methods in JavaScript Array.**
+**Method in JavaScript Array.**
 
-> `Array methods are functions built-in to JavaScript that we can apply to our arrays — Each method has a unique function that performs a change or calculation to our array and saves us from writing common functions from scratch.`
+> `Array method are functions built-in to JavaScript that we can apply to our arrays — Each method has a unique function that performs a change or calculation to our array and saves us from writing common functions from scratch.`
 
 > `.unshift()  .pop()  .shift()  .slice()  .filter()  .concat()  .indexOf()  .join()  .reverse()  .splice() & many more`
 
 # .at() method
 
-### _.at(argument) methods in array prints the value of argument which in a case of .at() is index_
+### _.at(argument) method in array prints the value of argument which in a case of .at() is index_
 
 ## Synatx
 
@@ -72,7 +72,7 @@ value of index at(4) is : 25
 
 # .concat() method
 
-### _.concat() methods is used to merge the two or more array to create new array_
+### _.concat() method is used to merge the two or more array to create new array_
 
 ## Synatx
 
@@ -82,7 +82,7 @@ concat(value0, value1)
 concat(value0, value1, valueN)
 ```
 
-````javascript
+```javascript
 let arr = [10, 15, 78];
 let arr2 = ["Bread", "Butter", "Cheese"];
 let arr3 = ["Pasta", "Pizza", "Burger"];
@@ -92,14 +92,139 @@ let concated1 = arr.concat(arr2);
 let concated2 = arr.concat(arr2).concat(arr3);
 
 console.log(
-  ` Conact Methods Adds the number of array after concat() : \n ${concated1} \n ${concated2}}`
-);```
-````
+  ` Conact Method Adds the number of array after concat() : \n ${concated1} \n ${concated2}}`
+);
+```
 
 **Output:**
 
 ```
-Conact Methods Adds the number of array after concat() :
+Conact Method Adds the number of array after concat() :
 10,15,78,Bread,Butter,Cheese
 10,15,78,Bread,Butter,Cheese,Pasta,Pizza,Burger}
+```
+
+# .fill() method
+
+### _.fill() method changes all elements in an array to a static value, from start index to end index_
+
+## Synatx
+
+```javaScript
+fill(value)
+fill(value, start)
+fill(value, start, end)
+```
+
+```javascript
+let arr = [10, 11, 12, 13, 14, 15, 16, 17];
+
+// fill
+console.log(
+  ` fill Method fill the value from start till end of the array : ${arr.fill(
+    0,
+    4,
+    8
+  )}}`
+);
+console.log(
+  ` fill Method fill the value from start till end of the array : ${arr.fill(
+    3,
+    2,
+    6
+  )}}`
+);
+```
+
+**Output:**
+
+```
+fill Method fill the value from start till end of the array : 10,11,12,13,0,0,0,0}
+fill Method fill the value from start till end of the array : 10,11,3,3,3,3,0,0}
+```
+
+# .pop() method
+
+### _.pop() removes the last elements of an array and return that elements_
+
+## Synatx
+
+```javaScript
+pop()
+```
+
+```javascript
+let arr = [12, 13, 14, 15, 16, 17, 18];
+
+// pop
+console.log(`Pops methods remove the last element in array: ${arr.pop()}`);
+console.log(`Pops methods remove the last element in array: ${arr.pop()}`);
+```
+
+**Output:**
+
+```
+Pops methods remove the last element in array: 18
+Pops methods remove the last element in array: 17
+```
+
+# .push() method
+
+### _.push() method add one or more element to the end of an array_
+
+## Synatx
+
+```javaScript
+push(element0)
+push(element0, element1)
+push(element0, element1, /* … ,*/ elementN)
+```
+
+```javascript
+let arr = ["Html", "Css", "Tailwind", "JavaScript", "Jquery"];
+
+// push
+let onepush = arr.push("React");
+console.log(
+  `Push Method add one or more elements at the end of an array \n ${arr} \n `
+);
+
+let twopush = arr.push("Angular", "Node.js");
+console.log(
+  `Push Method add one or more elements at the end of an array \n ${arr} `
+);
+```
+
+**Output:**
+
+```
+Push Method add one or more elements at the end of an array
+ Html,Css,Tailwind,JavaScript,Jquery,React
+
+Push Method add one or more elements at the end of an array
+ Html,Css,Tailwind,JavaScript,Jquery,React,Angular,Node.js
+```
+
+# .reverse() method
+
+### _.reverse() method reverse the order of an array_
+
+## Synatx
+
+```javaScript
+reverse()
+```
+
+```javascript
+let arr = [0, 1, 2, 3, 4, 5, 6];
+
+// Reverse
+let newarr = arr.reverse();
+console.log(`Reversed array: ${newarr}`);
+```
+
+**Output:**
+
+```
+Reversed array: 6,5,4,3,2,1,0
 ```
