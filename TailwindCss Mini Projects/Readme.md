@@ -16,7 +16,7 @@
 <hr>
 <hr>
 
-`Project 3`
+`Project 2`
 
 ### Pricing Grid
 
@@ -34,5 +34,16 @@
 | Website                                    | Src Code                                               |
 | ------------------------------------------ | ------------------------------------------------------ |
 | [Visit](https://productmodel.netlify.app/) | [View](./Project%2003%20-%20Product%20Model/Readme.md) |
+
+<hr>
+<hr>
+
+`Project 4`
+
+### Image Gallery
+
+| Website                                    | Src Code                                               |
+| ------------------------------------------ | ------------------------------------------------------ |
+| [Visit](https://view-gallery.netlify.app/) | [View](./Project%2004%20-%20Image%20Gallery/Readme.md) |
 
 <hr>
