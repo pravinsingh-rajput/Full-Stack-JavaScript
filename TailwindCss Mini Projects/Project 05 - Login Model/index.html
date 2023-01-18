@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="shortcut icon" href="./images/image.jpg" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div
+      class="flex min-h-screen justify-center items-center bg-pink-50 p-3 md:p-25"
+    >
+      <!-- Login Card -->
+      <div class="flex flex-row md:flex col bg-white rounded-lg shadow-xl m-4">
+        <!-- Login details -->
+        <div class="flex flex-col items-left space-y-3 px-6 md:px-12 max-w-sm">
+          <!-- upper container -->
+          <div class="flex flex-col items-left space-y-4 border-b py-6 md:py-8">
+            <h1 class="font-serif font-semibold text-2xl">Log In</h1>
+            <p class="text-xs text-gray-400 mb-10">
+              Log in to your account to upload or download pictures, videos or
+              music.
+            </p>
+            <div class="border rounded-lg p-3">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="placeholder:text-xs focus:outline-none"
+              />
+            </div>
+            <!-- forget / login -->
+            <div
+              class="flex flex-col md:flex-row space-y-3 md:space-y-0 justify-between md:items-center"
+            >
+              <a
+                href="#"
+                class="text-sm text-cyan-800 font-thin hover:text-cyan-400"
+                >Forget Password?</a
+              >
+              <button
+                class="flex justify-center space-x-1 items-center text-sm bg-cyan-700 text-white p-2 px-3 rounded-md shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <p>Next</p>
+                <img src="./images/arrow.svg" alt="" class="w-5 invert" />
+              </button>
+            </div>
+          </div>
+          <!-- bottom container -->
+          <div
+            class="flex flex-col max-w-sm items-center justify-center space-y-5 pb-4"
+          >
+            <p class="text-xs text-gray-400">Or log in with</p>
+            <div
+              class="flex flex-col md:flex-row justify-center items-center w-full md:justify-between md:py-2 space-y-2 md:space-y-0"
+            >
+              <button
+                class="flex items-center space-x-2 border p-2 px-5 rounded-lg w-full md:w-2/5 justify-center hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 md:w-32"
+              >
+                <img src="./images/facebook.png" alt="" class="w-7" />
+                <p class="text-sm text-gray-500">Facebook</p>
+              </button>
+              <button
+                class="flex items-center space-x-2 border p-2 px-5 rounded-lg w-full md:w-2/5 justify-center hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 md:w-32"
+              >
+                <img src="./images/google.png" alt="" class="w-7" />
+                <p class="text-sm text-gray-500">Google</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- img -->
+        <div class="max-w-sm md:visible">
+          <img
+            src="./images/image.jpg"
+            alt=""
+            class="w-[260px] rounded-r-lg hidden md:block"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
