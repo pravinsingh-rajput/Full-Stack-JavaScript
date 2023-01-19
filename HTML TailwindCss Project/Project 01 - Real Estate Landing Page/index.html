@@ -7,7 +7,7 @@
     <title>Real Estate</title>
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body class="box scrollbar-hide">
+  <body class="box scrollbar-hide box-border">
     <div
       class="flex flex-col overflow-hidden w-full h-full items-center justify-center bg-slate-50"
     >
@@ -336,19 +336,32 @@
         </div>
       </section>
       <!-- News Letter -->
-      <section aria-label="news-letter">
-        <div class="newsletter-card">
-          <h2>Susbscribe to Our NewsLetter For Weekly Article update.</h2>
-          <p>
+      <section
+        aria-label="news-letter"
+        class="w-screen px-5 md:px-16 md:lg-24 mb-20"
+      >
+        <div
+          class="newsletter-card bg-blue-600/80 w-full md:rounded-[80px] flex flex-col py-8 md:py-12 lg:py-16 px-5 text-center text-white items-center justify-center space-y-6"
+        >
+          <h2 class="font-bold text-2xl md:text-4xl lg:text-5xl max-w-2xl">
+            Susbscribe to Our NewsLetter For Weekly Article update.
+          </h2>
+          <p class="text-sm max-w-xl opacity-70">
             We have real estate-realted blog so we can shre our thought and
             utinity in our blog that updates weekly we will not spam yoy, we
             promise.
           </p>
           <!-- Susbscription -->
-          <form action="">
-            <div class="input-email">
-              <img src="./Icons/mail.png" alt="mail" />
+          <form
+            action=""
+            class="flex space-y-2 md:space-y-0 md:space-x-6 flex-col md:flex-row"
+          >
+            <div
+              class="input-email flex bg-blue-800 p-1 rounded-full px-4 items-center justify-start max-w-[500px] overflow-hidden"
+            >
+              <img src="./Icons/mail.png" alt="mail" class="h-6" />
               <input
+                class="focus:outline-none placeholder:text-sm px-4 bg-blue-800 p-1"
                 type="email"
                 name="email"
                 id="email"
@@ -356,7 +369,11 @@
               />
             </div>
 
-            <input type="submit" value="Subscribe" />
+            <button
+              class="bg-white cursor-pointer text-blue-500 rounded-full hover:text-white hover:bg-blue-800 p-2 md:p-0 transition-all duration-500 md:px-8 hover:shadow-lg hover:shadow-white/30 font-semibold hover:border-white hover:border"
+            >
+              Subscribe
+            </button>
           </form>
         </div>
       </section>
