@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Real Estate</title>
+    <title>Nearby Home</title>
+    <link
+      rel="shortcut icon"
+      href="./Photos/cardImage1.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body class="box scrollbar-hide box-border">
@@ -26,11 +31,15 @@
       >
         <header class="flex flex-col h-screen">
           <!-- Navigation -->
-          <nav class="flex flex-row justify-between mt-4 border-b-[1px] py-2">
+          <nav
+            class="flex flex-row justify-between mt-2 md:mt-4 border-b-[1px] py-2"
+          >
             <div class="logo md:mx-8">
-              <img src="./Icons/Logo.svg" alt="nav-logo" class="w-16 md:w-24" />
+              <img src="./Icons/Logo.svg" alt="nav-logo" class="w-20 md:w-24" />
             </div>
-            <ul class="flex flex-row md:w-2/5 md:space-x-8">
+            <ul
+              class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0"
+            >
               <li class="cursor-pointer text-md md:text-lg px-2">Location</li>
               <li class="cursor-pointer text-md md:text-lg px-2">Blogs</li>
               <li class="cursor-pointer text-md md:text-lg px-2">
@@ -62,8 +71,16 @@
       <section
         class="flex flex-row justify-around items-center shadow-xl shadow-black/10 rounded-xl mt-[-15px] md:mt-[-30px] px-6 bg-white py-4 md:py-8 w-[80%] md:rounded-2xl"
       >
-        <img src="./Icons/logoName.svg" alt="logo" class="w-12 md:w-20" />
-        <img src="./Icons/logoName.svg" alt="logo" class="w-12 md:w-20" />
+        <img
+          src="./Icons/logoName.svg"
+          alt="logo"
+          class="w-12 hidden md:flex md:w-20"
+        />
+        <img
+          src="./Icons/logoName.svg"
+          alt="logo"
+          class="w-12 hidden md:flex md:w-20"
+        />
         <img src="./Icons/logoName.svg" alt="logo" class="w-12 md:w-20" />
         <img src="./Icons/logoName.svg" alt="logo" class="w-12 md:w-20" />
         <img src="./Icons/logoName.svg" alt="logo" class="w-12 md:w-20" />
@@ -95,7 +112,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$205,500</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -115,7 +132,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$102,200</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -135,7 +152,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$135,900</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -155,7 +172,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$205,500</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -175,7 +192,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$102,200</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -195,7 +212,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$135,900</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -215,7 +232,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$205,500</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -235,7 +252,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$102,200</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -257,7 +274,7 @@
                   <p class="text-sm text-blue-600 font-semibold">$135,900</p>
                 </div>
                 <button
-                  class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                  class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
                 >
                   Details
                 </button>
@@ -295,7 +312,7 @@
                 nemo sequi autem reiciendis vitae recusandae!
               </p>
               <button
-                class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all p-2 duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all p-2 duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
               >
                 Early Bird Book
               </button>
@@ -313,7 +330,7 @@
                 nemo sequi autem reiciendis vitae recusandae!
               </p>
               <button
-                class="bg-blue-500 text-white rounded-full hover:text-blue-500 hover:bg-white transition-all p-2 duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
+                class="bg-blue-500 text-white rounded-full my-1 hover:text-blue-500 hover:bg-white transition-all p-2 duration-500 text-sm px-6 hover:shadow-lg hover:shadow-blue-500/30 font-semibold"
               >
                 Early Bird Book
               </button>
@@ -338,7 +355,7 @@
       <!-- News Letter -->
       <section
         aria-label="news-letter"
-        class="w-screen px-5 md:px-16 md:lg-24 mb-20"
+        class="w-screen px-5 md:px-16 lg:px-24 mb-20"
       >
         <div
           class="newsletter-card bg-blue-600/80 w-full md:rounded-[80px] flex flex-col py-8 md:py-12 lg:py-16 px-5 text-center text-white items-center justify-center space-y-6"
@@ -353,7 +370,6 @@
           </p>
           <!-- Susbscription -->
           <form
-            action=""
             class="flex space-y-2 md:space-y-0 md:space-x-6 flex-col md:flex-row"
           >
             <div
@@ -379,38 +395,105 @@
       </section>
       <!-- Footer -->
       <footer>
-        <section aria-label="Footer">
-          <div class="socail-address">
-            <img src="./Icons/Logo.svg" alt="footer-logo" />
-            <div class="social-media">
-              <img src="./Icons/facebook.png" alt="facebook" />
-              <img src="./Icons/twitter.png" alt="twitter" />
-              <img src="./Icons/instagram.png" alt="instagram" />
+        <section
+          aria-label="Footer"
+          class="w-screen px-5 md:px-20 lg:px-28 inline-grid grid-cols-2 lg:grid-cols-4 md:gap-30 gap-10 mb-10"
+        >
+          <div class="space-y-4">
+            <img
+              src="./Icons/Logo.svg"
+              alt="footer-logo"
+              class="w-20 md:w-28"
+            />
+            <div class="flex gap-2 w-8 md:w-10">
+              <img
+                src="./Icons/facebook.png"
+                alt="facebook"
+                class="cursor-pointer hover:scale-110 transition-all duration-200"
+              />
+              <img
+                src="./Icons/twitter.png"
+                alt="twitter"
+                class="cursor-pointer hover:scale-110 transition-all duration-200"
+              />
+              <img
+                src="./Icons/instagram.png"
+                alt="instagram"
+                class="cursor-pointer hover:scale-110 transition-all duration-200"
+              />
             </div>
-            <p>
+            <p class="max-w-lg">
               2022 Award winning Real estate and Lorem ipsum dolor sit amet.
             </p>
           </div>
-          <ul class="location">
-            <h4>Location</h4>
-            <li>America</li>
-            <li>Asia</li>
-            <li>Europe</li>
-            <li>Africa</li>
+          <ul class="space-y-4">
+            <h4 class="font-bold">Location</h4>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              America
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Asia
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Europe
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Africa
+            </li>
           </ul>
-          <ul class="contact">
-            <h4>Contact</h4>
-            <li>About Me</li>
-            <li>Teams</li>
-            <li>Profile</li>
-            <li>FAQ</li>
+          <ul class="space-y-4">
+            <h4 class="font-bold">Contact</h4>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              About Me
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Teams
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Profile
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              FAQ
+            </li>
           </ul>
-          <ul class="legals">
-            <h4>Legals</h4>
-            <li>Privacy</li>
-            <li>Disclaimer</li>
-            <li>Terms</li>
-            <li>Company</li>
+          <ul class="space-y-4">
+            <h4 class="font-bold">Legals</h4>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Privacy
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Disclaimer
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Terms
+            </li>
+            <li
+              class="cursor-pointer hover:scale-110 transition-all duration-200"
+            >
+              Company
+            </li>
           </ul>
         </section>
       </footer>
