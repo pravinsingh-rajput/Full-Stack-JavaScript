@@ -27,3 +27,4 @@
 | 21     | Date                | [Code](./date.js)                |
 | 22     | Math                | [Code](./math.js)                |
 | 23     | Array Methods       | [Code](./Array_Methods.js)       |
+| 24     | Inheritance         | [Code](./inheritance.js)         |
