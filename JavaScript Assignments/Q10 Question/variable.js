@@ -1,0 +1,11 @@
+console.log("True: ", 4 > 3);
+console.log("True: ", 4 >= 3);
+console.log("False: ", 4 < 3);
+console.log("False: ", 4 <= 3);
+console.log("True: ", 4 == 4);
+console.log("True: ", 4 === 4);
+console.log("False: ", 4 != 4);
+console.log("False: ", 4 !== 4);
+console.log("False: ", 4 != "4");
+console.log("True: ", 4 == "4");
+console.log("False: ", 4 === "4");
