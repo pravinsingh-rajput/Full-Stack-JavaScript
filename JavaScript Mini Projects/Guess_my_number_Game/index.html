@@ -6,8 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess</title>
     <link rel="stylesheet" href="./Style/style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
+    <section aria-label="Home">
+      <div class="gamecard">
+        <header>
+          <div class="upper-header">
+            <button class="tryagin">Try Again</button>
+            <p>Between 1 and 20</p>
+          </div>
+          <h1>Guess My Number</h1>
+        </header>
+        <div class="middle-content">
+          <div class="border"></div>
+          <div class="guessing-data">
+            <div class="guessing">
+              <lottie-player
+                src="https://assets2.lottiefiles.com/packages/lf20_vvx2gjpt.json"
+                background="transparent"
+                speed="1"
+                style="width: 80px; height: 80px"
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-content">
+          <div class="userinput-area">
+            <input type="number" name="" id="" maxlength="2" required />
+            <button>Check</button>
+          </div>
+          <div class="dynamic-area">
+            <div class="upper-dynamic-area">
+              <div class="start-guessing">
+                <h3>Start Guessing</h3>
+              </div>
+              <div class="incorrect">
+                <lottie-player
+                  src="https://assets8.lottiefiles.com/packages/lf20_usBwKS0WmV.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 150px; height: 150px"
+                  autoplay
+                ></lottie-player>
+              </div>
+              <div class="correct">
+                <lottie-player
+                  src="https://assets9.lottiefiles.com/packages/lf20_Jb8zgGUjL4.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 150px; height: 150px"
+                  autoplay
+                ></lottie-player>
+              </div>
+            </div>
+            <div class="lower-dynamic-area">
+              <h3>Score: <span class="score">00</span></h3>
+              <h3>HighScore: <span class="highscore">00</span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Script -->
     <script src="./Script/script.js"></script>
   </body>
