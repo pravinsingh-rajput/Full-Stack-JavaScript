@@ -17,10 +17,20 @@
             <p>Between 1 and 20</p>
           </div>
           <h1>Guess My Number</h1>
+          <div class="winning hidden">
+            <lottie-player
+              src="https://assets10.lottiefiles.com/packages/lf20_4fQThB5Yfz.json"
+              background="transparent"
+              speed="1"
+              style="width: 200px; height: 200px"
+              autoplay
+            ></lottie-player>
+          </div>
         </header>
         <div class="middle-content">
           <div class="border"></div>
           <div class="guessing-data">
+            <div class="orignial-number hidden">00</div>
             <div class="guessing">
               <lottie-player
                 src="https://assets2.lottiefiles.com/packages/lf20_vvx2gjpt.json"
@@ -35,29 +45,36 @@
         </div>
         <div class="bottom-content">
           <div class="userinput-area">
-            <input type="number" name="" id="" maxlength="2" required />
-            <button>Check</button>
+            <input
+              type="number"
+              name=""
+              id=""
+              maxlength="2"
+              required
+              class="userinput"
+            />
+            <button class="check">Check ?</button>
           </div>
           <div class="dynamic-area">
             <div class="upper-dynamic-area">
               <div class="start-guessing">
                 <h3>Start Guessing</h3>
               </div>
-              <div class="incorrect">
+              <div class="incorrect hidden">
                 <lottie-player
                   src="https://assets8.lottiefiles.com/packages/lf20_usBwKS0WmV.json"
                   background="transparent"
                   speed="1"
-                  style="width: 150px; height: 150px"
+                  style="width: 150px; height: 60px"
                   autoplay
                 ></lottie-player>
               </div>
-              <div class="correct">
+              <div class="correct hidden">
                 <lottie-player
                   src="https://assets9.lottiefiles.com/packages/lf20_Jb8zgGUjL4.json"
                   background="transparent"
                   speed="1"
-                  style="width: 150px; height: 150px"
+                  style="width: 150px; height: 60px"
                   autoplay
                 ></lottie-player>
               </div>
