@@ -29,7 +29,7 @@ input::-webkit-inner-spin-button {
   padding: 20px;
   width: 550px;
   position: relative;
-  min-width: 400px;
+  min-width: 320px;
 }
 
 header {
@@ -55,9 +55,14 @@ button {
 }
 
 .tryagin {
-  background-color: green;
+  background-color: red;
   color: white;
   z-index: 1;
+  border-radius: 0%;
+  transition: all 0.3s ease-in;
+}
+.tryagin:hover {
+  background-color: green;
 }
 
 h1 {
@@ -96,11 +101,12 @@ h1 {
   box-shadow: 1.5px 1.5px 5px rgb(77, 76, 76);
 }
 
-.orignial-number {
+.secretnumber {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: xx-large;
+  font-weight: 900;
 }
 
 .bottom-content {
@@ -119,10 +125,17 @@ h1 {
   width: 50%;
 }
 
+.correct {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .userinput {
   margin-bottom: 15px;
   padding: 5px;
-  width: 88px;
+  width: 50px;
+  font-size: x-large;
 }
 
 .check {
@@ -140,6 +153,8 @@ h1 {
 .start-guessing {
   width: 150px;
   height: 60px;
+  position: relative;
+  margin-bottom: 15px;
 }
 
 h3 {
@@ -147,7 +162,8 @@ h3 {
   width: 150px;
 }
 
-.winning {
+.winning,
+.loosing {
   width: 100%;
   display: flex;
   align-items: center;
@@ -160,4 +176,8 @@ h3 {
 
 .hidden {
   display: none;
+}
+
+.hide {
+  visibility: hidden;
 }
