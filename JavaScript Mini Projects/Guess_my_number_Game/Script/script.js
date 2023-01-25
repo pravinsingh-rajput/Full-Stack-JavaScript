@@ -16,11 +16,12 @@ const score = document.querySelector(".score");
 const highscore = document.querySelector(".highscore");
 
 // number
-const generated_number = Math.trunc(Math.random() * 21);
-const number = (document.querySelector(".secretnumber").textContent =
+let generated_number = Math.trunc(Math.random() * 21);
+let number = (document.querySelector(".secretnumber").textContent =
   generated_number);
 
 let totalscore = 20;
+let tempscore;
 
 //   Checking
 check.addEventListener("click", function () {
@@ -31,20 +32,17 @@ check.addEventListener("click", function () {
       message.textContent = "⛔ No Number";
     } else if (number === input_number) {
       message.textContent = "🎉 Correct";
-      highscore.textContent = totalscore;
+      tempscore = tempscore > totalscore ? tempscore : totalscore;
+      highscore.textContent = tempscore;
       document.querySelector(".home").style.backgroundColor = "green";
       message.classList.add("hidden");
       correct.classList.remove("hidden");
       winning.classList.remove("hidden");
       guessing.classList.add("hidden");
       document.querySelector(".secretnumber").classList.remove("hidden");
-    } else if (number != input_number && number > input_number) {
-      message.textContent = "⬇️ Two Low";
-      userinput.value = "";
-      totalscore--;
-      score.textContent = totalscore;
-    } else if (number != input_number && number < input_number) {
-      message.textContent = "⬆️ Two High";
+    } else if (number !== input_number) {
+      message.textContent =
+        number > input_number ? "⬇️ Two Low" : "⬆️ Two High";
       userinput.value = "";
       totalscore--;
       score.textContent = totalscore;
@@ -68,4 +66,7 @@ tryagain.addEventListener("click", function () {
   totalscore = 20;
   score.textContent = totalscore;
   userinput.value = "";
+  generated_number = Math.trunc(Math.random() * 21);
+  number = document.querySelector(".secretnumber").textContent =
+    generated_number;
 });
