@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dice Game</title>
-    <link rel="stylesheet" href="./Style/style.css" />
     <link
       rel="shortcut icon"
       href="./images/dice-logo.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="./Style/style.css" />
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body>
     <!-- Home Container -->
@@ -88,6 +89,7 @@
         <div
           class="button-container absolute w-full h-full flex flex-col items-center justify-around"
         >
+          <!-- Reset Button -->
           <button
             class="reset px-3 py-2 rounded-lg bg-white/40 focus:outline-none flex space-x-2 items-center justify-center"
           >
@@ -100,38 +102,41 @@
             >
             </lottie-player>
           </button>
+          <!-- dice container -->
           <div class="dicecontainer w-70 h-70">
-            <img src="./images/dice-logo.png" alt="dice" class="hidden" />
-            <lottie-player
-              src="https://assets5.lottiefiles.com/packages/lf20_j9iomtgp.json"
-              background="transparent"
-              speed="1"
-              style="width: 70px; height: 70px"
-              loop
-              autoplay
-              class="hidden"
-            ></lottie-player>
+            <img src="./images/dice-logo.png" alt="dice" class="hidden dice" />
+            <div class="animatedice hidden">
+              <lottie-player
+                src="https://assets5.lottiefiles.com/packages/lf20_j9iomtgp.json"
+                background="transparent"
+                speed="1"
+                style="width: 70px; height: 70px"
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
           </div>
-
+          <!-- bottom Button -->
           <div
             class="bottombuttons flex flex-col items-center justify-evenly space-y-4"
           >
-            <div class="roll w-70 h-70"></div>
+            <div class="rolldice hidden">
+              <lottie-player
+                src="https://assets3.lottiefiles.com/packages/lf20_Wy80jjKz4n.json"
+                background="transparent"
+                speed="1"
+                style="width: 70px; height: 70px"
+                loop
+                hover
+              ></lottie-player>
+            </div>
             <button
-              class="flex space-x-2 items-center justify-center roll-dice px-3 py-2 rounded-lg bg-white/40 focus:outline-none hover:scale-110 transition-all duration-300"
+              class="flex space-x-2 items-center justify-center roll px-3 py-2 rounded-lg bg-white/40 focus:outline-none hover:scale-110 transition-all duration-300"
             >
               <img src="./images/roll.png" alt="roll" class="w-6" />
               <span class="text-lg font-semibold">Roll</span>
             </button>
-            <lottie-player
-              src="https://assets3.lottiefiles.com/packages/lf20_Wy80jjKz4n.json"
-              background="transparent"
-              speed="1"
-              style="width: 70px; height: 70px"
-              loop
-              autoplay
-              class="hidden"
-            ></lottie-player>
+
             <button
               class="flex space-x-2 items-center justify-center hold px-3 py-2 rounded-lg bg-white/40 focus:outline-none hover:scale-110 transition-all duration-300"
             >

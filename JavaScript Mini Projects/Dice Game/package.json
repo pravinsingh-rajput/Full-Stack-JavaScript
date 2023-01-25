@@ -1,0 +1,21 @@
+{
+  "name": "dice-game",
+  "version": "1.0.0",
+  "description": "javaScript mini project",
+  "main": "index.js",
+  "scripts": {
+    "test": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "pravinsingh-rajput"
+  },
+  "keywords": [
+    "pravinsingh"
+  ],
+  "author": "Pravin Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
