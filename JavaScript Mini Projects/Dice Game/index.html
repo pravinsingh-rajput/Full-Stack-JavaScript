@@ -10,7 +10,7 @@
       href="./images/dice-logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./Style/style.css" />
+
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Tailwind -->
@@ -28,7 +28,7 @@
       >
         <!-- Player1 -->
         <div
-          class="flex flex-col pt-5 pb-10 px-4 rounded-l-xl bg-pink-300 items-center justify-between h-full w-1/2"
+          class="player1 flex flex-col pt-5 pb-10 px-4 rounded-l-xl bg-pink-300 items-center justify-between h-full w-1/2"
         >
           <!-- Upper user container -->
           <div
@@ -41,7 +41,7 @@
             >
             </lord-icon>
             <h1 class="text-2xl font-bold mb-5">Player 1</h1>
-            <p class="total_Score text-6xl mb-5">00</p>
+            <p class="total_Score text-6xl mb-5 totalscore_0">0</p>
           </div>
           <!-- Lower user container -->
           <div
@@ -51,14 +51,14 @@
               class="flex flex-col items-center justify-center bg-teal-500 text-white w-48 space-y-2 py-4"
             >
               <h1 class="text-2xl font-semibold">Current</h1>
-              <p class="text-xl font-bold">00</p>
+              <p class="text-xl font-bold currscore_0">0</p>
             </div>
           </div>
         </div>
 
         <!-- Player2 -->
         <div
-          class="flex flex-col pt-5 pb-10 px-4 rounded-r-xl bg-pink-400 items-center justify-between h-full w-1/2"
+          class="player2 flex flex-col pt-5 pb-10 px-4 rounded-r-xl bg-pink-400 items-center justify-between h-full w-1/2"
         >
           <!-- Upper user container -->
           <div
@@ -71,7 +71,7 @@
             >
             </lord-icon>
             <h1 class="text-2xl font-bold mb-5">Player 2</h1>
-            <p class="total_Score text-6xl mb-5">00</p>
+            <p class="total_Score text-6xl mb-5 totalscore_1">0</p>
           </div>
           <!-- Lower user container -->
           <div
@@ -81,7 +81,7 @@
               class="flex flex-col items-center justify-center bg-teal-500 text-white w-48 space-y-2 py-4"
             >
               <h1 class="text-2xl font-semibold">Current</h1>
-              <p class="text-xl font-bold">00</p>
+              <p class="text-xl font-bold currscore_1">0</p>
             </div>
           </div>
         </div>
@@ -103,8 +103,12 @@
             </lottie-player>
           </button>
           <!-- dice container -->
-          <div class="dicecontainer w-70 h-70">
-            <img src="./images/dice-logo.png" alt="dice" class="hidden dice" />
+          <div class="dicecontainer w-[70px] h-[70px]">
+            <img
+              src="./images/dice-logo.png"
+              alt="dice"
+              class="hidden dice w-[70px]"
+            />
             <div class="animatedice hidden">
               <lottie-player
                 src="https://assets5.lottiefiles.com/packages/lf20_j9iomtgp.json"
