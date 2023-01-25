@@ -12,6 +12,7 @@
       type="image/x-icon"
     />
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -21,7 +22,9 @@
       class="flex bg-gradient-to-r from-cyan-100 to-cyan-300 max-w-full h-screen items-center justify-center"
     >
       <!-- Game Outer Card -->
-      <div class="flex rounded-xl shadow-xl m-2 h-4/5 w-3/5">
+      <div
+        class="flex rounded-xl shadow-xl m-2 h-4/5 w-3/5 relative border-box"
+      >
         <!-- Player1 -->
         <div
           class="flex flex-col pt-5 pb-10 px-4 rounded-l-xl bg-pink-300 items-center justify-between h-full w-1/2"
@@ -46,11 +49,12 @@
             <div
               class="flex flex-col items-center justify-center bg-teal-500 text-white w-48 space-y-2 py-4"
             >
-              <h1 class="text-xl font-semibold">Current</h1>
-              <p>00</p>
+              <h1 class="text-2xl font-semibold">Current</h1>
+              <p class="text-xl font-bold">00</p>
             </div>
           </div>
         </div>
+
         <!-- Player2 -->
         <div
           class="flex flex-col pt-5 pb-10 px-4 rounded-r-xl bg-pink-400 items-center justify-between h-full w-1/2"
@@ -76,8 +80,64 @@
               class="flex flex-col items-center justify-center bg-teal-500 text-white w-48 space-y-2 py-4"
             >
               <h1 class="text-2xl font-semibold">Current</h1>
-              <p class="text-lg">00</p>
+              <p class="text-xl font-bold">00</p>
             </div>
+          </div>
+        </div>
+        <!-- Buttons -->
+        <div
+          class="button-container absolute w-full h-full flex flex-col items-center justify-around"
+        >
+          <button
+            class="reset px-3 py-2 rounded-lg bg-white/40 focus:outline-none flex space-x-2 items-center justify-center"
+          >
+            <lottie-player
+              src="https://assets3.lottiefiles.com/packages/lf20_nzk92xfr.json"
+              background="transparent"
+              speed="1"
+              style="width: 50px; height: 50px"
+              hover
+            >
+            </lottie-player>
+          </button>
+          <div class="dicecontainer w-70 h-70">
+            <img src="./images/dice-logo.png" alt="dice" class="hidden" />
+            <lottie-player
+              src="https://assets5.lottiefiles.com/packages/lf20_j9iomtgp.json"
+              background="transparent"
+              speed="1"
+              style="width: 70px; height: 70px"
+              loop
+              autoplay
+              class="hidden"
+            ></lottie-player>
+          </div>
+
+          <div
+            class="bottombuttons flex flex-col items-center justify-evenly space-y-4"
+          >
+            <div class="roll w-70 h-70"></div>
+            <button
+              class="flex space-x-2 items-center justify-center roll-dice px-3 py-2 rounded-lg bg-white/40 focus:outline-none hover:scale-110 transition-all duration-300"
+            >
+              <img src="./images/roll.png" alt="roll" class="w-6" />
+              <span class="text-lg font-semibold">Roll</span>
+            </button>
+            <lottie-player
+              src="https://assets3.lottiefiles.com/packages/lf20_Wy80jjKz4n.json"
+              background="transparent"
+              speed="1"
+              style="width: 70px; height: 70px"
+              loop
+              autoplay
+              class="hidden"
+            ></lottie-player>
+            <button
+              class="flex space-x-2 items-center justify-center hold px-3 py-2 rounded-lg bg-white/40 focus:outline-none hover:scale-110 transition-all duration-300"
+            >
+              <img src="./images/pause.png" alt="pause" class="w-6" />
+              <span class="text-lg font-semibold">Hold</span>
+            </button>
           </div>
         </div>
       </div>
