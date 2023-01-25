@@ -11,6 +11,9 @@ const animatedice = document.querySelector(".animatedice");
 const rolldice = document.querySelector(".rolldice");
 const player1 = document.querySelector(".player1");
 const player2 = document.querySelector(".player2");
+const winningplayer = document.querySelector(".winningplayer");
+let score1 = Number(document.querySelector(".totalscore_0").innerText);
+let score2 = Number(document.querySelector(".totalscore_1").innerText);
 
 let tempScore = 0;
 let totalscore = 0;
@@ -34,7 +37,7 @@ function upadte_current_score(numberdice, currentScore) {
     tempScore =
       numberdice > 1 ? `${Number(tempScore) + Number(numberdice)}` : 0;
     console.log(tempScore);
-    currentScore.textContent = tempScore;
+    currentScore.innerText = tempScore;
   }, 2000);
 }
 
@@ -61,13 +64,14 @@ roll.addEventListener("click", function () {
   if (numberdice !== 1) {
     setTimeout(() => {
       tempScore = `${Number(tempScore) + Number(numberdice)}`;
-      document.querySelector(`.currscore_${activeplayer}`).textContent =
+      document.querySelector(`.currscore_${activeplayer}`).innerText =
         tempScore;
     }, 2000);
+    winning();
   } else {
     setTimeout(() => {
       tempScore = 0;
-      document.querySelector(`.currscore_${activeplayer}`).textContent =
+      document.querySelector(`.currscore_${activeplayer}`).innerText =
         tempScore;
       change_effect(activeplayer);
       activeplayer = activeplayer == 0 ? 1 : 0;
@@ -77,21 +81,27 @@ roll.addEventListener("click", function () {
 
 hold.addEventListener("click", function () {
   totalscore =
-    Number(document.querySelector(`.totalscore_${activeplayer}`).textContent) +
+    Number(document.querySelector(`.totalscore_${activeplayer}`).innerText) +
     Number(tempScore);
 
-  document.querySelector(`.totalscore_${activeplayer}`).textContent =
-    totalscore;
+  document.querySelector(`.totalscore_${activeplayer}`).innerText = totalscore;
   totalscore = 0;
   tempScore = 0;
-  document.querySelector(`.currscore_${activeplayer}`).textContent = tempScore;
+  document.querySelector(`.currscore_${activeplayer}`).innerText = tempScore;
   change_effect(activeplayer);
   activeplayer = activeplayer === 1 ? 0 : 1;
 });
 
-console.log(Number(tempScore));
-console.log(Number(document.querySelector(`.totalscore_${activeplayer}`)));
-console.log(
-  Number(document.querySelector(`.totalscore_${activeplayer}`)) +
-    Number(tempScore)
-);
+function winning() {
+  if (score1 >= 50) {
+    document.querySelector("winningplayer").innerText =
+      "Player 1 has won this match";
+    winningplayer.classList.remove("hidden");
+  } else if (score2 >= 50) {
+    document.querySelector("winningplayer").innerText =
+      "Player 2 has won this match";
+    winningplayer.classList.remove("hidden");
+  } else {
+    document.querySelector("winningplayer").innerText = "Something went wrong";
+  }
+}
