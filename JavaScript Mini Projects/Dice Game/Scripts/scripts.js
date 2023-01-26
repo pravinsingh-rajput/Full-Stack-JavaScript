@@ -15,6 +15,9 @@ const winningplayer = document.querySelector(".winningplayer");
 let score1 = Number(document.querySelector(".totalscore_0").innerText);
 let score2 = Number(document.querySelector(".totalscore_1").innerText);
 
+let live1 = document.querySelector(".live1");
+let live2 = document.querySelector(".live2");
+
 let tempScore = 0;
 let totalscore = 0;
 
@@ -42,6 +45,16 @@ function upadte_current_score(numberdice, currentScore) {
 }
 
 let activeplayer = 0;
+
+function active(activeplayer) {
+  if (activeplayer === 0) {
+    live1.classList.add("bg-green-300");
+    live2.classList.remove("bg-green-300");
+  } else {
+    live2.classList.add("bg-green-300");
+    live1.classList.remove("bg-green-300");
+  }
+}
 
 function change_effect(activeplayer) {
   if (activeplayer === 0) {
@@ -75,6 +88,7 @@ roll.addEventListener("click", function () {
         tempScore;
       change_effect(activeplayer);
       activeplayer = activeplayer == 0 ? 1 : 0;
+      active(activeplayer);
     }, 2000);
   }
 });
@@ -90,6 +104,7 @@ hold.addEventListener("click", function () {
   document.querySelector(`.currscore_${activeplayer}`).innerText = tempScore;
   change_effect(activeplayer);
   activeplayer = activeplayer === 1 ? 0 : 1;
+  active(activeplayer);
 });
 
 // Reset
@@ -115,4 +130,5 @@ reset.addEventListener("click", function () {
   document.querySelector(`.currscore_${activeplayer}`).textContent = tempScore;
 
   activeplayer = 0;
+  active(activeplayer);
 });
