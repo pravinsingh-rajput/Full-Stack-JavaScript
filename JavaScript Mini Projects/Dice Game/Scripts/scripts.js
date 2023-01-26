@@ -92,16 +92,27 @@ hold.addEventListener("click", function () {
   activeplayer = activeplayer === 1 ? 0 : 1;
 });
 
-function winning() {
-  if (score1 >= 50) {
-    document.querySelector("winningplayer").innerText =
-      "Player 1 has won this match";
-    winningplayer.classList.remove("hidden");
-  } else if (score2 >= 50) {
-    document.querySelector("winningplayer").innerText =
-      "Player 2 has won this match";
-    winningplayer.classList.remove("hidden");
-  } else {
-    document.querySelector("winningplayer").innerText = "Something went wrong";
+// Reset
+reset.addEventListener("click", function () {
+  console.log("clicked");
+  dice.classList.add("hidden");
+  rolldice.classList.add("hidden");
+  animatedice.classList.add("hidden");
+  roll.classList.remove("hidden");
+  totalscore = 0;
+  tempScore = 0;
+  document.querySelector(`.currscore_${activeplayer}`).textContent = tempScore;
+  document.querySelector(`.totalscore_${activeplayer}`).textContent =
+    totalscore;
+
+  if (!activeplayer == 0) {
+    change_effect(activeplayer);
   }
-}
+  activeplayer = activeplayer === 0 ? 1 : 0;
+
+  document.querySelector(`.totalscore_${activeplayer}`).textContent =
+    totalscore;
+  document.querySelector(`.currscore_${activeplayer}`).textContent = tempScore;
+
+  activeplayer = 0;
+});
