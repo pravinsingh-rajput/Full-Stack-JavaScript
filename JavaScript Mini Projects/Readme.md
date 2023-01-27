@@ -7,6 +7,5 @@
 
 | Project No | Name            | View                                     | Website link                               |
 | ---------- | --------------- | ---------------------------------------- | ------------------------------------------ |
-| 1          | Drawing Circle  | [Link]()                                 | [Visit]()                                  |
-| 2          | Guess My Number | [Link](./Guess_my_number_Game/Readme.md) | [Visit](https://try-guessing.netlify.app/) |
-| 3          | Rolling Dice    | [Link](./Dice%20Game/Readme.md)          | [Visit](https://rollingcube.netlify.app/)  |
+| 1          | Guess My Number | [Link](./Guess_my_number_Game/Readme.md) | [Visit](https://try-guessing.netlify.app/) |
+| 2          | Rolling Dice    | [Link](./Dice%20Game/Readme.md)          | [Visit](https://rollingcube.netlify.app/)  |
