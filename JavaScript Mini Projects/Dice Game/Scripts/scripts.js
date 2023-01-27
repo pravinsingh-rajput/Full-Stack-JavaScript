@@ -169,5 +169,7 @@ reset.addEventListener("click", function () {
 
     winningplayer.classList.add("hidden");
     winningplayer.classList.remove("flex");
+  } else {
+    playing = true;
   }
 });
