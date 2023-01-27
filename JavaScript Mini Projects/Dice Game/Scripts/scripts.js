@@ -14,6 +14,8 @@ const player2 = document.querySelector(".player2");
 const winningplayer = document.querySelector(".winning");
 let score1 = Number(document.querySelector(".totalscore_0").innerText);
 let score2 = Number(document.querySelector(".totalscore_1").innerText);
+let data1 = document.querySelector(".data1");
+let data2 = document.querySelector(".data2");
 
 let live1 = document.querySelector(".live1");
 let live2 = document.querySelector(".live2");
@@ -50,24 +52,36 @@ let activeplayer = 0;
 function active(activeplayer) {
   if (activeplayer === 0) {
     live1.classList.add("bg-green-300");
+    live1.classList.add("shadow-2xl");
+    live2.classList.remove("shadow-2xl");
     live2.classList.remove("bg-green-300");
+    data1.classList.add("shadow-2xl");
+    data1.classList.add("rounded-lg");
+    data2.classList.remove("shadow-2xl");
+    data2.classList.remove("rounded-lg");
   } else {
     live2.classList.add("bg-green-300");
     live1.classList.remove("bg-green-300");
+    live2.classList.add("shadow-2xl");
+    live1.classList.remove("shadow-2xl");
+    data2.classList.add("shadow-2xl");
+    data2.classList.add("rounded-lg");
+    data1.classList.remove("shadow-2xl");
+    data1.classList.remove("rounded-lg");
   }
 }
 
 function change_effect(activeplayer) {
   if (activeplayer === 0) {
-    player1.classList.remove("bg-pink-300");
+    player1.classList.remove("bg-pink-200");
     player1.classList.add("bg-pink-400");
     player2.classList.remove("bg-pink-400");
-    player2.classList.add("bg-pink-300");
+    player2.classList.add("bg-pink-200");
   } else {
-    player1.classList.add("bg-pink-300");
+    player1.classList.add("bg-pink-200");
     player1.classList.remove("bg-pink-400");
     player2.classList.add("bg-pink-400");
-    player2.classList.remove("bg-pink-300");
+    player2.classList.remove("bg-pink-200");
   }
 }
 
@@ -79,7 +93,7 @@ roll.addEventListener("click", function () {
     Number(document.querySelector(`.totalscore_${activeplayer}`).innerText) +
     Number(tempScore) +
     Number(numberdice);
-  if (playing && winner < 10) {
+  if (playing && winner < 50) {
     if (numberdice !== 1) {
       setTimeout(() => {
         tempScore = `${Number(tempScore) + Number(numberdice)}`;

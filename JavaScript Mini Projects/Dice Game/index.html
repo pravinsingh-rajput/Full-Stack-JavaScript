@@ -20,15 +20,15 @@
   <body>
     <!-- Home Container -->
     <div
-      class="flex bg-gradient-to-r from-cyan-100 to-cyan-300 max-w-full h-screen items-center justify-center"
+      class="flex bg-gradient-to-r from-cyan-50 to-emerald-300 h-screen items-center justify-center overflow-hidden box-border"
     >
       <!-- Game Outer Card -->
       <div
-        class="flex rounded-xl shadow-xl m-2 h-4/5 w-3/5 relative border-box"
+        class="flex rounded-xl shadow-xl md:m-2 md:h-4/5 md:w-3/5 w-[350px] m-1 h-11/12 relative"
       >
         <!-- Player1 -->
         <div
-          class="player1 flex flex-col pt-5 pb-10 px-4 rounded-l-xl bg-pink-300 items-center justify-between h-full w-1/2"
+          class="player1 flex flex-col md:pt-5 md:pb-10 md:px-4 pt-2 pb-4 px-1 rounded-l-xl bg-pink-200 items-center justify-between w-1/2"
         >
           <!-- Upper user container -->
           <div
@@ -37,29 +37,33 @@
             <lord-icon
               src="https://cdn.lordicon.com/vusrdugn.json"
               trigger="hover"
-              style="width: 150px; height: 150px"
-              class="rounded-full bg-green-300 live1"
+              style="width: 100px; height: 100px"
+              class="rounded-full bg-green-300 live1 shadow-2xl"
             >
             </lord-icon>
-            <h1 class="text-2xl font-bold mb-5">Player 1</h1>
-            <p class="total_Score text-6xl mb-5 totalscore_0">0</p>
+            <h1 class="text-lg md:text-2xl font-bold mb-5">Player 1</h1>
+            <p
+              class="total_Score text-3xl font-semibold md:text-6xl mb-5 totalscore_0"
+            >
+              0
+            </p>
           </div>
           <!-- Lower user container -->
           <div
             class="lower-user-card flex flex-col items-center justify-center"
           >
             <div
-              class="flex flex-col items-center justify-center bg-teal-500 text-white w-48 space-y-2 py-4"
+              class="data1 flex flex-col items-center justify-center bg-teal-500 rounded-lg shadow-2xl text-white w-24 md:w-48 space-y-2 py-4"
             >
-              <h1 class="text-2xl font-semibold">Current</h1>
-              <p class="text-xl font-bold currscore_0">0</p>
+              <h1 class="text-xl md:text-2xl font-semibold">Current</h1>
+              <p class="text-lg md:text-xl font-bold currscore_0">0</p>
             </div>
           </div>
         </div>
 
         <!-- Player2 -->
         <div
-          class="player2 flex flex-col pt-5 pb-10 px-4 rounded-r-xl bg-pink-400 items-center justify-between h-full w-1/2"
+          class="player2 flex flex-col md:pt-5 md:pb-10 md:px-4 pt-2 pb-4 px-1 rounded-r-xl bg-pink-400 items-center justify-between h-full w-1/2"
         >
           <!-- Upper user container -->
           <div
@@ -68,22 +72,26 @@
             <lord-icon
               src="https://cdn.lordicon.com/vusrdugn.json"
               trigger="hover"
-              style="width: 150px; height: 150px"
+              style="width: 100px; height: 100px"
               class="live2 rounded-full"
             >
             </lord-icon>
-            <h1 class="text-2xl font-bold mb-5">Player 2</h1>
-            <p class="total_Score text-6xl mb-5 totalscore_1">0</p>
+            <h1 class="text-lg md:text-2xl font-bold mb-5">Player 2</h1>
+            <p
+              class="total_Score text-3xl font-semibold md:text-6xl mb-5 totalscore_1"
+            >
+              0
+            </p>
           </div>
           <!-- Lower user container -->
           <div
             class="lower-user-card flex flex-col items-center justify-center"
           >
             <div
-              class="flex flex-col items-center justify-center bg-teal-500 text-white w-48 space-y-2 py-4"
+              class="flex flex-col items-center justify-center bg-teal-500 data2 text-white w-24 md:w-48 space-y-2 py-4"
             >
-              <h1 class="text-2xl font-semibold">Current</h1>
-              <p class="text-xl font-bold currscore_1">0</p>
+              <h1 class="text-xl md:text-2xl font-semibold">Current</h1>
+              <p class="text-lg md:text-xl font-bold currscore_1">0</p>
             </div>
           </div>
         </div>
@@ -118,6 +126,7 @@
                 speed="1"
                 style="width: 70px; height: 70px"
                 loop
+                hover
                 autoplay
               ></lottie-player>
             </div>
@@ -131,23 +140,24 @@
                 src="https://assets3.lottiefiles.com/packages/lf20_Wy80jjKz4n.json"
                 background="transparent"
                 speed="1"
-                style="width: 70px; height: 70px"
+                style="width: 100px; height: 70px"
                 loop
+                autoplay
                 hover
               ></lottie-player>
             </div>
             <button
               class="flex space-x-2 items-center justify-center roll px-3 py-2 rounded-lg bg-white/40 focus:outline-none hover:scale-110 transition-all duration-300"
             >
-              <img src="./images/roll.png" alt="roll" class="w-6" />
-              <span class="text-lg font-semibold">Roll</span>
+              <img src="./images/roll.png" alt="roll" class="w-5 md:w-6" />
+              <span class="text-sm md:text-lg font-semibold">Roll</span>
             </button>
 
             <button
               class="flex space-x-2 items-center justify-center hold px-3 py-2 rounded-lg bg-white/40 focus:outline-none hover:scale-110 transition-all duration-300"
             >
-              <img src="./images/pause.png" alt="pause" class="w-6" />
-              <span class="text-lg font-semibold">Hold</span>
+              <img src="./images/pause.png" alt="pause" class="w-5 md:w-6" />
+              <span class="text-sm md:text-lg font-semibold">Hold</span>
             </button>
           </div>
         </div>
