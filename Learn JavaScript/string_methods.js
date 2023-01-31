@@ -28,3 +28,23 @@ let goodgreet = "Good Morning, Good Afternoon, Good Night";
 
 let badgreet = goodgreet.replaceAll("Good", "Bad");
 console.log(badgreet);
+
+// Split
+
+const newname = mynamne.split(" ");
+console.log(newname);
+
+// join
+
+let joinname = "Mr. " + newname.join(" ");
+console.log(joinname);
+
+// padding
+
+console.log(joinname.padStart(30, "*"));
+console.log(joinname.padEnd(30, "*"));
+console.log(joinname.padStart(30, "*").padEnd(50, "*"));
+
+// repeat
+
+console.log(joinname.repeat(10));
