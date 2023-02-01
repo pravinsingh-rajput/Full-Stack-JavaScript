@@ -58,3 +58,4 @@ HTML elements which do not have closing tags or do not need to be closed are Voi
 <details> <summary>What is formatting in HTML? </summary>
 </details>
 <details> <summary> </summary>
+<details> <summary> </summary>
