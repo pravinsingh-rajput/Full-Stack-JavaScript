@@ -32,3 +32,8 @@
 | 26     | Destructuring Arrays  | [Code](./Destructuring_Arrays.js)  |
 | 27     | Destructuring Objects | [Code](./Destructuring_Objects.js) |
 | 28     | Spread Operators      | [Code](./spreadOprator.js)         |
+| 29     | Set                   | [Code](./sets.js)                  |
+| 30     | Map                   | [Code](./Maps.js)                  |
+| 31     | Rest Pattern          | [Code](./Rest_pattern.js)          |
+| 32     | Objects Looping       | [Code](./object_looping.js)        |
+| 33     | String Methods        | [Code](./object_looping.js)        |
