@@ -37,3 +37,6 @@
 | 31     | Rest Pattern          | [Code](./Rest_pattern.js)          |
 | 32     | Objects Looping       | [Code](./object_looping.js)        |
 | 33     | String Methods        | [Code](./string_methods.js)        |
+| 34     | Call & Apply          | [Code](.//Call_apply.js)           |
+| 35     | Bind                  | [Code](./bind_method.js)           |
+| 36     | IIFE                  | [Code](./IIFE.js)                  |
