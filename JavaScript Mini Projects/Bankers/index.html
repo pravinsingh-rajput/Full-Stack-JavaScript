@@ -8,5 +8,48 @@
     <link rel="stylesheet" href="./dist/output.css" />
     <link rel="shortcut icon" href="./images/bank.png" type="image/x-icon" />
   </head>
-  <body></body>
+  <body>
+    <section
+      aria-label="Home"
+      class="flex flex-col bg-white w-full h-screen box-border"
+    >
+      <header class="w-full bg-slate-200">
+        <nav
+          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3 justify-between items-center px-16 w-full py-1"
+        >
+          <span
+            class="flex items-end justify-center text-xl font-mono font-bold text-white border"
+            ><img src="./images/bank.png" alt="Bank" class="w-10 mx-3" />
+            Bankers</span
+          >
+          <div
+            class="login space-y-1 md:space-x-1 md:space-y-0 flex items-center border"
+          >
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="ID"
+              id="id"
+              class="text-center focus:outline-none rounded-full p-[2px] max-w-[100px] shadow-md hover:-translate-y-0.5 transition-all duration-500"
+            />
+            <input
+              type="number"
+              name=""
+              id=""
+              placeholder="PIN"
+              id="pin"
+              class="text-center focus:outline-none rounded-full p-[2px] max-w-[100px] shadow-md hover:-translate-y-0.5 transition-all duration-500"
+            />
+            <button
+              class="login bg-emerald-500 text-white font-semibold px-5 py-1 text-center rounded-full hover:shadow-2xl hover:text-black hover:bg-white hover:-translate-y-0.5 transition-all duration-500"
+            >
+              Login
+            </button>
+          </div>
+        </nav>
+      </header>
+      <section class="banking w-full bg-white h-full"></section>
+    </section>
+  </body>
 </html>
