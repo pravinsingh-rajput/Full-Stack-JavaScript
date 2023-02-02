@@ -52,7 +52,9 @@
         <div
           class="outercontainer flex flex-col border border-red-500 w-full space-y-4"
         >
-          <div class="uppercontainer flex justify-between items-center w-full">
+          <div
+            class="uppercontainer flex justify-between items-center w-full px-8"
+          >
             <div class="currentbalance flex flex-col">
               <h1 class="text-xl font-semibold">Current Balance</h1>
               <p class="text-xs">As of 05/03/2023</p>
@@ -65,14 +67,37 @@
           </div>
           <div class="main-container flex">
             <div
-              class="historycontainer flex flex-col bg-white rounded-xl shadow-xl"
+              class="historycontainer flex flex-col bg-white rounded-xl shadow-xl w-7/12 md:h-[480px]"
             >
-              <div class="transaction">
-                <p>Deposit</p>
-                <p>500</p>
+              <div class="transaction-container p-2 px-10 overflow-hidden">
+                <div
+                  class="transction flex w-full items-center justify-between border-b-2 pb-2 mb-2"
+                >
+                  <p
+                    class="bg-gradient-to-r from-green-500 to-green-400 px-4 py-[1px] rounded-full text-sm"
+                  >
+                    Deposit
+                  </p>
+                  <p>500</p>
+                </div>
+                <div
+                  class="transction flex w-full items-center justify-between border-b-2 pb-2"
+                >
+                  <p
+                    class="bg-gradient-to-r from-red-500 to-red-400 px-4 py-[1px] rounded-full text-sm"
+                  >
+                    Withdrawal
+                  </p>
+                  <p>500</p>
+                </div>
               </div>
             </div>
+            <div class="action-container w-5/12 h-full"></div>
           </div>
+          <footer class="flex flex-col md:flex-row border border-red-500">
+            <div class="details w-7/12">..</div>
+            <div class="logoutcontainer w-5/12">..</div>
+          </footer>
         </div>
       </section>
     </section>
