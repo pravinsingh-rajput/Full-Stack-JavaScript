@@ -1,0 +1,14 @@
+{
+  "name": "bankers",
+  "version": "1.0.0",
+  "description": "Bankers Working",
+  "main": "index.js",
+  "scripts": {
+    "start": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "author": "Pravin Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
