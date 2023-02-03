@@ -11,7 +11,7 @@
   <body>
     <section
       aria-label="Home"
-      class="flex flex-col bg-white w-full h-screen box-border"
+      class="flex flex-col bg-white w-full h-full box-border"
     >
       <header class="w-full bg-slate-200">
         <nav
@@ -48,10 +48,13 @@
           </div>
         </nav>
       </header>
-      <section class="banking bg-slate-200 h-full border flex md:px-28 md:py-8">
+      <section
+        class="banking bg-slate-200 flex items-center justify-center h-full border md:px-10 lg:px-28 md:py-4 lg:py-8"
+      >
         <div
-          class="outercontainer flex flex-col border border-red-500 w-full space-y-4"
+          class="outercontainer flex flex-col border border-red-500 max-w-7xl space-y-4"
         >
+          <!-- Upper Container -->
           <div
             class="uppercontainer flex justify-between items-center w-full px-8"
           >
@@ -65,34 +68,52 @@
               </p>
             </div>
           </div>
-          <div class="main-container flex">
+          <!-- Main Container -->
+          <div
+            class="main-container flex flex-col border border-green-600 px-3 md:px-0 md:flex-row space-y-3 md:space-x-5 md:space-y-0"
+          >
+            <!-- Transction History -->
             <div
-              class="historycontainer flex flex-col bg-white rounded-xl shadow-xl w-7/12 md:h-[480px]"
+              class="historycontainer flex flex-col bg-white rounded-xl shadow-xl w-full md:w-7/12 md:h-[480px]"
             >
-              <div class="transaction-container p-2 px-10 overflow-hidden">
+              <div class="transaction-container p-2 px-0 overflow-hidden">
                 <div
-                  class="transction flex w-full items-center justify-between border-b-2 pb-2 mb-2"
+                  class="transction flex w-full items-center justify-between border-b-2 pb-2 mb-4 px-10"
                 >
-                  <p
-                    class="bg-gradient-to-r from-green-500 to-green-400 px-4 py-[1px] rounded-full text-sm"
+                  <div
+                    class="transaction-details flex items-center justify-between"
                   >
-                    Deposit
+                    <p
+                      class="bg-gradient-to-r from-green-400 to-green-500 px-4 py-[1px] rounded-full text-white text-sm"
+                    >
+                      DEPOSIT
+                    </p>
+                    <p class="mx-4 text-xs">12/01/2023</p>
+                  </div>
+                  <p class="font-semibold">
+                    500 <span class="currency">$</span>
                   </p>
-                  <p>500</p>
                 </div>
                 <div
-                  class="transction flex w-full items-center justify-between border-b-2 pb-2"
+                  class="transction flex w-full items-center justify-between border-b-2 pb-2 mb-4 px-10"
                 >
-                  <p
-                    class="bg-gradient-to-r from-red-500 to-red-400 px-4 py-[1px] rounded-full text-sm"
+                  <div
+                    class="transaction-details flex items-center justify-between"
                   >
-                    Withdrawal
+                    <p
+                      class="bg-gradient-to-r from-red-400 to-red-500 px-4 py-[1px] rounded-full text-white text-sm"
+                    >
+                      WITHDRAWAL
+                    </p>
+                    <p class="mx-4 text-xs">23/12/2022</p>
+                  </div>
+                  <p class="font-semibold">
+                    1500 <span class="currency">$</span>
                   </p>
-                  <p>500</p>
                 </div>
               </div>
             </div>
-            <div class="action-container w-5/12 h-full"></div>
+            <!-- Action Container -->
           </div>
           <footer class="flex flex-col md:flex-row border border-red-500">
             <div class="details w-7/12">..</div>
