@@ -15,14 +15,14 @@
     >
       <header class="w-full bg-slate-200">
         <nav
-          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3 justify-between items-center px-16 w-full py-1"
+          class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-3 justify-between items-center px-16 w-full py-1"
         >
           <span class="flex items-end justify-center font-mono font-bold"
             ><img src="./images/bank.png" alt="Bank" class="w-10 mx-3" />
             Bankers</span
           >
           <div
-            class="login space-y-1 md:space-x-1 md:space-y-0 flex items-center"
+            class="login space-y-1 space-x-2 md:space-x-1 md:space-y-0 flex items-center"
           >
             <input
               type="text"
@@ -49,7 +49,7 @@
         </nav>
       </header>
       <section
-        class="banking bg-slate-200 flex items-center justify-center h-full border md:px-10 lg:px-28 md:py-4 lg:py-8"
+        class="banking bg-slate-200 flex items-center justify-center h-full border border-red-500 pt-4 md:mt-0 md:px-10 lg:px-28 md:py-4 lg:py-8"
       >
         <div class="outercontainer flex flex-col max-w-7xl space-y-6">
           <!-- Upper Container -->
@@ -72,7 +72,7 @@
           >
             <!-- Transction History -->
             <div
-              class="historycontainer flex flex-col bg-white rounded-xl shadow-xl w-full md:w-7/12 md:h-[465px]"
+              class="historycontainer flex flex-col bg-white rounded-xl shadow-xl w-full h-96 md:w-7/12 md:h-[465px]"
             >
               <div class="transaction-container p-2 px-0 overflow-hidden">
                 <div
@@ -112,7 +112,7 @@
               </div>
             </div>
             <!-- Action Container -->
-            <div class="action-container w-5/12 h-full space-y-4">
+            <div class="action-container w-full md:w-5/12 h-full space-y-4">
               <!-- Transfer Money -->
               <div
                 class="transfer-container flex flex-col px-8 py-5 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-xl"
@@ -205,7 +205,9 @@
             </div>
           </div>
           <footer class="flex flex-col md:flex-row px-2">
-            <div class="details w-7/12 flex items-center justify-between">
+            <div
+              class="details w-full md:w-7/12 flex flex-col space-y-2 md:space-y-0 md:flex-row items-center justify-between"
+            >
               <div class="">
                 <p class="text-xs">
                   IN
@@ -241,7 +243,7 @@
               </div>
             </div>
             <div
-              class="logoutcontainer w-5/12 flex text-xs items-center justify-end space-x-2 px-2 font-medium"
+              class="logoutcontainer w-full md:w-5/12 flex text-xs items-center justify-center md:justify-end space-x-2 px-2 font-medium mt-5 md:mt-0"
             >
               <p>You will be logged out in:</p>
               <p class="logout">04:00</p>
