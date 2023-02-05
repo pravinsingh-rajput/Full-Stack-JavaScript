@@ -110,3 +110,17 @@ const displaytransctions = function (transction) {
 };
 
 displaytransctions(accoun1.transactions);
+
+// Creating Username
+
+const createusername = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((name) => name[0])
+      .join("");
+  });
+};
+
+createusername(account);
