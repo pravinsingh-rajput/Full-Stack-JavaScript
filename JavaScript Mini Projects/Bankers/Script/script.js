@@ -6,7 +6,7 @@ const accoun1 = {
   owner: "Doctor Strange",
   pin: 1111,
   transactions: [
-    100, -250, -3020, 4514, -2541.5, 6987, 7845, -4697, -1458, 2587, 6547, -200,
+    100, -250, -3020, 4514, -2541, 6987, 7845, -4697, -1458, 2587, 6547, -200,
     -2456, 1000,
   ],
   interest: 1.2,
@@ -16,7 +16,8 @@ const accoun2 = {
   owner: "I Am Groot",
   pin: 1001,
   transactions: [
-    520, 7850, -1058, 2414, -30000, 8975, 9923, -7584, -241, 25578, 6584, -1575,
+    520, 7850, -1058.54, 2414, -30000, 8975, 9923, -7584, -241, 25578, 6584,
+    -1575,
   ],
   interest: 1.5,
 };
@@ -25,8 +26,8 @@ const account3 = {
   owner: "Iron Man",
   pin: 1001,
   transactions: [
-    8745, -2245, -7845, 5700, 451000, -1457, 3257, -87469, 78458, 24578, 78945,
-    4587, -6784,
+    8745, -2245.17, -7845, 5700, 451000, -1457, 3257, -87469, 78458, 24578,
+    7894.5, 4587, -6784,
   ],
   interest: 2.3,
 };
@@ -140,7 +141,18 @@ const totalcredit = function (data) {
   const allcredits = data
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov);
-  credited.textContent = allcredits;
+  credited.textContent = `${allcredits} $`;
 };
 
 totalcredit(accoun1.transactions);
+
+// Total debit
+
+const totaldebit = function (data) {
+  const alldebit = Math.abs(
+    data.filter((mov) => mov < 0).reduce((acc, mov) => acc + mov)
+  );
+  debited.textContent = `${alldebit} $`;
+};
+
+totaldebit(accoun1.transactions);
