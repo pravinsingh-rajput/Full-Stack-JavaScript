@@ -41,3 +41,4 @@
 | 35     | Bind                  | [Code](./bind_method.js)           |
 | 36     | IIFE                  | [Code](./IIFE.js)                  |
 | 37     | Map Method            | [Code](./mapmethod.js)             |
+| 37     | Filter Method         | [Code](./filtermethod.js)          |
