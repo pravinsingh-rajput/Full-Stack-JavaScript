@@ -6,7 +6,7 @@ const accoun1 = {
   owner: "Doctor Strange",
   pin: 1111,
   transactions: [
-    100, -250, -3020, 4514, -2541, 6987, 7845, -4697, -1458, 2587, 6547, -200,
+    100, -250, -3020, 4514, -2541.5, 6987, 7845, -4697, -1458, 2587, 6547, -200,
     -2456, 1000,
   ],
   interest: 1.2,
@@ -133,3 +133,14 @@ const displaybalance = function (data) {
 };
 
 displaybalance(accoun1.transactions);
+
+// Total Credit
+
+const totalcredit = function (data) {
+  const allcredits = data
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov);
+  credited.textContent = allcredits;
+};
+
+totalcredit(accoun1.transactions);

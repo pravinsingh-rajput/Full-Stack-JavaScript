@@ -1037,6 +1037,11 @@ input::-webkit-inner-spin-button {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
