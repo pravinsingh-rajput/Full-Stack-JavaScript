@@ -6,8 +6,8 @@ const accoun1 = {
   owner: "Doctor Strange",
   pin: 1111,
   transactions: [
-    100, -250, -3020, 4514, -2541, 6987, 7845, -4697, -1458, 2587, 6547, -200,
-    -2456, 1000,
+    100, -250, 96, 4514, -2541.87, 6987, 7845, -4697.37, -1458.2, 2587.71, 6547,
+    -200, -2456, 1000,
   ],
   interest: 1.2,
 };
@@ -26,8 +26,8 @@ const account3 = {
   owner: "Iron Man",
   pin: 1001,
   transactions: [
-    8745, -2245.17, -7845, 5700, 451000, -1457, 3257, -87469, 78458, 24578,
-    7894.5, 4587, -6784,
+    8745, -2245.17, -7845, 5700.54, 45102.9, -1457, 3257, -87469, 78458, 24578,
+    7894.5, 4587.17, -6784,
   ],
   interest: 2.3,
 };
@@ -87,9 +87,7 @@ const displaytransctions = function (transction) {
             } ${mov.toLocaleUpperCase()} </p>
                 <p class="mx-4 text-xs">12/01/2023</p>
           </div>
-              <p class="font-semibold"> ${Math.abs(
-                movement
-              )} <span class="currency">$</span> </p>
+              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
         </div>
     `
         : `
@@ -100,9 +98,7 @@ const displaytransctions = function (transction) {
             } ${mov.toLocaleUpperCase()} </p>
                 <p class="mx-4 text-xs">12/01/2023</p>
           </div>
-              <p class="font-semibold"> ${Math.abs(
-                movement
-              )} <span class="currency">$</span> </p>
+              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
         </div>
     `;
 
@@ -129,7 +125,7 @@ createusername(account);
 // Total Balance
 
 const displaybalance = function (data) {
-  const Balance = data.reduce((acc, mov) => acc + mov, 0);
+  const Balance = data.reduce((acc, mov) => acc + mov, 0).toFixed(2);
   total_balance.textContent = `${Balance} $`;
 };
 
@@ -140,7 +136,8 @@ displaybalance(accoun1.transactions);
 const totalcredit = function (data) {
   const allcredits = data
     .filter((mov) => mov > 0)
-    .reduce((acc, mov) => acc + mov);
+    .reduce((acc, mov) => acc + mov, 0)
+    .toFixed(2);
   credited.textContent = `${allcredits} $`;
 };
 
@@ -150,9 +147,25 @@ totalcredit(accoun1.transactions);
 
 const totaldebit = function (data) {
   const alldebit = Math.abs(
-    data.filter((mov) => mov < 0).reduce((acc, mov) => acc + mov)
+    data
+      .filter((mov) => mov < 0)
+      .reduce((acc, mov) => acc + mov, 0)
+      .toFixed(2)
   );
   debited.textContent = `${alldebit} $`;
 };
 
 totaldebit(accoun1.transactions);
+
+// total interest
+
+const totalinterest = function (data) {
+  const allinterest = data
+    .filter((mov) => mov > 0)
+    .map((deposit) => (deposit * 1.2) / 100)
+    .reduce((acc, mov) => acc + mov, 0)
+    .toFixed(2);
+  interest.textContent = `${allinterest} $`;
+};
+
+totalinterest(accoun1.transactions);
