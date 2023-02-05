@@ -81,7 +81,7 @@ const displaytransctions = function (transction) {
         ? `
       <div class="transction flex w-full items-center justify-between border-b-2 pb-3 mb-3 px-8 ">
         <div class="transaction-details flex items-center justify-between">
-            <p class="bg-gradient-to-r from-green-400 to-green-500 px-4 py-[1px] rounded-full text-white text-sm"> ${
+            <p class="bg-gradient-to-r from-green-400 to-green-500 px-4 py-[1px] rounded-full text-white text-xs md:text-sm"> ${
               i + 1
             } ${mov.toLocaleUpperCase()} </p>
                 <p class="mx-4 text-xs">12/01/2023</p>
@@ -94,7 +94,7 @@ const displaytransctions = function (transction) {
         : `
       <div class="transction flex w-full items-center justify-between border-b-2 pb-3 mb-3 px-8 ">
         <div class="transaction-details flex items-center justify-between">
-            <p class="bg-gradient-to-r from-red-400 to-red-500 px-4 py-[1px] rounded-full text-white text-sm"> ${
+            <p class="bg-gradient-to-r from-red-400 to-red-500 px-4 py-[1px] rounded-full text-white text-xs md:text-sm"> ${
               i + 1
             } ${mov.toLocaleUpperCase()} </p>
                 <p class="mx-4 text-xs">12/01/2023</p>
@@ -124,3 +124,12 @@ const createusername = function (accs) {
 };
 
 createusername(account);
+
+// Total Balance
+
+const displaybalance = function (data) {
+  const Balance = data.reduce((acc, mov) => acc + mov, 0);
+  total_balance.textContent = `${Balance} $`;
+};
+
+displaybalance(accoun1.transactions);
