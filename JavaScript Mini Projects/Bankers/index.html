@@ -17,39 +17,42 @@
         <nav
           class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-3 justify-between items-center px-16 w-full py-1"
         >
+          <p class="font-mono font-bold text-xl welcome">
+            Login to get started
+          </p>
+
           <span class="flex items-end justify-center font-mono font-bold"
             ><img src="./images/bank.png" alt="Bank" class="w-10 mx-3" />
-            Bankers</span
-          >
-          <div
+          </span>
+          <form
             class="login space-y-1 space-x-2 md:space-x-1 md:space-y-0 flex items-center"
           >
             <input
               type="text"
               name=""
-              id=""
-              placeholder="ID"
               id="id"
+              placeholder="ID"
               class="text-center focus:outline-none rounded-full p-[2px] max-w-[100px] shadow-md hover:-translate-y-0.5 transition-all duration-500"
             />
             <input
-              type="number"
+              type="tel"
               name=""
-              id=""
-              placeholder="PIN"
               id="pin"
+              maxlength="4"
+              placeholder="PIN"
               class="text-center focus:outline-none rounded-full p-[2px] max-w-[100px] shadow-md hover:-translate-y-0.5 transition-all duration-500"
             />
             <button
-              class="login pl-2 hover:scale-125 transition-all duration-500"
+              class="login-btn pl-2 hover:scale-125 transition-all duration-500"
             >
               <img src="./images/right-arrow.png" alt="" class="w-6" />
             </button>
-          </div>
+          </form>
         </nav>
       </header>
+      <!-- Main Container -->
       <section
-        class="banking bg-slate-200 flex items-center justify-center h-full pt-4 md:mt-0 md:px-10 lg:px-28 md:py-4 lg:py-8"
+        class="banking bg-slate-200 items-center justify-center h-full pt-4 md:mt-0 md:px-10 lg:px-28 md:py-4 lg:py-8 hidden"
       >
         <div class="outercontainer flex flex-col max-w-7xl space-y-6">
           <!-- Upper Container -->

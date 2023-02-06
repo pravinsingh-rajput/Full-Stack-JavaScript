@@ -14,7 +14,7 @@ const accoun1 = {
 
 const accoun2 = {
   owner: "I Am Groot",
-  pin: 1001,
+  pin: 2222,
   transactions: [
     520, 7850, -1058.54, 2414, -30000, 8975, 9923, -7584, -241, 25578, 6584,
     -1575,
@@ -24,7 +24,7 @@ const accoun2 = {
 
 const account3 = {
   owner: "Iron Man",
-  pin: 1001,
+  pin: 3333,
   transactions: [
     8745, -2245.17, -7845, 5700.54, 45102.9, -1457, 3257, -87469, 78458, 24578,
     7894.5, 4587.17, -6784,
@@ -39,11 +39,14 @@ const account = [accoun1, accoun2, account3];
 // header
 const userid = document.querySelector("#id");
 const userpin = document.querySelector("#pin");
-const login_btn = document.querySelector(".login");
+const login_form = document.querySelector(".login");
+const login_btn = document.querySelector(".login-btn");
+const welcome_msg = document.querySelector(".welcome");
 
 // Main Container
 const today_date = document.querySelector(".todaydate");
 const total_balance = document.querySelector(".available_balance");
+const banking = document.querySelector(".banking");
 
 // transctions
 const transaction_container = document.querySelector(".transaction-container");
@@ -69,6 +72,43 @@ const confirpin = document.querySelector("#confirpin");
 const closeaccount = document.querySelector(".closeaccount");
 
 // Scripting
+
+// Login
+
+let currentuser;
+
+login_btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  currentuser = account.find((acc) => acc.username === userid.value);
+  console.log(currentuser);
+
+  if (currentuser?.pin === Number(userpin.value)) {
+    console.log("Login");
+  }
+  //Display
+
+  // Welocme Messgae
+
+  welcome_msg.textContent = `Welcome Back, ${currentuser.owner
+    .split(" ")
+    .join(" ")}`;
+
+  // Display Total Balance
+
+  displaybalance(currentuser);
+
+  // Display transction
+  displaytransctions(currentuser.transactions);
+
+  // Display Summary
+  totalinterest(currentuser);
+  totaldebit(currentuser);
+  totalcredit(currentuser);
+
+  login_form.reset();
+  banking.classList.remove("hidden");
+  banking.classList.add("flex");
+});
 
 // Display Transctions
 
@@ -106,8 +146,6 @@ const displaytransctions = function (transction) {
   });
 };
 
-displaytransctions(accoun1.transactions);
-
 // Creating Username
 
 const createusername = function (accs) {
@@ -125,29 +163,27 @@ createusername(account);
 // Total Balance
 
 const displaybalance = function (data) {
-  const Balance = data.reduce((acc, mov) => acc + mov, 0).toFixed(2);
+  const Balance = data.transactions
+    .reduce((acc, mov) => acc + mov, 0)
+    .toFixed(2);
   total_balance.textContent = `${Balance} $`;
 };
-
-displaybalance(accoun1.transactions);
 
 // Total Credit
 
 const totalcredit = function (data) {
-  const allcredits = data
+  const allcredits = data.transactions
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0)
     .toFixed(2);
   credited.textContent = `${allcredits} $`;
 };
 
-totalcredit(accoun1.transactions);
-
 // Total debit
 
 const totaldebit = function (data) {
   const alldebit = Math.abs(
-    data
+    data.transactions
       .filter((mov) => mov < 0)
       .reduce((acc, mov) => acc + mov, 0)
       .toFixed(2)
@@ -155,17 +191,13 @@ const totaldebit = function (data) {
   debited.textContent = `${alldebit} $`;
 };
 
-totaldebit(accoun1.transactions);
-
 // total interest
 
 const totalinterest = function (data) {
-  const allinterest = data
+  const allinterest = data.transactions
     .filter((mov) => mov > 0)
-    .map((deposit) => (deposit * 1.2) / 100)
+    .map((deposit) => (deposit * data.interest) / 100)
     .reduce((acc, mov) => acc + mov, 0)
     .toFixed(2);
   interest.textContent = `${allinterest} $`;
 };
-
-totalinterest(accoun1.transactions);
