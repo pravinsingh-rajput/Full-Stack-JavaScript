@@ -58,6 +58,7 @@ const sort = document.querySelector(".sort");
 const transfer_id = document.querySelector("#transferid");
 const transfer_amount = document.querySelector("#transferamount");
 const transfer_btn = document.querySelector(".transfer");
+const transferform = document.querySelector(".transfer-details");
 
 // Request Loan
 const loan = document.querySelector("#loanamount");
@@ -114,7 +115,8 @@ login_btn.addEventListener("click", function (e) {
 });
 
 // Transfer Money
-transfer_btn.addEventListener("click", function () {
+transfer_btn.addEventListener("click", function (e) {
+  e.preventDefault();
   const receiverid = account.find((acc) => acc.username === transfer_id.value);
   const amount = Number(transfer_amount.value);
 
@@ -125,8 +127,13 @@ transfer_btn.addEventListener("click", function () {
     receiverid.username !== currentuser.username
   ) {
     console.log("Transction Approved");
+    currentuser.transactions.push(-amount);
+    receiverid.transactions.push(amount);
+    transferform.reset();
+    updateUI(currentuser);
   } else {
     console.log("Transction Not Approved");
+    transferform.reset();
   }
 });
 

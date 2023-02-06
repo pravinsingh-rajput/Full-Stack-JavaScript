@@ -870,11 +870,6 @@ video {
   line-height: 1.25rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -982,6 +977,14 @@ input::-webkit-inner-spin-button {
     height: 465px;
   }
 
+  .md\:h-\[470px\] {
+    height: 470px;
+  }
+
+  .md\:h-\[480px\] {
+    height: 480px;
+  }
+
   .md\:w-7\/12 {
     width: 58.333333%;
   }
@@ -1037,6 +1040,11 @@ input::-webkit-inner-spin-button {
     padding-right: 0px;
   }
 
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1062,5 +1070,10 @@ input::-webkit-inner-spin-button {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
