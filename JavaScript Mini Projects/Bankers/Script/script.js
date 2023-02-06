@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("Connected");
-
 const accoun1 = {
   owner: "Doctor Strange",
   pin: 1111,
@@ -73,6 +71,21 @@ const closeaccount = document.querySelector(".closeaccount");
 
 // Scripting
 
+// Update UI
+
+const updateUI = function (acc) {
+  // Display Total Balance
+  displaybalance(acc);
+
+  // Display transction
+  displaytransctions(acc.transactions);
+
+  // Display Summary
+  totalinterest(acc);
+  totaldebit(acc);
+  totalcredit(acc);
+};
+
 // Login
 
 let currentuser;
@@ -93,21 +106,28 @@ login_btn.addEventListener("click", function (e) {
     .split(" ")
     .join(" ")}`;
 
-  // Display Total Balance
-
-  displaybalance(currentuser);
-
-  // Display transction
-  displaytransctions(currentuser.transactions);
-
-  // Display Summary
-  totalinterest(currentuser);
-  totaldebit(currentuser);
-  totalcredit(currentuser);
-
   login_form.reset();
   banking.classList.remove("hidden");
   banking.classList.add("flex");
+
+  updateUI(currentuser);
+});
+
+// Transfer Money
+transfer_btn.addEventListener("click", function () {
+  const receiverid = account.find((acc) => acc.username === transfer_id.value);
+  const amount = Number(transfer_amount.value);
+
+  if (
+    amount > 0 &&
+    receiverid &&
+    currentuser.balance >= amount &&
+    receiverid.username !== currentuser.username
+  ) {
+    console.log("Transction Approved");
+  } else {
+    console.log("Transction Not Approved");
+  }
 });
 
 // Display Transctions
@@ -161,16 +181,14 @@ const createusername = function (accs) {
 createusername(account);
 
 // Total Balance
-
 const displaybalance = function (data) {
-  const Balance = data.transactions
+  data.balance = data.transactions
     .reduce((acc, mov) => acc + mov, 0)
     .toFixed(2);
-  total_balance.textContent = `${Balance} $`;
+  total_balance.textContent = `${data.balance} $`;
 };
 
 // Total Credit
-
 const totalcredit = function (data) {
   const allcredits = data.transactions
     .filter((mov) => mov > 0)
@@ -180,7 +198,6 @@ const totalcredit = function (data) {
 };
 
 // Total debit
-
 const totaldebit = function (data) {
   const alldebit = Math.abs(
     data.transactions
@@ -192,7 +209,6 @@ const totaldebit = function (data) {
 };
 
 // total interest
-
 const totalinterest = function (data) {
   const allinterest = data.transactions
     .filter((mov) => mov > 0)
