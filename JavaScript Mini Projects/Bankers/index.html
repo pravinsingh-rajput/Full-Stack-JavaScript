@@ -24,9 +24,7 @@
           <span class="flex items-end justify-center font-mono font-bold"
             ><img src="./images/bank.png" alt="Bank" class="w-10 mx-3" />
           </span>
-          <form
-            class="login space-y-1 space-x-2 md:space-x-1 md:space-y-0 flex items-center"
-          >
+          <form class="login space-x-2 md:space-x-1 flex items-center">
             <input
               type="text"
               name=""
@@ -52,7 +50,7 @@
       </header>
       <!-- Main Container -->
       <section
-        class="banking bg-slate-200 items-center justify-center h-full pt-4 md:mt-0 md:px-10 lg:px-32 md:py-4 lg:py-8 flex"
+        class="banking bg-slate-200 items-center justify-center h-full pt-4 md:mt-0 md:px-10 lg:px-32 md:py-4 lg:py-6 hidden"
       >
         <div class="outercontainer flex flex-col max-w-7xl space-y-6">
           <!-- Upper Container -->
@@ -202,8 +200,8 @@
               >
                 <h1 class="font-bold text-xl mb-4">Request Loan</h1>
 
-                <form class="transfer-details flex space-x-4 pb-2">
-                  <div class="transfer-amount text-center w-5/12">
+                <form class="loan-form flex space-x-4 pb-2">
+                  <div class="text-center w-5/12">
                     <input
                       type="number"
                       class="w-full bg-white/60 rounded-lg mb-1 text-center focus:outline-none p-[2px] font-semi-bold"
@@ -230,8 +228,8 @@
               >
                 <h1 class="font-bold text-xl mb-4">Close Account</h1>
 
-                <form class="transfer-details flex space-x-4 pb-2">
-                  <div class="transfer-to text-center w-5/12">
+                <form class="close-form flex space-x-4 pb-2">
+                  <div class="text-center w-5/12">
                     <input
                       type="text"
                       class="w-full bg-white/60 rounded-lg mb-1 text-center focus:outline-none p-[2px] font-semi-bold"
@@ -243,7 +241,8 @@
                   </div>
                   <div class="transfer-amount text-center w-5/12">
                     <input
-                      type="number"
+                      type="tel"
+                      maxlength="4"
                       class="w-full bg-white/60 rounded-lg mb-1 text-center focus:outline-none p-[2px] font-semi-bold"
                       id="confirpin"
                     />

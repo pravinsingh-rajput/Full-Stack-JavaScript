@@ -699,17 +699,8 @@ video {
   border-radius: 0.5rem;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-b-2 {
   border-bottom-width: 2px;
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -973,14 +964,6 @@ input::-webkit-inner-spin-button {
     margin-top: 0px;
   }
 
-  .md\:h-\[465px\] {
-    height: 465px;
-  }
-
-  .md\:h-\[470px\] {
-    height: 470px;
-  }
-
   .md\:h-\[480px\] {
     height: 480px;
   }
@@ -1025,6 +1008,10 @@ input::-webkit-inner-spin-button {
     margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:p-\[2px\] {
+    padding: 2px;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -1038,11 +1025,6 @@ input::-webkit-inner-spin-button {
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 
   .md\:text-4xl {
@@ -1062,9 +1044,9 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 1024px) {
-  .lg\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .lg\:py-8 {
@@ -1072,8 +1054,8 @@ input::-webkit-inner-spin-button {
     padding-bottom: 2rem;
   }
 
-  .lg\:px-32 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }

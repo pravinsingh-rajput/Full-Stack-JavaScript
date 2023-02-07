@@ -61,14 +61,15 @@ const transfer_btn = document.querySelector(".transfer");
 const transferform = document.querySelector(".transfer-details");
 
 // Request Loan
+const loanform = document.querySelector(".loan-form ");
 const loan = document.querySelector("#loanamount");
-const requestloan = document.querySelector(".requestloan");
+const requestloan_btn = document.querySelector(".requestloan");
 
 // Close Account
-
+const closeform = document.querySelector(".close-form");
 const confirmuser = document.querySelector("#confirmuser");
 const confirpin = document.querySelector("#confirpin");
-const closeaccount = document.querySelector(".closeaccount");
+const closeaccount_btn = document.querySelector(".closeaccount");
 
 // Scripting
 
@@ -94,24 +95,24 @@ let currentuser;
 login_btn.addEventListener("click", function (e) {
   e.preventDefault();
   currentuser = account.find((acc) => acc.username === userid.value);
-  console.log(currentuser);
 
   if (currentuser?.pin === Number(userpin.value)) {
-    console.log("Login");
+    //Display
+
+    // Welocme Messgae
+
+    welcome_msg.textContent = `Welcome Back, ${currentuser.owner
+      .split(" ")
+      .join(" ")}`;
+
+    login_form.reset();
+    banking.classList.remove("hidden");
+    banking.classList.add("flex");
+
+    updateUI(currentuser);
+  } else {
+    console.log("Incorrect Credentails");
   }
-  //Display
-
-  // Welocme Messgae
-
-  welcome_msg.textContent = `Welcome Back, ${currentuser.owner
-    .split(" ")
-    .join(" ")}`;
-
-  login_form.reset();
-  banking.classList.remove("hidden");
-  banking.classList.add("flex");
-
-  updateUI(currentuser);
 });
 
 // Transfer Money
@@ -134,6 +135,25 @@ transfer_btn.addEventListener("click", function (e) {
   } else {
     console.log("Transction Not Approved");
     transferform.reset();
+  }
+});
+
+//Close Account
+
+closeaccount_btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  const closeuser = confirmuser.value;
+  const closeuserpin = Number(confirpin.value);
+  if (closeuser === currentuser.username && closeuserpin === currentuser.pin) {
+    const closeindex = account.findIndex((acc) => acc.username === closeuser);
+    account.splice(closeindex, 1);
+    console.log("Account Closed");
+    banking.classList.add("hidden");
+    banking.classList.remove("flex");
+    closeform.reset();
+  } else {
+    console.log("Incorrect Credentials");
+    closeform.reset();
   }
 });
 
