@@ -138,6 +138,27 @@ transfer_btn.addEventListener("click", function (e) {
   }
 });
 
+// Request Loan
+
+requestloan_btn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const loanmaount = Number(loan.value);
+
+  if (
+    loanmaount > 0 &&
+    currentuser.transactions.some((deposits) => deposits >= loanmaount * 0.1)
+  ) {
+    currentuser.transactions.push(loanmaount);
+    loanform.reset();
+    updateUI(currentuser);
+    console.log("Loan Approved");
+  } else {
+    console.log("Loan Not Approved");
+    loanform.reset();
+  }
+});
+
 //Close Account
 
 closeaccount_btn.addEventListener("click", function (e) {
