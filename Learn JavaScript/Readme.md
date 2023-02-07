@@ -43,4 +43,4 @@
 | 37     | Map Method            | [Code](./mapmethod.js)             |
 | 38     | Filter Method         | [Code](./filtermethod.js)          |
 | 39     | Reduce Method         | [Code](./reducemethod.js)          |
-| 40     | find                  | [Code](./reducemethod.js)          |
+| 40     | find Method           | [Code](./findmethod.js)            |
