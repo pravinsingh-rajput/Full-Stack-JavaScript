@@ -180,9 +180,13 @@ closeaccount_btn.addEventListener("click", function (e) {
 
 // Display Transctions
 
-const displaytransctions = function (transction) {
+const displaytransctions = function (transction, sort = false) {
   transaction_container.innerHTML = "";
-  transction.forEach(function (movement, i) {
+  const sortaction = sort
+    ? transction.slice().sort((a, b) => a - b)
+    : transction;
+
+  sortaction.forEach(function (movement, i) {
     const mov = movement > 0 ? "deposit" : "Withdrawal";
 
     const newtransction =
@@ -265,3 +269,11 @@ const totalinterest = function (data) {
     .toFixed(2);
   interest.textContent = `${allinterest} $`;
 };
+
+// sort
+let issorted = true;
+sort.addEventListener("click", function (e) {
+  e.preventDefault();
+  displaytransctions(currentuser.transactions, !issorted);
+  issorted = !issorted;
+});
