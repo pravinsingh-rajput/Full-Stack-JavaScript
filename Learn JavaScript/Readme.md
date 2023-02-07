@@ -44,3 +44,4 @@
 | 38     | Filter Method         | [Code](./filtermethod.js)          |
 | 39     | Reduce Method         | [Code](./reducemethod.js)          |
 | 40     | find Method           | [Code](./findmethod.js)            |
+| 40     | findindex             | [Code](./findmethod.js)            |
