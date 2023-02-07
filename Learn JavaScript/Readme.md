@@ -46,3 +46,4 @@
 | 40     | find Method           | [Code](./findmethod.js)            |
 | 41     | findindex             | [Code](./findmethod.js)            |
 | 42     | some Method           | [Code](./somemethod.js)            |
+| 43     | Every Method          | [Code](./everymethod.js)           |
