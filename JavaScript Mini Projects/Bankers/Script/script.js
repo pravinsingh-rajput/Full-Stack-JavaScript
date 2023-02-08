@@ -109,34 +109,20 @@ const confirmuser = document.querySelector("#confirmuser");
 const confirpin = document.querySelector("#confirpin");
 const closeaccount_btn = document.querySelector(".closeaccount");
 
-// Scripting
-
-// Update UI
-
-const updateUI = function (acc) {
-  // Display Total Balance
-  displaybalance(acc);
-
-  // Display transction
-  displaytransctions(acc);
-
-  // Display Summary
-  totalinterest(acc);
-  totaldebit(acc);
-  totalcredit(acc);
+// ----------------------------------------------------------------------------------- //
+// --------------------------------Login Section-------------------------------------- //
+// ----------------------------------------------------------------------------------- //
+// Creating Username
+const createusername = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((name) => name[0])
+      .join("");
+  });
 };
-
-const logindate = new Date();
-
-const date = `${logindate.getDate()}`.padStart(2, 0);
-const month = `${logindate.getMonth() + 1}`.padStart(2, 0);
-const year = logindate.getFullYear();
-const hour = `${logindate.getHours()}`.padStart(2, 0);
-const minute = `${logindate.getMinutes()}`.padStart(2, 0);
-
-today_date.textContent = `${date}/${month}/${year}, ${hour}:${minute} `;
-
-// Login
+createusername(account);
 
 let currentuser;
 
@@ -163,6 +149,17 @@ login_btn.addEventListener("click", function (e) {
   }
 });
 
+// Display Dates
+const logindate = new Date();
+
+const date = `${logindate.getDate()}`.padStart(2, 0);
+const month = `${logindate.getMonth() + 1}`.padStart(2, 0);
+const year = logindate.getFullYear();
+const hour = `${logindate.getHours()}`.padStart(2, 0);
+const minute = `${logindate.getMinutes()}`.padStart(2, 0);
+
+today_date.textContent = `${date}/${month}/${year}, ${hour}:${minute} `;
+
 // Display Transctions
 
 const displaytransctions = function (acc, sort = false) {
@@ -174,13 +171,8 @@ const displaytransctions = function (acc, sort = false) {
   sortaction.forEach(function (movement, i) {
     const mov = movement > 0 ? "deposit" : "Withdrawal";
 
-    const newdate = new Date(acc.transactiondate[i]);
-
-    const date = `${newdate.getDate()}`.padStart(2, 0);
-    const month = `${newdate.getMonth() + 1}`.padStart(2, 0);
-    const year = newdate.getFullYear();
-
-    const displaydate = `${date}/${month}/${year}`;
+    const date = new Date(acc.transactiondate[i]);
+    const displaydate = formtingdate(date);
 
     const newtransction =
       mov == "deposit"
@@ -211,6 +203,10 @@ const displaytransctions = function (acc, sort = false) {
   });
 };
 
+// -------------------------------------------------------------------------------------- //
+// --------------------------------Action Container-------------------------------------- //
+// -------------------------------------------------------------------------------------- //
+
 // Transfer Money
 transfer_btn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -225,9 +221,9 @@ transfer_btn.addEventListener("click", function (e) {
   ) {
     console.log("Transction Approved");
     currentuser.transactions.push(-amount);
-    currentuser.transactiondate.push(new Date());
+    currentuser.transactiondate.push(new Date().toISOString());
     receiverid.transactions.push(amount);
-    receiverid.transactiondate.push(new Date());
+    receiverid.transactiondate.push(new Date().toISOString());
     transferform.reset();
     updateUI(currentuser);
   } else {
@@ -240,15 +236,13 @@ transfer_btn.addEventListener("click", function (e) {
 
 requestloan_btn.addEventListener("click", function (e) {
   e.preventDefault();
-
   const loanmaount = Number(loan.value);
-
   if (
     loanmaount > 0 &&
     currentuser.transactions.some((deposits) => deposits >= loanmaount * 0.1)
   ) {
     currentuser.transactions.push(loanmaount);
-    currentuser.transactiondate.push(new Date());
+    currentuser.transactiondate.push(new Date().toISOString());
     loanform.reset();
     updateUI(currentuser);
     console.log("Loan Approved");
@@ -277,19 +271,9 @@ closeaccount_btn.addEventListener("click", function (e) {
   }
 });
 
-// Creating Username
-
-const createusername = function (accs) {
-  accs.forEach(function (acc) {
-    acc.username = acc.owner
-      .toLowerCase()
-      .split(" ")
-      .map((name) => name[0])
-      .join("");
-  });
-};
-
-createusername(account);
+// ------------------------------------------------------------------------------------- //
+// --------------------------------Summary Section-------------------------------------- //
+// ------------------------------------------------------------------------------------- //
 
 // Total Balance
 const displaybalance = function (data) {
@@ -336,3 +320,41 @@ sort.addEventListener("click", function (e) {
   displaytransctions(currentuser.transactions, !issorted);
   issorted = !issorted;
 });
+
+// -------------------------------------------------------------------------------------- //
+/// --------------------------------Other Functions-------------------------------------- //
+// -------------------------------------------------------------------------------------- //
+
+// Update UI
+const updateUI = function (acc) {
+  // Display Total Balance
+  displaybalance(acc);
+
+  // Display transction
+  displaytransctions(acc);
+
+  // Display Summary
+  totalinterest(acc);
+  totaldebit(acc);
+  totalcredit(acc);
+};
+
+// Date Function
+const formtingdate = function (date) {
+  // Number of days
+  const calnumberofdays = (date1, date2) =>
+    Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
+
+  const dayspassed = calnumberofdays(date, new Date());
+  console.log(dayspassed);
+
+  if (dayspassed === 0) return "Today";
+  if (dayspassed === 1) return "Yesterday";
+  if (dayspassed <= 7) return `${dayspassed} days Ago`;
+  else {
+    const day = `${new Date(date).getDate()}`.padStart(2, 0);
+    const month = `${new Date(date).getMonth() + 1}`.padStart(2, 0);
+    const year = new Date(date).getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+};
