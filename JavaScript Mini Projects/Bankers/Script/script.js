@@ -16,9 +16,9 @@ const accoun1 = {
     "2021-06-15T21:31:17.178Z",
     "2022-01-24T21:31:17.178Z",
     "2022-07-17T21:31:17.178Z",
-    "2022-11-25T21:31:17.178Z",
-    "2022-12-12T21:31:17.178Z",
-    "2023-01-31T21:31:17.178Z",
+    "2022-11-25T16:31:17.178Z",
+    "2022-12-12T18:31:17.178Z",
+    "2023-02-05T19:31:17.178Z",
   ],
   interest: 1.2,
 };
@@ -128,7 +128,9 @@ let currentuser;
 
 login_btn.addEventListener("click", function (e) {
   e.preventDefault();
-  currentuser = account.find((acc) => acc.username === userid.value);
+  currentuser = account.find(
+    (acc) => acc.username === userid.value.toLowerCase()
+  );
 
   if (currentuser?.pin === Number(userpin.value)) {
     //Display
@@ -148,6 +150,10 @@ login_btn.addEventListener("click", function (e) {
     console.log("Incorrect Credentails");
   }
 });
+
+// ----------------------------------------------------------------------------------- //
+// --------------------------------Transactions-------------------------------------- //
+// ----------------------------------------------------------------------------------- //
 
 // Display Dates
 const logindate = new Date();
