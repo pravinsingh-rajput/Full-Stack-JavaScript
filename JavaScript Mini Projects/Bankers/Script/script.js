@@ -4,8 +4,21 @@ const accoun1 = {
   owner: "Doctor Strange",
   pin: 1111,
   transactions: [
-    100, -250, 96, 4514, -2541.87, 6987, 7845, -4697.37, -1458.2, 2587.71, 6547,
-    -200, -2456, 1000,
+    100, -250, 4514, -2541.87, 6987, 7845, -4697.37, -1458.2, 2587.71, 6547,
+    -200,
+  ],
+  transactiondate: [
+    "2020-01-18T21:31:17.178Z",
+    "2020-02-20T21:31:17.178Z",
+    "2020-03-17T21:31:17.178Z",
+    "2021-02-20T21:31:17.178Z",
+    "2021-05-28T21:31:17.178Z",
+    "2021-06-15T21:31:17.178Z",
+    "2022-01-24T21:31:17.178Z",
+    "2022-07-17T21:31:17.178Z",
+    "2022-11-25T21:31:17.178Z",
+    "2022-12-12T21:31:17.178Z",
+    "2023-01-31T21:31:17.178Z",
   ],
   interest: 1.2,
 };
@@ -15,7 +28,19 @@ const accoun2 = {
   pin: 2222,
   transactions: [
     520, 7850, -1058.54, 2414, -30000, 8975, 9923, -7584, -241, 25578, 6584,
-    -1575,
+  ],
+  transactiondate: [
+    "2021-01-28T21:31:17.178Z",
+    "2021-02-30T21:31:17.178Z",
+    "2021-03-19T21:31:17.178Z",
+    "2021-03-20T21:31:17.178Z",
+    "2021-05-28T21:31:17.178Z",
+    "2021-06-25T21:31:17.178Z",
+    "2021-07-24T21:31:17.178Z",
+    "2021-07-20T21:31:17.178Z",
+    "2022-11-30T21:31:17.178Z",
+    "2023-01-29T21:31:17.178Z",
+    "2023-02-08T21:31:17.178Z",
   ],
   interest: 1.5,
 };
@@ -25,7 +50,20 @@ const account3 = {
   pin: 3333,
   transactions: [
     8745, -2245.17, -7845, 5700.54, 45102.9, -1457, 3257, -87469, 78458, 24578,
-    7894.5, 4587.17, -6784,
+    7894.5,
+  ],
+  transactiondate: [
+    "2021-01-31T11:31:17.178Z",
+    "2021-02-28T21:31:17.178Z",
+    "2021-05-15T21:31:17.178Z",
+    "2022-03-18T21:31:17.178Z",
+    "2022-06-26T12:31:17.178Z",
+    "2022-06-25T21:31:17.178Z",
+    "2022-07-08T21:31:17.178Z",
+    "2022-08-09T21:31:17.178Z",
+    "2022-11-18T12:31:17.178Z",
+    "2023-01-20T11:31:17.178Z",
+    "2023-02-04T08:31:17.178Z",
   ],
   interest: 2.3,
 };
@@ -80,13 +118,23 @@ const updateUI = function (acc) {
   displaybalance(acc);
 
   // Display transction
-  displaytransctions(acc.transactions);
+  displaytransctions(acc);
 
   // Display Summary
   totalinterest(acc);
   totaldebit(acc);
   totalcredit(acc);
 };
+
+const logindate = new Date();
+
+const date = `${logindate.getDate()}`.padStart(2, 0);
+const month = `${logindate.getMonth() + 1}`.padStart(2, 0);
+const year = logindate.getFullYear();
+const hour = `${logindate.getHours()}`.padStart(2, 0);
+const minute = `${logindate.getMinutes()}`.padStart(2, 0);
+
+today_date.textContent = `${date}/${month}/${year}, ${hour}:${minute} `;
 
 // Login
 
@@ -115,6 +163,54 @@ login_btn.addEventListener("click", function (e) {
   }
 });
 
+// Display Transctions
+
+const displaytransctions = function (acc, sort = false) {
+  transaction_container.innerHTML = "";
+  const sortaction = sort
+    ? acc.transactions.slice().sort((a, b) => a - b)
+    : acc.transactions;
+
+  sortaction.forEach(function (movement, i) {
+    const mov = movement > 0 ? "deposit" : "Withdrawal";
+
+    const newdate = new Date(acc.transactiondate[i]);
+
+    const date = `${newdate.getDate()}`.padStart(2, 0);
+    const month = `${newdate.getMonth() + 1}`.padStart(2, 0);
+    const year = newdate.getFullYear();
+
+    const displaydate = `${date}/${month}/${year}`;
+
+    const newtransction =
+      mov == "deposit"
+        ? `
+      <div class="transction flex w-full items-center justify-between border-b-2 pb-3 mb-3 px-8 ">
+        <div class="transaction-details flex items-center justify-between">
+            <p class="bg-gradient-to-r from-green-400 to-green-500 px-4 py-[1px] rounded-full text-white text-xs md:text-sm"> ${
+              i + 1
+            } ${mov.toLocaleUpperCase()} </p>
+                <p class="mx-4 text-xs">${displaydate}</p>
+          </div>
+              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
+        </div>
+    `
+        : `
+      <div class="transction flex w-full items-center justify-between border-b-2 pb-3 mb-3 px-8 ">
+        <div class="transaction-details flex items-center justify-between">
+            <p class="bg-gradient-to-r from-red-400 to-red-500 px-4 py-[1px] rounded-full text-white text-xs md:text-sm"> ${
+              i + 1
+            } ${mov.toLocaleUpperCase()} </p>
+                <p class="mx-4 text-xs">${displaydate}</p>
+          </div>
+              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
+        </div>
+    `;
+
+    transaction_container.insertAdjacentHTML("afterbegin", newtransction);
+  });
+};
+
 // Transfer Money
 transfer_btn.addEventListener("click", function (e) {
   e.preventDefault();
@@ -129,7 +225,9 @@ transfer_btn.addEventListener("click", function (e) {
   ) {
     console.log("Transction Approved");
     currentuser.transactions.push(-amount);
+    currentuser.transactiondate.push(new Date());
     receiverid.transactions.push(amount);
+    receiverid.transactiondate.push(new Date());
     transferform.reset();
     updateUI(currentuser);
   } else {
@@ -150,6 +248,7 @@ requestloan_btn.addEventListener("click", function (e) {
     currentuser.transactions.some((deposits) => deposits >= loanmaount * 0.1)
   ) {
     currentuser.transactions.push(loanmaount);
+    currentuser.transactiondate.push(new Date());
     loanform.reset();
     updateUI(currentuser);
     console.log("Loan Approved");
@@ -177,46 +276,6 @@ closeaccount_btn.addEventListener("click", function (e) {
     closeform.reset();
   }
 });
-
-// Display Transctions
-
-const displaytransctions = function (transction, sort = false) {
-  transaction_container.innerHTML = "";
-  const sortaction = sort
-    ? transction.slice().sort((a, b) => a - b)
-    : transction;
-
-  sortaction.forEach(function (movement, i) {
-    const mov = movement > 0 ? "deposit" : "Withdrawal";
-
-    const newtransction =
-      mov == "deposit"
-        ? `
-      <div class="transction flex w-full items-center justify-between border-b-2 pb-3 mb-3 px-8 ">
-        <div class="transaction-details flex items-center justify-between">
-            <p class="bg-gradient-to-r from-green-400 to-green-500 px-4 py-[1px] rounded-full text-white text-xs md:text-sm"> ${
-              i + 1
-            } ${mov.toLocaleUpperCase()} </p>
-                <p class="mx-4 text-xs">12/01/2023</p>
-          </div>
-              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
-        </div>
-    `
-        : `
-      <div class="transction flex w-full items-center justify-between border-b-2 pb-3 mb-3 px-8 ">
-        <div class="transaction-details flex items-center justify-between">
-            <p class="bg-gradient-to-r from-red-400 to-red-500 px-4 py-[1px] rounded-full text-white text-xs md:text-sm"> ${
-              i + 1
-            } ${mov.toLocaleUpperCase()} </p>
-                <p class="mx-4 text-xs">12/01/2023</p>
-          </div>
-              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
-        </div>
-    `;
-
-    transaction_container.insertAdjacentHTML("afterbegin", newtransction);
-  });
-};
 
 // Creating Username
 
