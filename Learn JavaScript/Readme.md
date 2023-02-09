@@ -48,4 +48,5 @@
 | 42     | some Method           | [Code](./somemethod.js)            |
 | 43     | Every Method          | [Code](./everymethod.js)           |
 | 44     | Flat & flatMap Method | [Code](./flat_flatmapmethods.js)   |
-| 45     | Sort Method           | [Code](./flat_flatmapmethods.js)   |
+| 45     | Sort Method           | [Code](./sortmethod.js)            |
+| 45     | INTL Api              | [Code](./intl.js)                  |
