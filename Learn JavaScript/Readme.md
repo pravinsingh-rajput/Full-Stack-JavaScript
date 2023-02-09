@@ -51,3 +51,4 @@
 | 45     | Sort Method           | [Code](./sortmethod.js)            |
 | 46     | INTL Api              | [Code](./intl.js)                  |
 | 47     | Set Time Out          | [Code](./settimeout.js)            |
+| 47     | Set Interval          | [Code](./setinterval.js)           |
