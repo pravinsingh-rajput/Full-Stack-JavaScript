@@ -120,7 +120,7 @@ const transaction_container = document.querySelector(".transaction-container");
 const credited = document.querySelector(".credit");
 const debited = document.querySelector(".debit");
 const interest = document.querySelector(".interest");
-const sort = document.querySelector(".sort");
+// const sort = document.querySelector(".sort");
 
 // Action
 // Transfer Money
@@ -204,12 +204,6 @@ function warning(msg) {
   setTimeout(() => {
     warningbox.classList.add("hidden");
   }, 1000);
-}
-
-function print() {
-  console.log("Hii");
-  console.log("hello");
-  console.log("Hii");
 }
 
 // Creating Username
@@ -431,13 +425,13 @@ const totalinterest = function (data) {
   );
 };
 
-// sort
-let issorted = true;
-sort.addEventListener("click", function (e) {
-  e.preventDefault();
-  displaytransctions(currentuser.transactions, !issorted);
-  issorted = !issorted;
-});
+// // sort
+// let issorted = true;
+// sort.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   displaytransctions(currentuser.transactions, !issorted);
+//   issorted = !issorted;
+// });
 
 // ----------------------------------------------------------------------------------- //
 // --------------------------------Login Section-------------------------------------- //
