@@ -140,6 +140,17 @@ const confirmuser = document.querySelector("#confirmuser");
 const confirpin = document.querySelector("#confirpin");
 const closeaccount_btn = document.querySelector(".closeaccount");
 
+// Error
+const warningbox = document.querySelector(".warning");
+const errormsg = document.querySelector(".errormsg");
+
+// Logout
+const timeremaning = document.querySelector(".logout");
+
+// Global Variables
+let currentuser, timer;
+const logindate = new Date();
+
 // -------------------------------------------------------------------------------------- //
 /// --------------------------------Other Functions-------------------------------------- //
 // -------------------------------------------------------------------------------------- //
@@ -148,10 +159,8 @@ const closeaccount_btn = document.querySelector(".closeaccount");
 const updateUI = function (acc) {
   // Display Total Balance
   displaybalance(acc);
-
   // Display transction
   displaytransctions(acc);
-
   // Display Summary
   totalinterest(acc);
   totaldebit(acc);
@@ -187,6 +196,22 @@ const formatecurrency = function (value, loacle, currency) {
   }).format(value);
 };
 
+// Warning
+
+function warning(msg) {
+  warningbox.classList.remove("hidden");
+  errormsg.textContent = msg;
+  setTimeout(() => {
+    warningbox.classList.add("hidden");
+  }, 1000);
+}
+
+function print() {
+  console.log("Hii");
+  console.log("hello");
+  console.log("Hii");
+}
+
 // Creating Username
 const createusername = function (accs) {
   accs.forEach(function (acc) {
@@ -199,8 +224,27 @@ const createusername = function (accs) {
 };
 createusername(account);
 
-let currentuser;
-const logindate = new Date();
+const logouttimer = function () {
+  let time = 600;
+
+  const countdown = function () {
+    let minutes = String(Math.trunc(time / 60)).padStart(2, 0);
+    let seconds = String(time % 60).padStart(2, 0);
+
+    timeremaning.textContent = `${minutes}:${seconds}`;
+
+    if (time === 0) {
+      clearInterval(timer);
+      welcome_msg.textContent = `Login to get started`;
+      banking.classList.remove("flex");
+      banking.classList.add("hidden");
+    }
+    time--;
+  };
+
+  const timer = setInterval(countdown, 1000);
+  return timer;
+};
 
 // ----------------------------------------------------------------------------------- //
 // --------------------------------Transactions-------------------------------------- //
@@ -279,29 +323,39 @@ transfer_btn.addEventListener("click", function (e) {
     transferform.reset();
     updateUI(currentuser);
   } else {
-    console.log("Transction Not Approved");
+    warning("Transction Not Approved");
     transferform.reset();
   }
+
+  clearInterval(timer);
+  timer = logouttimer();
 });
 
 // Request Loan
 
 requestloan_btn.addEventListener("click", function (e) {
   e.preventDefault();
-  const loanmaount = Number(loan.value);
-  if (
-    loanmaount > 0 &&
-    currentuser.transactions.some((deposits) => deposits >= loanmaount * 0.1)
-  ) {
-    currentuser.transactions.push(loanmaount);
-    currentuser.transactiondate.push(new Date().toISOString());
+
+  setTimeout(() => {
+    const loanmaount = Number(loan.value);
+    if (
+      loanmaount > 0 &&
+      currentuser.transactions.some((deposits) => deposits >= loanmaount * 0.1)
+    ) {
+      currentuser.transactions.push(loanmaount);
+      currentuser.transactiondate.push(new Date().toISOString());
+      updateUI(currentuser);
+    } else {
+      warning("Loan Not Approved");
+    }
+  }, 1500);
+
+  setTimeout(() => {
     loanform.reset();
-    updateUI(currentuser);
-    console.log("Loan Approved");
-  } else {
-    console.log("Loan Not Approved");
-    loanform.reset();
-  }
+  }, 1501);
+
+  clearInterval(timer);
+  timer = logouttimer();
 });
 
 //Close Account
@@ -397,8 +451,6 @@ login_btn.addEventListener("click", function (e) {
 
   if (currentuser?.pin === Number(userpin.value)) {
     //Display
-    console.log(currentuser.loacle);
-
     // Welocme Messgae
 
     welcome_msg.textContent = `Welcome Back, ${currentuser.owner
@@ -408,11 +460,11 @@ login_btn.addEventListener("click", function (e) {
     login_form.reset();
     banking.classList.remove("hidden");
     banking.classList.add("flex");
-
+    if (timer) clearInterval(timer);
+    timer = logouttimer();
     updateUI(currentuser);
 
     // Display Dates
-
     const option = {
       day: "numeric",
       month: "numeric",
@@ -420,12 +472,12 @@ login_btn.addEventListener("click", function (e) {
       hour: "numeric",
       minute: "numeric",
     };
-
     today_date.textContent = new Intl.DateTimeFormat(
       currentuser.loacle,
       option
     ).format(logindate);
   } else {
-    console.log("Incorrect Credentails");
+    login_form.reset();
+    warning("incorrect credentials");
   }
 });
