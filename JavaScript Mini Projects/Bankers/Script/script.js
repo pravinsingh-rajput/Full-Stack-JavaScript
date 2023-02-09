@@ -21,6 +21,8 @@ const accoun1 = {
     "2023-02-05T19:31:17.178Z",
   ],
   interest: 1.2,
+  loacle: "en-IN",
+  currency: "INR",
 };
 
 const accoun2 = {
@@ -43,6 +45,8 @@ const accoun2 = {
     "2023-02-08T21:31:17.178Z",
   ],
   interest: 1.5,
+  loacle: "en-US",
+  currency: "EUR",
 };
 
 const account3 = {
@@ -66,9 +70,36 @@ const account3 = {
     "2023-02-04T08:31:17.178Z",
   ],
   interest: 2.3,
+  loacle: "en-UD",
+  currency: "USD",
 };
 
-const account = [accoun1, accoun2, account3];
+const account4 = {
+  owner: "Spider Man",
+  pin: 3333,
+  transactions: [
+    1845, -2240.17, -784, 700.54, 102.9, -1457, 257, -7469, 99458, 24578,
+    3294.5,
+  ],
+  transactiondate: [
+    "2021-01-24T11:31:17.178Z",
+    "2021-02-12T21:31:17.178Z",
+    "2021-05-15T21:31:17.178Z",
+    "2022-03-18T21:31:17.178Z",
+    "2022-06-22T12:31:17.178Z",
+    "2022-06-25T21:31:17.178Z",
+    "2022-07-08T21:31:17.178Z",
+    "2022-08-09T21:31:17.178Z",
+    "2022-11-25T12:31:17.178Z",
+    "2023-01-30T11:31:17.178Z",
+    "2023-02-04T08:31:17.178Z",
+  ],
+  interest: 2.3,
+  loacle: "en-IN",
+  currency: "INR",
+};
+
+const account = [accoun1, accoun2, account3, account4];
 
 // Importing
 
@@ -109,9 +140,53 @@ const confirmuser = document.querySelector("#confirmuser");
 const confirpin = document.querySelector("#confirpin");
 const closeaccount_btn = document.querySelector(".closeaccount");
 
-// ----------------------------------------------------------------------------------- //
-// --------------------------------Login Section-------------------------------------- //
-// ----------------------------------------------------------------------------------- //
+// -------------------------------------------------------------------------------------- //
+/// --------------------------------Other Functions-------------------------------------- //
+// -------------------------------------------------------------------------------------- //
+
+// Update UI
+const updateUI = function (acc) {
+  // Display Total Balance
+  displaybalance(acc);
+
+  // Display transction
+  displaytransctions(acc);
+
+  // Display Summary
+  totalinterest(acc);
+  totaldebit(acc);
+  totalcredit(acc);
+};
+
+// Date Function
+const formtingdate = function (date, locale) {
+  // Number of days
+  const calnumberofdays = (date1, date2) =>
+    Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
+
+  const dayspassed = calnumberofdays(date, new Date());
+
+  if (dayspassed === 0) return "Today";
+  if (dayspassed === 1) return "Yesterday";
+  if (dayspassed <= 7) return `${dayspassed} days Ago`;
+  else {
+    return new Intl.DateTimeFormat(locale, {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    }).format(date);
+  }
+};
+
+// Formated Transction
+
+const formatecurrency = function (value, loacle, currency) {
+  return new Intl.NumberFormat(loacle, {
+    style: "currency",
+    currency: currency,
+  }).format(value);
+};
+
 // Creating Username
 const createusername = function (accs) {
   accs.forEach(function (acc) {
@@ -125,46 +200,11 @@ const createusername = function (accs) {
 createusername(account);
 
 let currentuser;
-
-login_btn.addEventListener("click", function (e) {
-  e.preventDefault();
-  currentuser = account.find(
-    (acc) => acc.username === userid.value.toLowerCase()
-  );
-
-  if (currentuser?.pin === Number(userpin.value)) {
-    //Display
-
-    // Welocme Messgae
-
-    welcome_msg.textContent = `Welcome Back, ${currentuser.owner
-      .split(" ")
-      .join(" ")}`;
-
-    login_form.reset();
-    banking.classList.remove("hidden");
-    banking.classList.add("flex");
-
-    updateUI(currentuser);
-  } else {
-    console.log("Incorrect Credentails");
-  }
-});
+const logindate = new Date();
 
 // ----------------------------------------------------------------------------------- //
 // --------------------------------Transactions-------------------------------------- //
 // ----------------------------------------------------------------------------------- //
-
-// Display Dates
-const logindate = new Date();
-
-const date = `${logindate.getDate()}`.padStart(2, 0);
-const month = `${logindate.getMonth() + 1}`.padStart(2, 0);
-const year = logindate.getFullYear();
-const hour = `${logindate.getHours()}`.padStart(2, 0);
-const minute = `${logindate.getMinutes()}`.padStart(2, 0);
-
-today_date.textContent = `${date}/${month}/${year}, ${hour}:${minute} `;
 
 // Display Transctions
 
@@ -178,7 +218,13 @@ const displaytransctions = function (acc, sort = false) {
     const mov = movement > 0 ? "deposit" : "Withdrawal";
 
     const date = new Date(acc.transactiondate[i]);
-    const displaydate = formtingdate(date);
+    const displaydate = formtingdate(date, acc.loacle);
+
+    const formatetransaction = formatecurrency(
+      movement,
+      acc.loacle,
+      acc.currency
+    );
 
     const newtransction =
       mov == "deposit"
@@ -190,7 +236,7 @@ const displaytransctions = function (acc, sort = false) {
             } ${mov.toLocaleUpperCase()} </p>
                 <p class="mx-4 text-xs">${displaydate}</p>
           </div>
-              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
+              <p class="font-semibold"> ${formatetransaction} </p>
         </div>
     `
         : `
@@ -201,7 +247,7 @@ const displaytransctions = function (acc, sort = false) {
             } ${mov.toLocaleUpperCase()} </p>
                 <p class="mx-4 text-xs">${displaydate}</p>
           </div>
-              <p class="font-semibold"> ${movement} <span class="currency">$</span> </p>
+              <p class="font-semibold">  ${formatetransaction}  </p>
         </div>
     `;
 
@@ -286,7 +332,11 @@ const displaybalance = function (data) {
   data.balance = data.transactions
     .reduce((acc, mov) => acc + mov, 0)
     .toFixed(2);
-  total_balance.textContent = `${data.balance} $`;
+  total_balance.textContent = formatecurrency(
+    data.balance,
+    data.loacle,
+    data.currency
+  );
 };
 
 // Total Credit
@@ -295,7 +345,11 @@ const totalcredit = function (data) {
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0)
     .toFixed(2);
-  credited.textContent = `${allcredits} $`;
+  credited.textContent = formatecurrency(
+    allcredits,
+    data.loacle,
+    data.currency
+  );
 };
 
 // Total debit
@@ -306,7 +360,7 @@ const totaldebit = function (data) {
       .reduce((acc, mov) => acc + mov, 0)
       .toFixed(2)
   );
-  debited.textContent = `${alldebit} $`;
+  debited.textContent = formatecurrency(alldebit, data.loacle, data.currency);
 };
 
 // total interest
@@ -316,7 +370,11 @@ const totalinterest = function (data) {
     .map((deposit) => (deposit * data.interest) / 100)
     .reduce((acc, mov) => acc + mov, 0)
     .toFixed(2);
-  interest.textContent = `${allinterest} $`;
+  interest.textContent = formatecurrency(
+    allinterest,
+    data.loacle,
+    data.currency
+  );
 };
 
 // sort
@@ -327,40 +385,47 @@ sort.addEventListener("click", function (e) {
   issorted = !issorted;
 });
 
-// -------------------------------------------------------------------------------------- //
-/// --------------------------------Other Functions-------------------------------------- //
-// -------------------------------------------------------------------------------------- //
+// ----------------------------------------------------------------------------------- //
+// --------------------------------Login Section-------------------------------------- //
+// ----------------------------------------------------------------------------------- //
 
-// Update UI
-const updateUI = function (acc) {
-  // Display Total Balance
-  displaybalance(acc);
+login_btn.addEventListener("click", function (e) {
+  e.preventDefault();
+  currentuser = account.find(
+    (acc) => acc.username === userid.value.toLowerCase()
+  );
 
-  // Display transction
-  displaytransctions(acc);
+  if (currentuser?.pin === Number(userpin.value)) {
+    //Display
+    console.log(currentuser.loacle);
 
-  // Display Summary
-  totalinterest(acc);
-  totaldebit(acc);
-  totalcredit(acc);
-};
+    // Welocme Messgae
 
-// Date Function
-const formtingdate = function (date) {
-  // Number of days
-  const calnumberofdays = (date1, date2) =>
-    Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
+    welcome_msg.textContent = `Welcome Back, ${currentuser.owner
+      .split(" ")
+      .join(" ")}`;
 
-  const dayspassed = calnumberofdays(date, new Date());
-  console.log(dayspassed);
+    login_form.reset();
+    banking.classList.remove("hidden");
+    banking.classList.add("flex");
 
-  if (dayspassed === 0) return "Today";
-  if (dayspassed === 1) return "Yesterday";
-  if (dayspassed <= 7) return `${dayspassed} days Ago`;
-  else {
-    const day = `${new Date(date).getDate()}`.padStart(2, 0);
-    const month = `${new Date(date).getMonth() + 1}`.padStart(2, 0);
-    const year = new Date(date).getFullYear();
-    return `${day}/${month}/${year}`;
+    updateUI(currentuser);
+
+    // Display Dates
+
+    const option = {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+    };
+
+    today_date.textContent = new Intl.DateTimeFormat(
+      currentuser.loacle,
+      option
+    ).format(logindate);
+  } else {
+    console.log("Incorrect Credentails");
   }
-};
+});
