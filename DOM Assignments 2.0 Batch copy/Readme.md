@@ -22,34 +22,40 @@ searchbox.placeholder = "Search My Project";
 ![Alt](./DOM%20Assignment%202.0%201%2C2%2C3/firstAssignmentImage/task3Output.png)
 
 ```javaScript
-<ul>
-  <li>
-    <a href="/" target="_blank"><i class="fa-brands fa-github"></i></a>
-  </li>
-  <li>
-    <a href="/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-  </li>
-  <li>
-    <a href="/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-  </li>
-</ul>
+const social = document.getElementsByTagName("footer")[0];
+const socialicon = `<ul>
+        <li>
+          <a href="/" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </li>
+        <li>
+          <a href="/" target="_blank"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      </ul>`;
+
+social.insertAdjacentHTML("beforeend", socialicon);
 ```
 
 ![Alt](./DOM%20Assignment%202.0%201%2C2%2C3/firstAssignmentImage/task4Output.png)
 
 ```javaScript
-<img
-  src="https://hiteshchoudhary.com/static/a8d73d1aac4c79e9bb689640e6090367/2eaab/person-image.jpg"
-/>
+const image = document.querySelector(".hero-right-section img");
+
+image.src =
+  "https://hiteshchoudhary.com/static/a8d73d1aac4c79e9bb689640e6090367/2eaab/person-image.jpg";
 ```
 
 ![Alt](./DOM%20Assignment%202.0%201%2C2%2C3/firstAssignmentImage/task5Output.png)
 
 ```javaScript
-<div class="hero-right-section-btns">
-  <button>Chat With Me</button>
-  <button>Chat With Me</button>
-</div>
+const support = document.querySelector(".hero-right-section-btns");
+
+const support_btn = `<button>Chat With Me</button>`;
+support.insertAdjacentHTML("beforeend", support_btn);
 ```
 
 ### Assignment 2
