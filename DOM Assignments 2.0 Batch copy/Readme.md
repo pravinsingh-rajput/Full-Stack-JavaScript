@@ -80,3 +80,18 @@ const skills = `<div class="accordian">
 
 addaccordian.insertAdjacentHTML("beforeend", skills);
 ```
+
+### Assignment 3
+
+![Alt](./DOM%20Assignment%202.0%201%2C2%2C3/thirdAssignmentImage/task1Output.png)
+
+```javaScript
+document.querySelector(".enterName").placeholder = "FSJS 2.0";
+document.querySelector(".enterMail").placeholder = "FSJS@ineuron.ai";
+document.querySelector(".enterMessage").placeholder = "Hello World";
+
+document.querySelector(".userName").placeholder = "FSJS 2.0";
+document.querySelector(".userEmail").placeholder = "FSJS@ineuron.ai";
+document.querySelector(".userMessage").placeholder = "Hello World";
+
+```
