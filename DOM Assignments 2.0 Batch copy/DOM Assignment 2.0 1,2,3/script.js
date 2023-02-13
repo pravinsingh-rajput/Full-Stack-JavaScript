@@ -42,5 +42,4 @@ image.src =
 const support = document.querySelector(".hero-right-section-btns");
 
 const support_btn = `<button>Chat With Me</button>`;
-
 support.insertAdjacentHTML("beforeend", support_btn);

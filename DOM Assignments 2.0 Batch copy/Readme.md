@@ -69,5 +69,14 @@ support.insertAdjacentHTML("beforeend", support_btn);
 ![Alt](./DOM%20Assignment%202.0%201%2C2%2C3/secondAssignmentImage/task2Output.png)
 
 ```javaScript
+const addaccordian = document.querySelector(".accordian-wrapper");
 
+const skills = `<div class="accordian">
+        <h3>Skills</h3>
+        <p>
+          I posses a very good command over the Full Stack Development technologies like MERN which can be seen in my work over the Github.
+        </p>
+      </div>`;
+
+addaccordian.insertAdjacentHTML("beforeend", skills);
 ```
