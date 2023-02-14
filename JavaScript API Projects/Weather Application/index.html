@@ -12,13 +12,63 @@
     <!-- Weather Application -->
     <section
       aria-label="HomeScreen"
-      class="h-full md:h-screen w-full bg-cyan-50"
+      class="h-full md:h-screen w-full bg-cyan-50 flex"
     >
       <!-- Landing Page -->
-      <section aria-label="MainContainer" class="bg-transparent">
-        hello
-        <!-- Getting starting Section -->
-        <section aria-label="getstarted_section"></section>
+      <section aria-label="MainContainer" class="flex w-full">
+        <!-- Left conatiner -->
+        <div class="left_container p-5 bg-cyan-50 w-full">Hello</div>
+        <!-- Right Conatiner -->
+        <div
+          class="right_container flex flex-col space-y-4 bg-emerald-100 p-5 w-[35%]"
+        >
+          <!-- Search -->
+          <div
+            class="search_container w-full rounded-lg shadow-xl border-b-2 border-white"
+          >
+            <form class="flex">
+              <img
+                src="./images/locationicon.png"
+                alt=""
+                class="w-8 bg-transparent/5 rounded-l-md"
+              />
+              <input
+                type="text"
+                placeholder="Search your city"
+                class="w-full focus:outline-none px-2 bg-transparent/5"
+              />
+              <button class="bg-transparent/5 rounded-r-md">
+                <img
+                  src="./images/searchicon.png"
+                  alt=""
+                  class="w-10 bg-transparent/5 rounded-r-md"
+                />
+              </button>
+            </form>
+          </div>
+          <!-- Searched Weather -->
+          <div
+            class="city_weather w-full p-2 bg-white rounded-lg shadow-lg space-y-4 h-3/5 py-4"
+          >
+            <div class="flex justify-start space-x-1">
+              <img src="./images/locationicon2.png" alt="" class="h-6" />
+              <h3 class="searched_loction text-lg font-semibold">MUMBAI</h3>
+            </div>
+            <div
+              class="weather_view items-center flex w-full border-2 justify-center"
+            >
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player
+                src="https://assets5.lottiefiles.com/temp/lf20_JA7Fsb.json"
+                background="transparent"
+                speed="1"
+                style="width: 200px; height: 200px"
+                loop
+                autoplay
+              ></lottie-player>
+            </div>
+          </div>
+        </div>
       </section>
     </section>
   </body>
