@@ -24,48 +24,69 @@
         >
           <!-- Search -->
           <div
-            class="search_container w-full rounded-lg shadow-xl border-b-2 border-white"
+            class="search_container w-full rounded-2xl shadow-xl border-b-2 border-white"
           >
             <form class="flex">
               <img
                 src="./images/locationicon.png"
                 alt=""
-                class="w-8 bg-transparent/5 rounded-l-md"
+                class="w-8 bg-transparent/5 rounded-l-2xl"
               />
               <input
                 type="text"
                 placeholder="Search your city"
                 class="w-full focus:outline-none px-2 bg-transparent/5"
               />
-              <button class="bg-transparent/5 rounded-r-md">
+              <button class="bg-transparent/5 rounded-r-2xl">
                 <img
                   src="./images/searchicon.png"
                   alt=""
-                  class="w-10 bg-transparent/5 rounded-r-md"
+                  class="w-10 bg-transparent/5 rounded-r-2xl"
                 />
               </button>
             </form>
           </div>
           <!-- Searched Weather -->
           <div
-            class="city_weather w-full p-2 bg-white rounded-lg shadow-lg space-y-4 h-3/5 py-4"
+            class="city_weather w-full p-2 bg-white rounded-2xl shadow-lg space-y-4 h-3/5 py-4"
           >
             <div class="flex justify-start space-x-1">
               <img src="./images/locationicon2.png" alt="" class="h-6" />
               <h3 class="searched_loction text-lg font-semibold">MUMBAI</h3>
             </div>
-            <div
-              class="weather_view items-center flex w-full border-2 justify-center"
-            >
+            <div class="weather_view items-center flex w-full justify-center">
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
               <lottie-player
                 src="https://assets5.lottiefiles.com/temp/lf20_JA7Fsb.json"
                 background="transparent"
                 speed="1"
-                style="width: 200px; height: 200px"
+                style="width: 180px; height: 180px"
                 loop
                 autoplay
               ></lottie-player>
+            </div>
+            <p class="w-full text-center">Today, 14 April</p>
+            <h1 class="text-6xl font-semibold w-full text-center">
+              29<sup>o</sup>
+            </h1>
+          </div>
+          <!-- wind & humidity -->
+          <div
+            class="city_weather w-full p-2 bg-white rounded-2xl shadow-lg space-y-4 py-4"
+          >
+            <!-- Wind -->
+            <div class="flex space-x-2 items-baseline">
+              <img src="./images/windicon.png" alt="" />
+              <p>Wind</p>
+              <div class="w-[2px] h-4 bg-black"></div>
+              <p>15 <span class="text-sm">km/h</span></p>
+            </div>
+            <!-- Humidity -->
+            <div class="flex space-x-2 items-baseline">
+              <img src="./images/humidityicon.png" alt="" />
+              <p>Wind</p>
+              <div class="w-[2px] h-4 bg-black"></div>
+              <p>26 <span class="text-sm">%</span></p>
             </div>
           </div>
         </div>
