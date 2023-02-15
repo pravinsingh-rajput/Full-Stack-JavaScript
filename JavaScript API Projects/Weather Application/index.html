@@ -85,9 +85,10 @@
           <!-- More details weather Container -->
           <div class="more_details flex">
             <!-- Right Container -->
-            <div class="right_details_container flex w-full">
+            <div class="right_details_container flex w-full space-x-24">
+              <!-- Future Details -->
               <div
-                class="future_detail_container w-2/5 shadow-xl rounded-xl h-full flex flex-col space-y-4 bg-white"
+                class="future_detail_container w-2/5 shadow-xl rounded-xl flex flex-col space-y-4 bg-white"
               >
                 <!-- Day 1 -->
                 <div
@@ -246,7 +247,7 @@
                       </p>
                     </div>
                   </div>
-                  <!-- Right Container -->
+                  <!-- bottom Container -->
                   <div
                     class="right_future_container flex w-full justify-around"
                   >
@@ -259,6 +260,119 @@
                     >
                       <img src="./images/sunseticon.png" alt="" class="w-8" />
                       <p class="h-fit">06:39 PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fetched Details -->
+              <div
+                class="fetched_details w-1/2 rounded-xl space-y-2 shadow-2xl bg-transparent pt-4"
+              >
+                <div class="flex justify-start space-x-1 px-2">
+                  <img src="./images/locationicon2.png" alt="" class="h-6" />
+                  <h3 class="searched_loction text-lg font-semibold">MUMBAI</h3>
+                </div>
+                <!-- Sunrise and Set Container -->
+                <div class="rise_set_container">
+                  <div
+                    class="right_future_container flex w-full justify-around"
+                  >
+                    <div class="sunrise flex space-x-4 items-center">
+                      <img src="./images/sunriseicon.png" alt="" class="" />
+                      <div>
+                        <h2 class="text-xl">Sunrise</h2>
+                        <p class="h-fit">07:06 AM</p>
+                      </div>
+                    </div>
+                    <div
+                      class="sunset flex space-x-4 align-bottom items-center"
+                    >
+                      <img src="./images/sunseticon.png" alt="" class="" />
+                      <div>
+                        <h2 class="text-xl">Sunset</h2>
+                        <p class="h-fit">06:46 PM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- other details -->
+                <div class="otherdetails_container space-y-4">
+                  <!-- Wind -->
+                  <div
+                    class="flex flex-col justify-between items-center space-y-4 pt-4"
+                  >
+                    <div class="wind_details flex space-x-2">
+                      <div
+                        class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
+                      >
+                        <img src="./images/windicon.png" alt="" class="mx-1" />
+                        <p>Wind Speed:</p>
+                        <p>20.2 <span class="text-sm">km/h</span></p>
+                      </div>
+                      <div
+                        class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
+                      >
+                        <img src="./images/windicon.png" alt="" class="mx-1" />
+                        <p>Wind Degree:</p>
+                        <p>270</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div
+                    class="flex flex-col justify-between items-center space-y-4 pt-4"
+                  >
+                    <div class="wind_details flex space-x-2">
+                      <div
+                        class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
+                      >
+                        <img src="./images/windicon.png" alt="" class="mx-1" />
+                        <p>Wind Direction:</p>
+                        <p>W</p>
+                      </div>
+                      <div
+                        class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
+                      >
+                        <img
+                          src="./images/humidityicon.png"
+                          alt=""
+                          class="mx-1"
+                        />
+                        <p>Humidity:</p>
+                        <p>21</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Longitude and latitude -->
+                  <div
+                    class="flex flex-col justify-between items-center space-y-4 pt-4"
+                  >
+                    <div class="wind_details flex space-x-2">
+                      <div
+                        class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
+                      >
+                        <p>Latitude:</p>
+                        <p>18.93</p>
+                      </div>
+                      <div
+                        class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
+                      >
+                        <p>Longitude:</p>
+                        <p>72.83</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Local Time -->
+                  <div
+                    class="flex flex-col justify-between items-center space-y-4 pt-4"
+                  >
+                    <div class="wind_details flex space-x-2">
+                      <div
+                        class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
+                      >
+                        <p>Local Time:</p>
+                        <p>2023-02-15 14:46</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -328,19 +442,6 @@
                 TimeZone: <span class="font-normal text-lg">Asia/Kolkata</span>
               </h1>
             </div>
-            <!-- <div class="flex space-x-2 items-baseline">
-              <img src="./images/windicon.png" alt="" />
-              <p>Wind</p>
-              <div class="w-[2px] h-4 bg-black"></div>
-              <p>15 <span class="text-sm">km/h</span></p>
-            </div>
-
-            <div class="flex space-x-2 items-baseline">
-              <img src="./images/humidityicon.png" alt="" />
-              <p>Wind</p>
-              <div class="w-[2px] h-4 bg-black"></div>
-              <p>26 <span class="text-sm">%</span></p>
-            </div> -->
           </div>
         </div>
       </section>
