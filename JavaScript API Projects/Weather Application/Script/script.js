@@ -3,6 +3,7 @@
 // Input
 
 const searchinput = document.getElementById("searchinput");
+const animated_climate = document.getElementById("animated_climate");
 const search = document.querySelector("#search");
 const searched_loction = document.querySelectorAll(".searched_loction");
 const searched_temperature = document.querySelector(".searched_temperature");
@@ -53,11 +54,26 @@ const getdata = async (event) => {
 
   // Displaying Data
 
+  if (data.current.temp_c >= 20) {
+    animated_climate.src = "./images/sunny.gif";
+  } else if (data.current.temp_c < 20 && data.current.temp_c >= 15) {
+    animated_climate.src = "./images/cloudy.gif";
+  } else if (data.current.temp_c < 15 && data.current.temp_c >= 10) {
+    animated_climate.src = "./images/thunder.gif";
+  } else if (data.current.temp_c < 10 && data.current.temp_c > 0) {
+    animated_climate.src = "./images/rainfall.gif";
+  } else if (data.current.temp_c <= 0) {
+    animated_climate.src = "./images/snowfall.gif";
+  } else {
+    console.log("Something Went Wrong");
+  }
+
   displaylocationdata();
   sunriseset();
   displaymoredetails();
   displaytimetemp();
   displayfuturedata();
+  climateanimation();
 };
 
 // displaying Data
