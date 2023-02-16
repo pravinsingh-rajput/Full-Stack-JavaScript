@@ -12,19 +12,28 @@
     <!-- Weather Application -->
     <section
       aria-label="HomeScreen"
-      class="h-full md:h-screen w-full bg-cyan-50 flex"
+      class="h-full md:h-full w-full lg:h-screen bg-cyan-50 flex"
     >
       <!-- Main Page -->
-      <section aria-label="MainContainer" class="flex w-full">
+      <section
+        aria-label="MainContainer"
+        class="flex w-full flex-col-reverse lg:flex-row md:flex-row-reverse"
+      >
         <!-- Left conatiner -->
-        <div class="left_container p-5 bg-cyan-50 w-full space-y-8">
+        <div
+          class="left_container p-4 bg-cyan-50 md:w-3/4 w-full space-y-2 lg:space-y-8"
+        >
           <!-- Date & Time -->
           <div class="date_time">
-            <h1 class="text-4xl font-bold text-blue-500 livetime">07:32 AM</h1>
+            <h1 class="text-2xl md:text-4xl font-bold text-blue-500 livetime">
+              07:32 AM
+            </h1>
             <p class="livedate">Wednesday, 14 April, 2023</p>
           </div>
           <!-- Time Weather -->
-          <div class="time_container flex w-full justify-evenly space-x-2">
+          <div
+            class="time_container grid grid-cols-3 min-[425px]:grid-cols-4 lg:grid-cols-7 md:grid-cols-4 gap-2 w-full"
+          >
             <!-- 12:00 AM Card -->
             <div
               class="12am card text-sm rounded-xl shadow-xl w-fit p-3 flex flex-col justify-center items-center space-y-1 text-white bg-slate-700"
@@ -83,12 +92,14 @@
             </div>
           </div>
           <!-- More details weather Container -->
-          <div class="more_details flex">
+          <div class="more_details flex w-full">
             <!-- Right Container -->
-            <div class="right_details_container flex w-full space-x-24">
+            <div
+              class="right_details_container flex w-full flex-col-reverse md:flex-col-reverse md:space-x-0 lg:space-x-24 lg:flex-row"
+            >
               <!-- Future Details -->
               <div
-                class="future_detail_container w-2/5 shadow-xl rounded-xl flex flex-col space-y-6 bg-white"
+                class="future_detail_container lg:w-2/5 shadow-xl rounded-xl grid md:w-full bg-white mt-2"
               >
                 <!-- Day 1 -->
                 <div
@@ -219,7 +230,7 @@
                       --/--/-----
                     </div>
                     <!-- Max Min Temp -->
-                    <div class="minmax flex space-x-5">
+                    <div class="minmax flex text-sm md:space-x-5">
                       <p>
                         Max:
                         <span class="futuremaxtemp">-- </span>
@@ -249,7 +260,7 @@
               </div>
               <!-- Fetched Details -->
               <div
-                class="fetched_details w-1/2 rounded-xl space-y-2 shadow-2xl bg-transparent pt-4 pb-2"
+                class="fetched_details w-full md:w-full lg:w-3/5 rounded-xl shadow-2xl bg-transparent pt-4 pb-2 md:space-y-1"
               >
                 <div class="flex justify-start space-x-1 px-2">
                   <img src="./images/locationicon2.png" alt="" class="h-6" />
@@ -279,7 +290,7 @@
                   </div>
                 </div>
                 <!-- other details -->
-                <div class="otherdetails_container space-y-4">
+                <div class="otherdetails_container space-y-1">
                   <!-- Wind -->
                   <div
                     class="flex flex-col justify-between items-center space-y-4 pt-4"
@@ -288,7 +299,6 @@
                       <div
                         class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
                       >
-                        <img src="./images/windicon.png" alt="" class="mx-1" />
                         <p>Wind Speed:</p>
                         <p class="windspeed">
                           -- <span class="text-sm">km/h</span>
@@ -297,7 +307,6 @@
                       <div
                         class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
                       >
-                        <img src="./images/windicon.png" alt="" class="mx-1" />
                         <p>Wind Degree:</p>
                         <p class="winddegree">---</p>
                       </div>
@@ -311,18 +320,12 @@
                       <div
                         class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
                       >
-                        <img src="./images/windicon.png" alt="" class="mx-1" />
                         <p>Wind Direction:</p>
                         <p class="winddirection">--</p>
                       </div>
                       <div
                         class="flex space-x-2 items-baseline rounded-lg shadow-lg p-2 bg-white"
                       >
-                        <img
-                          src="./images/humidityicon.png"
-                          alt=""
-                          class="mx-1"
-                        />
                         <p>Humidity:</p>
                         <p class="humidity">--</p>
                       </div>
@@ -367,7 +370,7 @@
         </div>
         <!-- Right Conatiner -->
         <div
-          class="right_container flex flex-col space-y-4 bg-emerald-100 p-5 w-[35%]"
+          class="right_container w-full flex flex-col space-y-4 bg-emerald-100 p-5 md:w-[40%] lg:w-1/4"
         >
           <!-- Search -->
           <div
