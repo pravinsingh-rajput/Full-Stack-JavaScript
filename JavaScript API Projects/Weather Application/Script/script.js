@@ -48,4 +48,20 @@ const getdata = async (event) => {
   data = recdata;
   astro = data.forecast.forecastday;
   timetemp = data.forecast.forecastday[0];
+
+  // Displaying Data
+
+  displaylocationdata();
+};
+
+// displaying Data
+
+const displaylocationdata = function () {
+  searched_loction[0].textContent = data.location.name;
+  searched_loction[1].textContent = data.location.name;
+  searched_loction[2].textContent = data.location.name;
+  searched_temperature.innerHTML = `${data.current.temp_c}<sup>o</sup>`;
+  region.textContent = data.location.region;
+  country.textContent = data.location.country;
+  timezoneid.textContent = data.location.tz_id;
 };
