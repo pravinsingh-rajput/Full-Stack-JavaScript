@@ -27,6 +27,8 @@ const fourpm = document.querySelector(".fourpm");
 const eightpm = document.querySelector(".eightpm");
 const elevenpm = document.querySelector(".elevenpm");
 
+const alltimetemp = document.querySelectorAll(".timetemp");
+
 let data;
 let astro;
 let timetemp;
@@ -93,14 +95,15 @@ const displaymoredetails = function () {
 
 const timedetail = (num) => {
   return timetemp.hour[num].temp_c;
+  alltimetemp[0];
 };
 
 const displaytimetemp = () => {
-  tweleveam.innerHTML = `${timedetail(0)}<sup>o</sup>`;
-  fouram.innerHTML = `${timedetail(4)}<sup>o</sup>`;
-  eightam.innerHTML = `${timedetail(8)}<sup>o</sup>`;
-  twelevepm.innerHTML = `${timedetail(12)}<sup>o</sup>`;
-  fourpm.innerHTML = `${timedetail(16)}<sup>o</sup>`;
-  eightpm.innerHTML = `${timedetail(20)}<sup>o</sup>`;
-  elevenpm.innerHTML = `${timedetail(23)}<sup>o</sup>`;
+  alltimetemp[0].innerHTML = `${timedetail(0)}<sup>o</sup>`;
+  alltimetemp[1].innerHTML = `${timedetail(4)}<sup>o</sup>`;
+  alltimetemp[2].innerHTML = `${timedetail(8)}<sup>o</sup>`;
+  alltimetemp[3].innerHTML = `${timedetail(12)}<sup>o</sup>`;
+  alltimetemp[4].innerHTML = `${timedetail(16)}<sup>o</sup>`;
+  alltimetemp[5].innerHTML = `${timedetail(20)}<sup>o</sup>`;
+  alltimetemp[6].innerHTML = `${timedetail(23)}<sup>o</sup>`;
 };
