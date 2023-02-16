@@ -19,19 +19,18 @@ const latitude = document.querySelector(".latitude");
 const longitude = document.querySelector(".longitude");
 const localtime = document.querySelector(".localtime");
 
-const tweleveam = document.querySelector(".tweleveam");
-const fouram = document.querySelector(".fouram");
-const eightam = document.querySelector(".eightam");
-const twelevepm = document.querySelector(".twelevepm");
-const fourpm = document.querySelector(".fourpm");
-const eightpm = document.querySelector(".eightpm");
-const elevenpm = document.querySelector(".elevenpm");
-
 const alltimetemp = document.querySelectorAll(".timetemp");
+
+const futuretempdate = document.querySelectorAll(".futuretempdate");
+const futuremaxtemp = document.querySelectorAll(".futuremaxtemp");
+const futuremintemp = document.querySelectorAll(".futuremintemp");
+const futuresunrise = document.querySelectorAll(".futuresunrise");
+const futuresunset = document.querySelectorAll(".futuresunset");
 
 let data;
 let astro;
 let timetemp;
+let futuredata;
 
 const getdata = async (event) => {
   event.preventDefault();
@@ -50,6 +49,7 @@ const getdata = async (event) => {
   data = recdata;
   astro = data.forecast.forecastday;
   timetemp = data.forecast.forecastday[0];
+  futuredata = data.forecast.forecastday;
 
   // Displaying Data
 
@@ -57,6 +57,7 @@ const getdata = async (event) => {
   sunriseset();
   displaymoredetails();
   displaytimetemp();
+  displayfuturedata();
 };
 
 // displaying Data
@@ -106,4 +107,20 @@ const displaytimetemp = () => {
   alltimetemp[4].innerHTML = `${timedetail(16)}<sup>o</sup>`;
   alltimetemp[5].innerHTML = `${timedetail(20)}<sup>o</sup>`;
   alltimetemp[6].innerHTML = `${timedetail(23)}<sup>o</sup>`;
+};
+
+// Future Prediction
+
+const displayfuturedata = () => {
+  for (let i = 0; i <= 4; i++) {
+    futuretempdate[i].textContent = futuredata[i + 1].date;
+    futuremaxtemp[i].innerHTML = `${
+      futuredata[i + 1].day.maxtemp_c
+    }<sup>o</sup>`;
+    futuremintemp[i].innerHTML = `${
+      futuredata[i + 1].day.mintemp_c
+    }<sup>o</sup>`;
+    futuresunrise[i].textContent = futuredata[i + 1].astro.sunrise;
+    futuresunset[i].textContent = futuredata[i + 1].astro.sunset;
+  }
 };
