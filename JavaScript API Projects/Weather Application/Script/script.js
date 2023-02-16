@@ -28,6 +28,9 @@ const futuremintemp = document.querySelectorAll(".futuremintemp");
 const futuresunrise = document.querySelectorAll(".futuresunrise");
 const futuresunset = document.querySelectorAll(".futuresunset");
 
+const livetime = document.querySelector(".livetime");
+const livedate = document.querySelector(".livedate");
+
 let data;
 let astro;
 let timetemp;
@@ -140,3 +143,33 @@ const displayfuturedata = () => {
     futuresunset[i].textContent = futuredata[i + 1].astro.sunset;
   }
 };
+
+// Live Date
+
+let date = new Date();
+
+const setdate = new Intl.DateTimeFormat(navigator.language, {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(date);
+livedate.textContent = setdate;
+
+// Live Time
+
+const settime = new Intl.DateTimeFormat(navigator.language, {
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+}).format(date);
+
+setInterval(() => {
+  date = new Date();
+  const settime = new Intl.DateTimeFormat(navigator.language, {
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  }).format(date);
+  livetime.textContent = settime;
+}, 1000);
