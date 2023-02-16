@@ -65,3 +65,15 @@ const displaylocationdata = function () {
   country.textContent = data.location.country;
   timezoneid.textContent = data.location.tz_id;
 };
+
+const sunrise = (num) => {
+  return astro[num].astro.sunrise;
+};
+const sunset = (num) => {
+  return astro[num].astro.sunset;
+};
+
+const sunriseset = function () {
+  today_sunrise.textContent = sunrise(0);
+  today_sunset.textContent = sunset(0);
+};
