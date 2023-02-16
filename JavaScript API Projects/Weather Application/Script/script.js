@@ -52,6 +52,9 @@ const getdata = async (event) => {
   // Displaying Data
 
   displaylocationdata();
+  sunriseset();
+  displaymoredetails();
+  displaytimetemp();
 };
 
 // displaying Data
@@ -76,4 +79,28 @@ const sunset = (num) => {
 const sunriseset = function () {
   today_sunrise.textContent = sunrise(0);
   today_sunset.textContent = sunset(0);
+};
+
+const displaymoredetails = function () {
+  windspeed.textContent = `${data.current.wind_kph} Km/h`;
+  winddegree.textContent = data.current.wind_degree;
+  winddirection.textContent = data.current.wind_dir;
+  humidity.textContent = data.current.humidity;
+  latitude.textContent = data.location.lat;
+  longitude.textContent = data.location.lon;
+  localtime.textContent = data.location.localtime;
+};
+
+const timedetail = (num) => {
+  return timetemp.hour[num].temp_c;
+};
+
+const displaytimetemp = () => {
+  tweleveam.innerHTML = `${timedetail(0)}<sup>o</sup>`;
+  fouram.innerHTML = `${timedetail(4)}<sup>o</sup>`;
+  eightam.innerHTML = `${timedetail(8)}<sup>o</sup>`;
+  twelevepm.innerHTML = `${timedetail(12)}<sup>o</sup>`;
+  fourpm.innerHTML = `${timedetail(16)}<sup>o</sup>`;
+  eightpm.innerHTML = `${timedetail(20)}<sup>o</sup>`;
+  elevenpm.innerHTML = `${timedetail(23)}<sup>o</sup>`;
 };
