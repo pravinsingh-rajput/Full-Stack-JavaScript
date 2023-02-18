@@ -2,4 +2,4 @@
 
 ![Alt](./images/WeatherApplicationimg.png)
 
-[Website](https://climatecast.netlify.app/)
+Website: [View](https://climatecast.netlify.app/)
