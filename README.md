@@ -6,7 +6,7 @@
 
 ![Alt](https://img.shields.io/badge/-HTML-orange) ![Alt](https://img.shields.io/badge/-CSS-green) ![Alt](https://img.shields.io/badge/-TailwindCss-blue)
 ![Alt](https://img.shields.io/badge/-JavaScript-brightgreen)
-![Alt](https://img.shields.io/badge/-React-red)
+![Alt](https://img.shields.io/badge/-React-9cf)
 
 | Context                   | Technology                                                                                                                                                            | Link                                              |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
@@ -22,4 +22,4 @@
 | Mini Projects             | ![Alt](https://img.shields.io/badge/-HTML-orange) ![Alt](https://img.shields.io/badge/-TailwindCss-blue) ![Alt](https://img.shields.io/badge/-JavaScript-brightgreen) | [Link](./JavaScript%20Mini%20Projects)            |
 | JavaScript DOM Assignment | ![Alt](https://img.shields.io/badge/-HTML-orange) ![Alt](https://img.shields.io/badge/-CSS-green) ![Alt](https://img.shields.io/badge/-JavaScript-brightgreen)        | [Link](./DOM%20Assignments%202.0%20Batch%20copy)  |
 | JavaScript API Projects   | ![Alt](https://img.shields.io/badge/-HTML-orange) ![Alt](https://img.shields.io/badge/-TailwindCss-blue) ![Alt](https://img.shields.io/badge/-JavaScript-brightgreen) | [Link](./JavaScript%20API%20Projects)             |
-| Learning React            | ![Alt](https://img.shields.io/badge/-React-red)                                                                                                                       | [Link](./Learning%20React)                        |
+| Learning React            | ![Alt](https://img.shields.io/badge/-React-9cf)                                                                                                                       | [Link](./Learning%20React)                        |
