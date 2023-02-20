@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+}
+
+.expense_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 70%;
+  padding: 4px;
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px rgb(58, 57, 57);
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.expense_items_date {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 5px 10px;
+  box-shadow: 2px 2px 5px rgb(88, 88, 88);
+  border-radius: 10px;
+  width: 80px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.expense_date,
+.expense_month,
+.expense_year {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  margin: 2px;
+  background-color: transparent;
+}
+
+.expense_items_title {
+  display: flex;
+  flex-grow: 1;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0px 10px;
+  background-color: transparent;
+}
+
+.expense_items_amount {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0px 10px;
+  background-color: transparent;
+  border: 2px solid cyan;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: rgb(139, 199, 201);
+}
