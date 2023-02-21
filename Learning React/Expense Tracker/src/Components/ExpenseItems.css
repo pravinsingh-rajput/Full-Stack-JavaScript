@@ -7,7 +7,6 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px auto;
-  max-width: 70%;
   padding: 4px;
   border-radius: 20px;
   box-shadow: 2px 5px 10px rgb(58, 57, 57);
@@ -55,8 +54,8 @@
   font-weight: 700;
   margin: 0px 10px;
   background-color: transparent;
-  border: 2px solid cyan;
+  /* border: 2px solid cyan; */
   padding: 5px 10px;
   border-radius: 15px;
-  background-color: rgb(139, 199, 201);
+  /* background-color: rgb(139, 199, 201); */
 }

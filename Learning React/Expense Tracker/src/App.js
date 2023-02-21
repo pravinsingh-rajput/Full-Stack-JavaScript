@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Card from "./Components/Card";
 
 import ExpenseItems from "./Components/ExpenseItems";
 
@@ -28,8 +29,7 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <h1>Hello World</h1>
+    <Card className="App">
       <ExpenseItems
         date={data[0].date}
         title={data[0].title}
@@ -45,7 +45,7 @@ function App() {
         title={data[2].title}
         amount={data[2].amount}
       />
-    </div>
+    </Card>
   );
 }
 
