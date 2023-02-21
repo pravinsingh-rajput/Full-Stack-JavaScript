@@ -1,8 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Card from "./Components/Card";
+import Card from "./Components/UI/Card";
+import NewExpense from "./Components/NewExpense/NewExpense";
 
-import ExpenseItems from "./Components/ExpenseItems";
+import ExpenseItems from "./Components/ExpenseItems/ExpenseItems";
 
 function App() {
   // Data
@@ -29,23 +30,26 @@ function App() {
   ];
 
   return (
-    <Card className="App">
-      <ExpenseItems
-        date={data[0].date}
-        title={data[0].title}
-        amount={data[0].amount}
-      />
-      <ExpenseItems
-        date={data[1].date}
-        title={data[1].title}
-        amount={data[1].amount}
-      />
-      <ExpenseItems
-        date={data[2].date}
-        title={data[2].title}
-        amount={data[2].amount}
-      />
-    </Card>
+    <div className="App">
+      <NewExpense />
+      <Card className="display_expense_items">
+        <ExpenseItems
+          date={data[0].date}
+          title={data[0].title}
+          amount={data[0].amount}
+        />
+        <ExpenseItems
+          date={data[1].date}
+          title={data[1].title}
+          amount={data[1].amount}
+        />
+        <ExpenseItems
+          date={data[2].date}
+          title={data[2].title}
+          amount={data[2].amount}
+        />
+      </Card>
+    </div>
   );
 }
 
