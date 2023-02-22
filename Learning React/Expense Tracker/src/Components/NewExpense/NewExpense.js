@@ -3,10 +3,19 @@ import ExpenseForm from "./ExpenseForm";
 
 import Card from "../UI/Card";
 
-function NewExpense() {
+function NewExpense(props) {
+  const saveExpenseHandler = (newenteredExpense) => {
+    const newExpense = {
+      ...newenteredExpense,
+      id: Math.random().toString(),
+    };
+
+    props.onSaveNewExpense(newExpense);
+  };
+
   return (
     <Card className="new_expense">
-      <ExpenseForm />
+      <ExpenseForm onSaveExpenseData={saveExpenseHandler} />
     </Card>
   );
 }

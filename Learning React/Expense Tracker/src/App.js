@@ -29,9 +29,13 @@ function App() {
     },
   ];
 
+  const addexpense = (expense) => {
+    console.log(expense);
+  };
+
   return (
     <div className="App">
-      <NewExpense />
+      <NewExpense onSaveNewExpense={addexpense} />
       <Card className="display_expense_items">
         <ExpenseItems
           date={data[0].date}
