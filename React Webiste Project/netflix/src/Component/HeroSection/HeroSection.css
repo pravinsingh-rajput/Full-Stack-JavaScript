@@ -1,0 +1,10 @@
+.hero__Section {
+  background-image: url("./Assets/hero_bg.jpg");
+  height: 100vh;
+  width: 100%;
+}
+
+.hero__Container {
+  background-color: rgba(0, 0, 0, 0.473);
+  height: 100%;
+}
