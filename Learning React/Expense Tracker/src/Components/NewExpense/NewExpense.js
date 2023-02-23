@@ -15,6 +15,7 @@ function NewExpense(props) {
 
   return (
     <Card className="new_expense">
+      
       <ExpenseForm onSaveExpenseData={saveExpenseHandler} />
     </Card>
   );
