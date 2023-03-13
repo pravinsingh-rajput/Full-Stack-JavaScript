@@ -46,7 +46,7 @@ button:focus {
   color: white;
   border: 1px solid white;
   width: fit-content;
-  padding: 8px 5px;
+  padding: 8px 2px;
 }
 
 .btn_signin {

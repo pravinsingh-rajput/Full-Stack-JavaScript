@@ -7,4 +7,79 @@
 .hero__Container {
   background-color: rgba(0, 0, 0, 0.623);
   height: 100%;
+  color: white;
+}
+.main_container {
+  height: 85%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_content {
+  text-align: center;
+}
+
+.hero_primary_heading {
+  font-size: 50px;
+}
+.hero_secondary_heading {
+  font-size: 18px;
+  font-weight: 400;
+}
+.hero_description {
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.emailAddress {
+  padding: 11px;
+  background: transparent;
+  margin-right: 10px;
+  border: 1px solid rgb(172, 169, 169);
+  caret-color: #ffff;
+  color: #ffff;
+  width: 300px;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  z-index: 1;
+
+  label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.5s;
+    color: rgb(172, 169, 169);
+  }
+
+  .emailAddress:hover ~ label {
+    top: -5px;
+  }
+}
+
+.submit_btn {
+  display: flex;
+  background-color: red;
+  border: none;
+  color: #ffff;
+  border-radius: 4px;
+  font-size: 18px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.submit_btn:hover {
+  background-color: rgb(250, 27, 27);
+}
+
+.submit_btn img {
+  filter: invert(1);
 }
