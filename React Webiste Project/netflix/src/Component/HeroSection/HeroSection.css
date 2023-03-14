@@ -2,12 +2,19 @@
   background: url("./Assets/hero_bg.jpg") no-repeat center center/cover;
   height: 100vh;
   width: 100%;
+  border-bottom: 10px solid rgb(73, 73, 73);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .hero__Container {
-  background-color: rgba(0, 0, 0, 0.623);
+  background-color: rgba(0, 0, 0, 0.568);
   height: 100%;
+  width: 100%;
   color: white;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 .main_container {
   height: 85%;
@@ -16,6 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0px 5px;
 }
 
 .hero_content {
@@ -23,14 +31,15 @@
 }
 
 .hero_primary_heading {
-  font-size: 50px;
+  font-size: 48px;
 }
 .hero_secondary_heading {
   font-size: 18px;
   font-weight: 400;
 }
 .hero_description {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 form {
@@ -41,45 +50,75 @@ form {
 
 .emailAddress {
   padding: 11px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.212);
   margin-right: 10px;
   border: 1px solid rgb(172, 169, 169);
   caret-color: #ffff;
   color: #ffff;
   width: 300px;
-  font-size: 18px;
+  font-size: 17px;
   border-radius: 5px;
   outline: none;
-  z-index: 1;
+}
 
-  label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    transition: all 0.5s;
-    color: rgb(172, 169, 169);
-  }
-
-  .emailAddress:hover ~ label {
-    top: -5px;
-  }
+.emailAddress::placeholder {
+  color: #ffff;
+  font-size: medium;
 }
 
 .submit_btn {
   display: flex;
-  background-color: red;
+  background-color: rgb(247, 14, 14);
   border: none;
   color: #ffff;
   border-radius: 4px;
   font-size: 18px;
   align-items: center;
+  font-weight: 500;
+  line-height: 18px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 .submit_btn:hover {
-  background-color: rgb(250, 27, 27);
+  background-color: rgb(193, 17, 25);
 }
 
 .submit_btn img {
   filter: invert(1);
+}
+/* 
+label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: all 0.5s;
+  color: rgb(172, 169, 169);
+} */
+
+@media screen and (max-width: 400px) {
+  .hero_primary_heading {
+    font-size: 30px;
+  }
+
+  .emailAddress {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .submit_btn {
+    padding: 8px 12px;
+    width: fit-content;
+    margin: 10px;
+  }
+  .hero_primary_heading {
+    font-size: 32px;
+  }
 }

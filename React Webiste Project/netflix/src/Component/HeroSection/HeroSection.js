@@ -20,8 +20,12 @@ const HeroSection = () => {
             </p>
           </div>
           <form>
-            <label htmlFor="email">Email address</label>
-            <input type="email" className="emailAddress" />
+            {/* <label htmlFor="email">Email address</label> */}
+            <input
+              type="email"
+              className="emailAddress"
+              placeholder="Email address"
+            />
             <button className="submit_btn">
               Get Started <img src={require("./Assets/next.png")} alt="" />{" "}
             </button>

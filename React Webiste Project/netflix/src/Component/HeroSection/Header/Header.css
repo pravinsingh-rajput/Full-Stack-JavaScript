@@ -1,6 +1,6 @@
 header {
   height: fit-content;
-  padding: 10px 30px;
+  padding: 15px 10%;
 }
 
 nav {
@@ -50,8 +50,35 @@ button:focus {
 }
 
 .btn_signin {
-  background-color: red;
-  color: white;
-  border: 2px solid red;
+  background-color: rgb(229, 17, 25);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(229, 18, 27);
   border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn_signin:hover {
+  background-color: rgb(193, 17, 25);
+  border: 2px solid rgb(193, 17, 25);
+}
+
+@media screen and (max-width: 600px) {
+  .logo_img {
+    height: 36px;
+  }
+  header {
+    height: fit-content;
+    padding: 15px 1%;
+  }
+
+  .btn_lang {
+    font-size: 0;
+  }
+
+  .buttons {
+    padding: 2px 6px;
+    display: flex;
+    align-items: center;
+  }
 }
