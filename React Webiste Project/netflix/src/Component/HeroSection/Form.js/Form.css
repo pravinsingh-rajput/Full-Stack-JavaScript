@@ -1,48 +1,8 @@
-.hero__Section {
-  background: url("./Assets/hero_bg.jpg") no-repeat center center/cover;
-  height: 100vh;
-  width: 100%;
-  border-bottom: 10px solid rgb(73, 73, 73);
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.hero__Container {
-  background-color: rgba(0, 0, 0, 0.568);
-  height: 100%;
-  width: 100%;
-  color: white;
-}
-.main_container {
-  height: 85%;
-  color: white;
+.form_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0px 5px;
-}
-
-.hero_content {
-  text-align: center;
-}
-
-.hero_primary_heading {
-  font-size: 48px;
-}
-.hero_secondary_heading {
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: -20px;
-}
-.hero_description {
-  font-size: 18px;
-  line-height: 27px;
-  text-align: center;
-  margin: 0px 10px;
-}
-
-.form_container {
+  margin-top: 30px;
 }
 
 form {
@@ -50,10 +10,12 @@ form {
   justify-content: space-between;
   position: relative;
   padding: 0px 30px;
+  width: fit-content;
+  margin-top: 15px;
 }
 
 .emailAddress {
-  padding: 11px;
+  padding: 16px 11px;
   background: rgba(0, 0, 0, 0.212);
   margin-right: 10px;
   border: 1px solid rgb(172, 169, 169);
@@ -90,20 +52,8 @@ form {
 .submit_btn img {
   filter: invert(1);
 }
-/* 
-label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  transition: all 0.5s;
-  color: rgb(172, 169, 169);
-} */
 
 @media screen and (max-width: 400px) {
-  .hero_primary_heading {
-    font-size: 30px;
-  }
-
   .emailAddress {
     width: 90%;
     margin-top: 15px;
@@ -123,9 +73,7 @@ label {
     width: fit-content;
     margin: 10px;
   }
-  .hero_primary_heading {
-    font-size: 32px;
-  }
+
   .emailAddress {
     margin-right: 0px;
   }

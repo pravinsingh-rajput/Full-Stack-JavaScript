@@ -1,6 +1,7 @@
 import React from "react";
 import "./F&Q.css";
 import Questions from "./Questions";
+import Form from "../HeroSection/Form.js/Form";
 
 function FrequentQuetions() {
   return (
@@ -40,6 +41,7 @@ Netflix has an extensive library of feature films, documentaries, TV shows, anim
 
 Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."
       />
+      <Form />
     </div>
   );
 }

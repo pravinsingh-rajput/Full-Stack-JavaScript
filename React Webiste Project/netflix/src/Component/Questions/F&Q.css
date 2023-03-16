@@ -8,4 +8,11 @@
   align-items: center;
   justify-content: center;
   color: white;
+  padding-bottom: 30px;
+}
+
+.fqtitle {
+  text-align: center;
+  margin: 0px 10px;
+  margin-bottom: 40px;
 }

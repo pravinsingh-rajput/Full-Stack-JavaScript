@@ -1,5 +1,6 @@
 import "./HeroSection.css";
 import Header from "./Header/Header";
+import Form from "./Form.js/Form";
 
 const HeroSection = () => {
   return (
@@ -14,22 +15,8 @@ const HeroSection = () => {
             <h3 className="hero_secondary_heading">
               Watch anywhere. Cancel anytime.
             </h3>
-            <p className="hero_description">
-              Ready to watch? Enter your email to create or restart your
-              membership.
-            </p>
+            <Form />
           </div>
-          <form>
-            {/* <label htmlFor="email">Email address</label> */}
-            <input
-              type="email"
-              className="emailAddress"
-              placeholder="Email address"
-            />
-            <button className="submit_btn">
-              Get Started <img src={require("./Assets/next.png")} alt="" />{" "}
-            </button>
-          </form>
         </div>
       </div>
     </div>
