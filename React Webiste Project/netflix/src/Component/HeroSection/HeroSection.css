@@ -29,11 +29,13 @@
 
 .hero_primary_heading {
   font-size: 48px;
+  margin: 0px 10px;
 }
 .hero_secondary_heading {
   font-size: 18px;
   font-weight: 400;
   margin-top: -20px;
+  margin: 0px 10px;
 }
 .hero_description {
   font-size: 18px;

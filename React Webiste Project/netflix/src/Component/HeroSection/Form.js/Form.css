@@ -15,7 +15,7 @@ form {
 }
 
 .emailAddress {
-  padding: 16px 11px;
+  padding: 15px 11px;
   background: rgba(0, 0, 0, 0.212);
   margin-right: 10px;
   border: 1px solid rgb(145, 145, 145);
@@ -30,7 +30,7 @@ form {
 .emailAddress::placeholder {
   color: #7a7878;
   font-size: medium;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .submit_btn {
@@ -39,10 +39,10 @@ form {
   border: none;
   color: #ffff;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 24px;
   align-items: center;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 24px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
