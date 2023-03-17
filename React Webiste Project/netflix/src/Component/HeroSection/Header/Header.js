@@ -1,4 +1,5 @@
 import "./Header.css";
+import Languagebtn from "../../Button/Language";
 
 const Header = () => {
   return (
@@ -10,19 +11,7 @@ const Header = () => {
           className="logo_img"
         />
         <div className="buttons">
-          <button className="btn_lang nav_btn">
-            <img
-              src={require("./Assets/world.png")}
-              alt="logo"
-              className="btn_img"
-            />
-            <span>English</span>
-            <img
-              src={require("./Assets/arrow.png")}
-              alt="logo"
-              className="btn_img"
-            />
-          </button>
+          <Languagebtn />
           <button className="btn_signin nav_btn">Sign In</button>
         </div>
       </nav>

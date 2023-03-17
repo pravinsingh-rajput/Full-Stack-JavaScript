@@ -18,7 +18,7 @@ form {
   padding: 16px 11px;
   background: rgba(0, 0, 0, 0.212);
   margin-right: 10px;
-  border: 1px solid rgb(172, 169, 169);
+  border: 1px solid rgb(145, 145, 145);
   caret-color: #ffff;
   color: #ffff;
   width: 350px;
@@ -28,8 +28,9 @@ form {
 }
 
 .emailAddress::placeholder {
-  color: #ffff;
+  color: #7a7878;
   font-size: medium;
+  font-weight: 600;
 }
 
 .submit_btn {
