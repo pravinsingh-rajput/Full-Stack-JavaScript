@@ -1,0 +1,31 @@
+.list__items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remove {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  background-color: turquoise;
+  padding: 4px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 15px;
+  height: fit-content;
+  width: fit-content;
+  border: none;
+  transition: all 0.2s ease-out;
+}
+
+.remove:hover {
+  background-color: rgb(252, 34, 34);
+  color: #ffffff;
+}
+
+li {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
