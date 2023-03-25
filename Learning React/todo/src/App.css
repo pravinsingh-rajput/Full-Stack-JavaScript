@@ -64,5 +64,10 @@ input {
 
 ol {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: auto;
+  height: 360px;
+}
+
+ol::-webkit-scrollbar {
+  display: none;
 }

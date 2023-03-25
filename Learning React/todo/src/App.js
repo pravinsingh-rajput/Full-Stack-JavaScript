@@ -11,11 +11,23 @@ function App() {
   };
 
   const add = () => {
-    setItems((prev) => {
-      return [...prev, data];
-    });
+    if (!data.length) {
+      alert("Enter Task to Add");
+    } else {
+      setItems((prev) => {
+        return [...prev, data];
+      });
 
-    setData("");
+      setData("");
+    }
+  };
+
+  const deleteItem = (id) => {
+    setItems((oldItems) => {
+      return oldItems.filter((arr, index) => {
+        return index !== id;
+      });
+    });
   };
 
   return (
@@ -23,7 +35,8 @@ function App() {
       <div className="main_Container">
         <h1>Todo List</h1>
         <div className="user_action">
-          <input type="text" value={data} onChange={changeHandler} />
+          <input type="text" value={data} onChange={changeHandler} required />
+
           <button className="add" onClick={add}>
             +
           </button>
@@ -31,7 +44,7 @@ function App() {
 
         <ol>
           {items.map((val, i) => {
-            return <Todo text={val} />;
+            return <Todo text={val} click={deleteItem} key={i} id={i} />;
           })}
         </ol>
       </div>
