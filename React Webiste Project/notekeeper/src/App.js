@@ -1,9 +1,20 @@
 import "./App.css";
+import NewTask from "./Component/NewTask/NewTask";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="all_task">
+        <NewTask />
+        <NewTask />
+        <NewTask />
+        <NewTask />
+        <NewTask />
+        <NewTask />
+        <NewTask />
+        <NewTask />
+        <NewTask />
+      </div>
     </div>
   );
 }

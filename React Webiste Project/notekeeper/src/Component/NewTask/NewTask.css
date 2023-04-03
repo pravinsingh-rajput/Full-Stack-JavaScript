@@ -1,0 +1,50 @@
+.task_container {
+  width: 95%;
+  /* min-width: 300px; */
+  max-width: 400px;
+  padding: 6px 5px;
+  margin: 8px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #cad5e2;
+}
+
+.task_title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.task_description {
+  text-align: left;
+  font-size: 15px;
+}
+
+.delete {
+  cursor: pointer;
+  margin: 2px;
+  transition: all 0.8s ease-in-out;
+}
+.delete:hover {
+  border: 0.1px solid #e8bd0d;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 425px) {
+  .task_title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .task_description {
+    text-align: left;
+    font-size: 14px;
+  }
+}
