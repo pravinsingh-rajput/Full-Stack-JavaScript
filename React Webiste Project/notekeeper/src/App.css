@@ -4,6 +4,10 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-items: center;
 }
+.footer {
+  width: 100vw;
+  border: 2px solid green;
+}
 
 @media screen and (max-width: 425px) {
   .all_task {
