@@ -26,6 +26,10 @@ a {
   text-decoration: none;
   color: black;
 }
+.activeClass {
+  text-decoration: none;
+  color: white;
+}
 
 .page {
   height: 90vh;
@@ -40,4 +44,8 @@ a {
 }
 .about {
   background-color: green;
+}
+.error {
+  background-color: red;
+  color: white;
 }
